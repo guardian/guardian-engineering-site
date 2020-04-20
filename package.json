@@ -17,7 +17,8 @@
     "format": "prettier --write \"src/**/*.{ts,tsx,md}\"",
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "start": "npm run dev",
-    "ci": "npm run type-check && npm run lint && npm run build",
+    "ci": "npm run type-check && npm run lint && npm run test && npm run build",
+    "test": "echo \"no tests... yet!\"",
     "type-check": "tsc"
   },
   "engines": {
