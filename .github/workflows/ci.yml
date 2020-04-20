@@ -1,11 +1,7 @@
 name: CI
-
-on:
-  pull_request:
-    branches: [ master ]
-
+on: pull_request
 jobs:
-  build:
+  validate:
     runs-on: ubuntu-latest
     strategy:
       matrix:
