@@ -1,7 +1,8 @@
 name: CD
 on:
   push:
-    - master
+    branches:
+      - master
 jobs:
   validate:
     runs-on: ubuntu-latest
