@@ -1,0 +1,23 @@
+name: CD
+on:
+  push:
+    - master
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm install
+      - run: npm run ci
+      - name: Build and deploy to gh-pages
+        uses: enriikke/gatsby-gh-pages-action@v2
+        with:
+          access-token: ${{ secrets.ACCESS_TOKEN }}
+          deploy-branch: gh-pages
