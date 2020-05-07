@@ -3,8 +3,9 @@ import styled from '@emotion/styled'
 
 const StyledHero = styled.div`
   display: flex;
-  flex-direction: column;
-  flex: 1;
+  flex-direction: row;
+  height: 100px;
+  margin-bottom: 20px;
 `
 
 interface HeroProps {
