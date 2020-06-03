@@ -1,5 +1,9 @@
 import * as React from 'react'
+import { css } from '@emotion/core'
 import { Link } from 'gatsby'
+
+import { neutral } from '@guardian/src-foundations/palette'
+import { space } from '@guardian/src-foundations'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
@@ -7,6 +11,12 @@ import Section from '../components/Section'
 import Content from '../components/Content'
 import { HeroText, HeroImage } from '../components/HeroBox'
 import ContentSection from '../components/ContentSection'
+
+const containerStyles = css`
+  color: white;
+  border: ${neutral[46]} 0.2px solid;
+  padding: ${space[3]}px;
+`
 
 const IndexPage = () => (
   <IndexLayout>

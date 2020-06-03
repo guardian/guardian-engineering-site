@@ -1,6 +1,12 @@
 /* eslint-disable max-len */
 
+import { brandAltBackground, neutral } from '@guardian/src-foundations/palette'
+import { from } from '@guardian/src-foundations/mq'
+
 export const colors = {
+  siteBackground: `${brandAltBackground.ctaPrimary}`,
+  silverGrey: `${neutral[86]}`,
+  primaryText: `${neutral[7]}`,
   brand: 'blue',
   lilac: '#9d7cbf',
   accent: '#ffb238',
@@ -61,5 +67,6 @@ export const dimensions = {
 }
 
 export const heights = {
-  header: 60
+  header: 80,
+  headerDesktop: 120
 }

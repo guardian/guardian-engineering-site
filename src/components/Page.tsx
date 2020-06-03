@@ -1,14 +1,22 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-
+import { space } from '@guardian/src-foundations'
+import { from } from '@guardian/src-foundations/mq'
 import { dimensions } from '../styles/variables'
 
 const StyledPage = styled.div`
   display: block;
   flex: 1;
   position: relative;
-  padding: ${dimensions.containerPadding}rem;
+  padding: 0 ${space[3]}px;
   margin-bottom: 3rem;
+  h1 {
+    color: white;
+  }
+
+  ${from.desktop} {
+    padding: 0 ${dimensions.containerPadding}rem;
+  }
 `
 
 interface PageProps {

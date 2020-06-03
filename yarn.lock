@@ -1617,7 +1617,7 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@babel/runtime@^7.8.4":
+"@babel/runtime@^7.5.5", "@babel/runtime@^7.8.4":
   version "7.10.2"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.10.2.tgz#d103f21f2602497d38348a32e008637d506db839"
   integrity sha512-6sF3uQw2ivImfVIl62RZ7MXhO2tap69WeWK57vAaimT6AZbE4FbqjdEJIN1UqoD6wI6B+1n9UiagafH1sxjOtg==
@@ -1808,6 +1808,11 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.2.tgz#63985d3d8b02530e0869962f4da09142ee8e200e"
   integrity sha512-n/VQ4mbfr81aqkx/XmVicOLjviMuy02eenSdJY33SVA7S2J42EU0P1H0mOogfYedb3wXA0d/LVtBrgTSm04WEA==
 
+"@emotion/weak-memoize@0.2.5":
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
+  integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
+
 "@gatsbyjs/relay-compiler@2.0.0-printer-fix.2":
   version "2.0.0-printer-fix.2"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/relay-compiler/-/relay-compiler-2.0.0-printer-fix.2.tgz#214db0e6072d40ea78ad5fabdb49d56bc95f4e99"
@@ -1829,6 +1834,31 @@
     relay-runtime "2.0.0"
     signedsource "^1.0.0"
     yargs "^9.0.0"
+
+"@guardian/src-button@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-1.1.0.tgz#f874ba5c9fc16aa0891d5e96f1ac918a19a4dd72"
+  integrity sha512-at2I/uhuScXCvfptRXbJM8jVs/bgOII2WDSkLsq0wu8xKKjjf/sHpvo0wv9fXMvssN9IIwlCYXDQmWtCQgNljw==
+  dependencies:
+    "@guardian/src-helpers" "^1.1.0"
+    "@guardian/src-svgs" "^1.1.0"
+
+"@guardian/src-foundations@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-1.1.0.tgz#1955a3933c3aecfae46d4688a43f331866386b94"
+  integrity sha512-XGZSbHuHf20kewajdIAOPk7jb6mB6+wPYFj+CUuKcEPXXjNLQ4K5WVIzu0xQ9Fa5aO1wG/s0ek0ii9KbpDcbNA==
+
+"@guardian/src-helpers@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-1.1.0.tgz#6fe6843835f51fe86aeb5fb4566a673de2a61d91"
+  integrity sha512-+TVCJ4wvDAcGk/eS66aUzsrna/7KvIno8XDFvzrkqdI2S2GLIpZpc7e6H65d4CCH6ib/HLoNd/xx5/BFKVWcYw==
+  dependencies:
+    "@guardian/src-foundations" "^1.1.0"
+
+"@guardian/src-svgs@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-svgs/-/src-svgs-1.1.0.tgz#de52c09359f8b5122e652f35a9c1b8a4402560b4"
+  integrity sha512-24S1S9spRGtz50OMJ0gOGXSYIuoqM7wme+yaYVvCav/ppcrpB1yU49tfqgkWZmo4VUf8BlW8CTEWjm0cO0H3SQ==
 
 "@jimp/bmp@^0.6.4":
   version "0.6.4"
@@ -5298,6 +5328,15 @@ emojis-list@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-3.0.0.tgz#5570662046ad29e2e916e71aae260abdff4f6a78"
   integrity sha512-/kyM18EfinwXZbno9FyUGeFh87KC8HRQBQGildHZbEuRyWFOmv1U10o9BBp8XVZDVNNuQKyIGIu5ZYAAXJ0V2Q==
+
+emotion-theming@^10.0.27:
+  version "10.0.27"
+  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.27.tgz#1887baaec15199862c89b1b984b79806f2b9ab10"
+  integrity sha512-MlF1yu/gYh8u+sLUqA0YuA9JX0P4Hb69WlKc/9OLo+WCXuX6sy/KoIa+qJimgmr2dWqnypYKYPX37esjDBbhdw==
+  dependencies:
+    "@babel/runtime" "^7.5.5"
+    "@emotion/weak-memoize" "0.2.5"
+    hoist-non-react-statics "^3.3.0"
 
 encodeurl@~1.0.2:
   version "1.0.2"
