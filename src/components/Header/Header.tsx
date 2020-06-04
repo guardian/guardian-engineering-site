@@ -56,9 +56,7 @@ const jobLinkMobile = css`
   }
 `
 
-// interface HeaderProps {}
-
-const Header: React.FC<HeaderProps> = () => (
+const Header: React.FC = () => (
   <StyledHeader>
     <HeaderInner>
       <span css={jobLinkMobile}>
