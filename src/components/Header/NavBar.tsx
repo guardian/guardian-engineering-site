@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { from } from '@guardian/src-foundations/mq'
 import { space } from '@guardian/src-foundations'
-import { neutral } from '@guardian/src-foundations/palette'
+import { neutral, lifestyle } from '@guardian/src-foundations/palette'
 import { headline } from '@guardian/src-foundations/typography'
 import veggieBurger from './veggieBurger.png'
 
@@ -32,19 +32,25 @@ const desktopMenu = css`
   }
 `
 const showNavList = css`
+  width: 97%;
+  height: 100vh;
   position: absolute;
-  top: 80px;
-  right: 45px;
-  background: ${neutral[20]};
+  top: 0;
+  left: -12px;
+  background: ${lifestyle[400]};
   z-index: 10;
   li {
     list-style: none;
     padding-top: ${space[4]}px;
     ${headline.xsmall()};
+    &:hover,
+    &:focus {
+      border-bottom: solid 3px ${neutral[100]};
+    }
   }
 
   ul {
-    padding: 0 ${space[4]}px;
+    padding: 0 ${space[7]}px;
   }
 
   ${from.desktop} {
@@ -83,7 +89,7 @@ const burger = css`
   position: absolute;
   right: 0;
   bottom: -28px;
-  z-index: 5;
+  z-index: 20;
 
   ${from.desktop} {
     display: none;
@@ -92,14 +98,18 @@ const burger = css`
 
 const highlightMenuItem = css`
   border-bottom: solid 3px ${neutral[100]};
+  border-top: none;
   ${from.desktop} {
     border-top: solid 3px ${neutral[100]};
+    border-bottom: none;
   }
 `
 const regularMenuItem = css`
   border-bottom: solid 3px transparent;
+  border-top: none;
   ${from.desktop} {
     border-top: solid 3px transparent;
+    border-bottom: none;
   }
 `
 
@@ -111,11 +121,15 @@ const menuItems = [
   { id: 'events', text: 'Events & talks', link: '/' }
 ]
 
-function createList() {
+function createList(closeMenu) {
   const [selected = 'home', setSelected] = useState(false)
+  const handleMenuItemClick = id => {
+    setSelected(id)
+    closeMenu()
+  }
   return menuItems.map(item => (
     <li key={item.id} css={item.id === selected ? highlightMenuItem : regularMenuItem}>
-      <MenuItemLink onClick={() => setSelected(item.id)} to={item.link}>
+      <MenuItemLink onClick={() => handleMenuItemClick(item.id)} to={item.link}>
         {item.text}
       </MenuItemLink>
     </li>
@@ -132,7 +146,7 @@ function NavBar() {
         <img css={burger} src={veggieBurger} alt="menu dropdown link" />
       </button>
       <nav css={menuOpen ? showNavList : hideNavList}>
-        <ul>{createList()}</ul>
+        <ul>{createList(closeMenu)}</ul>
       </nav>
     </>
   )
