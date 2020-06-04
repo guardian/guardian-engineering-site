@@ -1,7 +1,6 @@
 /* eslint-disable max-len */
 
 import { brandAltBackground, neutral } from '@guardian/src-foundations/palette'
-import { from } from '@guardian/src-foundations/mq'
 
 export const colors = {
   siteBackground: `${brandAltBackground.ctaPrimary}`,

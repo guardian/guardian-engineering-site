@@ -6,7 +6,7 @@ import { Link } from 'gatsby'
 import { Button } from '@guardian/src-button'
 import { ThemeProvider } from 'emotion-theming'
 import { colors } from '../../styles/variables'
-import arrowRightStraight from '../../content/arrowRight.png'
+import arrowRightStraight from './arrowRight.png'
 
 const JobLink = styled(Link)`
   display: block;

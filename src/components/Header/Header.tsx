@@ -8,7 +8,7 @@ import { space } from '@guardian/src-foundations'
 import { from, until } from '@guardian/src-foundations/mq'
 import { heights, dimensions, colors } from '../../styles/variables'
 import Container from '../Container'
-import logo from '../../content/logo.png'
+import logo from './logo.png'
 import JobLinkButton from './JobLinkButton'
 import NavBar from './NavBar'
 
