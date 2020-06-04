@@ -1,4 +1,4 @@
-import * as React from 'react'
+import React, { useState } from 'react'
 import { css } from '@emotion/core'
 import styled from '@emotion/styled'
 import { Link } from 'gatsby'
@@ -58,18 +58,28 @@ const burger = css`
   }
 `
 
+const highlightMenuItem = css`
+  border-top: solid 3px ${neutral[100]};
+`
+const regularMenuItem = css`
+  border-top: solid 3px transparent;
+`
+
 const menuItems = [
-  { text: 'Home', link: '/' },
-  { text: 'Diversity & inclusion', link: '/' },
-  { text: 'Open people', link: '/' },
-  { text: 'Open source', link: '/' },
-  { text: 'Events & talks', link: '/' }
+  { id: 'home', text: 'Home', link: '/' },
+  { id: 'diversity', text: 'Diversity & inclusion', link: '/' },
+  { id: 'openPeople', text: 'Open people', link: '/' },
+  { id: 'openSource', text: 'Open source', link: '/' },
+  { id: 'events', text: 'Events & talks', link: '/' }
 ]
 
 function createList() {
+  const [selected = 'home', setSelected] = useState(false)
   return menuItems.map(item => (
-    <li>
-      <MenuItemLink to={item.link}>{item.text}</MenuItemLink>
+    <li key={item.id} css={item.id === selected ? highlightMenuItem : regularMenuItem}>
+      <MenuItemLink onClick={() => setSelected(item.id)} to={item.link}>
+        {item.text}
+      </MenuItemLink>
     </li>
   ))
 }
