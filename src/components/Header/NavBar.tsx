@@ -8,33 +8,57 @@ import { neutral } from '@guardian/src-foundations/palette'
 import { headline } from '@guardian/src-foundations/typography'
 import veggieBurger from './veggieBurger.png'
 
-const navList = css`
+const desktopMenu = css`
+  width: 100%;
+  border-top: ${neutral[46]} 0.2px solid;
+  border-right: ${neutral[46]} 0.2px solid;
+  border-left: ${neutral[46]} 0.2px solid;
+  display: flex;
+  align-self: flex-end;
+  ul {
+    margin: 0;
+    padding: 0 0 ${space[3]}px;
+    display: flex;
+    flex-direction: row;
+    li {
+      display: block;
+      ${headline.xxxsmall()};
+      border-left: ${neutral[46]} 0.2px solid;
+      padding: ${space[1]}px ${space[6]}px 0 ${space[3]}px;
+      :first-of-type {
+        border-left: none;
+      }
+    }
+  }
+`
+const showNavList = css`
+  position: absolute;
+  top: 80px;
+  right: 45px;
+  background: ${neutral[20]};
+  z-index: 10;
   li {
     list-style: none;
+    padding-top: ${space[4]}px;
     ${headline.xsmall()};
   }
 
+  ul {
+    padding: 0 ${space[4]}px;
+  }
+
   ${from.desktop} {
-    width: 100%;
-    border-top: ${neutral[46]} 0.2px solid;
-    border-right: ${neutral[46]} 0.2px solid;
-    border-left: ${neutral[46]} 0.2px solid;
-    display: flex;
-    align-self: flex-end;
-    ul {
-      margin: 0;
-      padding: 0 0 ${space[3]}px;
-      display: flex;
-      flex-direction: row;
-      li {
-        ${headline.xxxsmall()};
-        border-left: ${neutral[46]} 0.2px solid;
-        padding: ${space[1]}px ${space[6]}px 0 ${space[3]}px;
-        :first-of-type {
-          border-left: none;
-        }
-      }
-    }
+    ${desktopMenu}
+  }
+`
+
+const hideNavList = css`
+  li {
+    display: none;
+  }
+
+  ${from.desktop} {
+    ${desktopMenu}
   }
 `
 
@@ -46,11 +70,19 @@ const MenuItemLink = styled(Link)`
   }
 `
 
+const button = css`
+  border: none;
+  margin: 0;
+  padding: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+`
+
 const burger = css`
   display: block;
   position: absolute;
   right: 0;
-  bottom: -32px;
+  bottom: -28px;
   z-index: 5;
 
   ${from.desktop} {
@@ -59,10 +91,16 @@ const burger = css`
 `
 
 const highlightMenuItem = css`
-  border-top: solid 3px ${neutral[100]};
+  border-bottom: solid 3px ${neutral[100]};
+  ${from.desktop} {
+    border-top: solid 3px ${neutral[100]};
+  }
 `
 const regularMenuItem = css`
-  border-top: solid 3px transparent;
+  border-bottom: solid 3px transparent;
+  ${from.desktop} {
+    border-top: solid 3px transparent;
+  }
 `
 
 const menuItems = [
@@ -85,11 +123,18 @@ function createList() {
 }
 
 function NavBar() {
+  const [menuOpen = false, toggleMenu] = useState(false)
+  const closeMenu = () => toggleMenu(false)
+  const openMenu = () => toggleMenu(true)
   return (
-    <nav css={navList}>
-      <ul>{createList()}</ul>
-      <img css={burger} src={veggieBurger} alt="menu dropdown link" />
-    </nav>
+    <>
+      <button css={button} type="button" onClick={menuOpen ? closeMenu : openMenu}>
+        <img css={burger} src={veggieBurger} alt="menu dropdown link" />
+      </button>
+      <nav css={menuOpen ? showNavList : hideNavList}>
+        <ul>{createList()}</ul>
+      </nav>
+    </>
   )
 }
 
