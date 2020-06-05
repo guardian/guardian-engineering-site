@@ -50,7 +50,7 @@ const showNavList = css`
   }
 
   ul {
-    padding: 0 ${space[7]}px;
+    padding: 0 ${space[9]}px;
   }
 
   ${from.desktop} {
@@ -121,9 +121,9 @@ const menuItems = [
   { id: 'events', text: 'Events & talks', link: '/' }
 ]
 
-function createList(closeMenu) {
+function createList(closeMenu: Function) {
   const [selected, setSelected] = useState('home')
-  const handleMenuItemClick = id => {
+  const handleMenuItemClick = (id: string) => {
     setSelected(id)
     closeMenu()
   }
