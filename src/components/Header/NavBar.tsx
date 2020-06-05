@@ -122,7 +122,7 @@ const menuItems = [
 ]
 
 function createList(closeMenu) {
-  const [selected = 'home', setSelected] = useState(false)
+  const [selected, setSelected] = useState('home')
   const handleMenuItemClick = id => {
     setSelected(id)
     closeMenu()
@@ -137,7 +137,7 @@ function createList(closeMenu) {
 }
 
 function NavBar() {
-  const [menuOpen = false, toggleMenu] = useState(false)
+  const [menuOpen, toggleMenu] = useState(false)
   const closeMenu = () => toggleMenu(false)
   const openMenu = () => toggleMenu(true)
   return (
