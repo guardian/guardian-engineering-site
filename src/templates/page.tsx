@@ -1,6 +1,7 @@
 import * as React from 'react'
 import { graphql } from 'gatsby'
 
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import IndexLayout from '../layouts'
@@ -11,14 +12,10 @@ interface PageTemplateProps {
       siteMetadata: {
         title: string
         description: string
-        author: {
-          name: string
-          url: string
-        }
       }
     }
-    markdownRemark: {
-      html: string
+    mdx: {
+      body: string
       excerpt: string
       frontmatter: {
         title: string
@@ -27,34 +24,32 @@ interface PageTemplateProps {
   }
 }
 
-const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => (
-  <IndexLayout>
-    <Page>
-      <Container>
-        <h1>{data.markdownRemark.frontmatter.title}</h1>
-        {/* eslint-disable-next-line react/no-danger */}
-        <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
-      </Container>
-    </Page>
-  </IndexLayout>
-)
+const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
+  const post = data.mdx
+
+  return (
+    <IndexLayout>
+      <Page>
+        <Container>
+          <h1>{post.frontmatter.title}</h1>
+          <MDXRenderer>{post.body}</MDXRenderer>
+        </Container>
+      </Page>
+    </IndexLayout>
+  )
+}
 
 export default PageTemplate
 
 export const query = graphql`
-  query PageTemplateQuery($slug: String!) {
+  query($slug: String!) {
     site {
       siteMetadata {
         title
-        description
-        author {
-          name
-          url
-        }
       }
     }
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+    mdx(fields: { slug: { eq: $slug } }) {
+      body
       excerpt
       frontmatter {
         title
