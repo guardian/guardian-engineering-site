@@ -12,6 +12,7 @@ const StyledHeroImage = styled.div`
   justify-self: end;
   background: blue;
   width: 100%;
+  text-align: right;
 `
 interface HeroTextProps {
   className?: string
