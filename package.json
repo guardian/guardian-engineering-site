@@ -29,6 +29,7 @@
     "@emotion/styled": "^10.0.12",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
+    "@types/mdx-js__react": "^1.5.2",
     "babel-plugin-styled-components": "^1.10.1",
     "classnames": "^2.2.6",
     "gatsby": "^2.10.0",
