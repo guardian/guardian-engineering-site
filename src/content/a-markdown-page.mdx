@@ -3,23 +3,14 @@ layout: page
 title: 'Example Markdown page'
 ---
 
-import Content from '../components/Content'
-import { HeroText, HeroImage } from '../components/HeroBox'
-import ContentSection from '../components/ContentSection'
-
-<ContentSection>
-  <HeroText>A</HeroText>
-  <HeroImage>B</HeroImage>
-  <Content>
-    <h2>Content Section</h2>
-    This is a content chunk
-  </Content>
-</ContentSection>
+<ContentSection imgSrc="https://via.placeholder.com/350x350.png" imgAlt="Placeholder" />
 
 ## Example MDX Heading
 
 Now we're writing in Markdown! Pretty nice, huh?
 
 This starter has out-of-the-box support for basic Markdown rendering. The `content/` directory is where you put all of your Markdown content in. Gatsby will build your pages out of it. Gatsby will also follow the directory structure of your files too, so when you store a page at e.g. `content/projects/large-hadron-collider.md`, it will be built in `/projects/large-hadron-collider/`.
+
+![Example Image](https://via.placeholder.com/350x350.png)
 
 [That's cool! Okay, take me back home.](/)
