@@ -12,11 +12,7 @@ const StyledContentSection = styled.section`
 
 interface ContentSectionProps {
   className?: string
-<<<<<<< HEAD
   imgSrc?: string
-=======
-  imgSrc: string
->>>>>>> d5cf16d54781078e46f2c58dfc54ca74e775bf45
   imgAlt?: string
 }
 
