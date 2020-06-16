@@ -6,10 +6,12 @@ import { MDXProvider } from '@mdx-js/react'
 import Page from '../components/Page'
 import Container from '../components/Container'
 import ContentSection from '../components/ContentSection'
+import Content from '../components/Content'
 import IndexLayout from '../layouts'
 
 const shortcodes = {
-  ContentSection
+  ContentSection,
+  Content
 }
 interface PageTemplateProps {
   data: {
