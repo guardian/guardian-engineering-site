@@ -2,10 +2,17 @@ import * as React from 'react'
 import { graphql } from 'gatsby'
 
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 import Page from '../components/Page'
 import Container from '../components/Container'
+import ContentSection from '../components/ContentSection'
+import Content from '../components/Content'
 import IndexLayout from '../layouts'
 
+const shortcodes = {
+  ContentSection,
+  Content
+}
 interface PageTemplateProps {
   data: {
     site: {
@@ -32,7 +39,9 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
       <Page>
         <Container>
           <h1>{post.frontmatter.title}</h1>
-          <MDXRenderer>{post.body}</MDXRenderer>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
         </Container>
       </Page>
     </IndexLayout>
