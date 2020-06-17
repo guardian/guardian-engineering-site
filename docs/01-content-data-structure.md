@@ -94,3 +94,85 @@ The general content of a markdown file is then available at the `html` field as 
 
 1. We move to using [.mdx](https://github.com/mdx-js/mdx) files that allow us to embed react components directly into the markdown.
 2. We use something like [`rehype-react`](https://using-remark.gatsbyjs.org/custom-components/) to create custom components.
+
+Of these two, it seems more sensible to use mdx for now as it allows styling with minimal extra work to integrate the components.
+
+## MDX
+
+[MDX](https://github.com/mdx-js/mdx) allows us to embed JSX in Markdown. The [Gatsby documentation on MDX](https://www.gatsbyjs.org/docs/mdx/) has some really useful information on getting started which I will summarise below. If you want a more detailed explanation, it's worth reading into the documentation a bit more.
+
+### Gatsby Layout/Template
+
+Similar to vanilla Markdown, there is a template file which is used to generate pages from MDX files. For us this is [src/templates/page.tsx](../src/templates/page.tsx). If you want to change how the MDX files are rendered on the page, this is the place you need to edit to reflect those broad changes.
+
+Examples of where this would be the appropriate place to implement changes would be amending the GraphQL queries or adding in new shortcodes (see below).
+
+### Embedding Components
+
+React components can be embedded directly into MDX files by importing them:
+
+```
+import { Chart } from "../components/chart"
+import FAQ from "../components/faq.mdx"
+
+# Here’s a chart
+The chart is rendered inside our MDX document.
+
+<Chart />
+<FAQ />
+```
+
+However, if we are using a component repeatedly in multiple MDX files we have the option of adding them as "shortcodes".
+
+In [page.tsx](../src/templates/page.tsx) there is a shortcodes object containing regularly used components.
+
+```js
+const shortcodes = {
+  ContentSection,
+  Content
+}
+```
+
+Thie object is then passed to the `<MDXProvider>` element in the exported `PageTemplate`
+
+```jsx
+const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
+  const post = data.mdx
+
+  return (
+    <IndexLayout>
+      <Page>
+        <Container>
+          <h1>{post.frontmatter.title}</h1>
+          <MDXProvider components={shortcodes}>
+            <MDXRenderer>{post.body}</MDXRenderer>
+          </MDXProvider>
+        </Container>
+      </Page>
+    </IndexLayout>
+  )
+}
+```
+
+Any components in this object are accessible inside the MDX files without the need to import.
+
+### Custom Markdown Components
+
+It's also possible to [customise standard Markdown components](https://www.gatsbyjs.org/docs/mdx/customizing-components/). This allows us to replace things like the default heading elements with custom components that we have styled to reflect custom requirements. This is done by adding an object to the components field of the `MDXProvider` to map the standard elements (`h1`, `h2`, `p`,...) to custom components:
+
+```jsx
+<MDXProvider
+    components={{
+    // Map HTML element tag to React component
+    h1: DesignSystem.H1,
+    h2: DesignSystem.H2,
+    h3: DesignSystem.H3,
+    // Or define component inline
+    p: props => <p {...props} style={{ color: "rebeccapurple" }} />,
+    }}
+>
+```
+
+### Programatically creating pages
+
+It's outside of the scope of this documentation to outline specifically what is needed to programatically create pages from MDX files but the [Gatsby documentation on this topic](https://www.gatsbyjs.org/docs/mdx/programmatically-creating-pages/) is comprehensive and well written.
