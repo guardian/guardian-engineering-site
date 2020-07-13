@@ -7,11 +7,14 @@ import Page from '../components/Page'
 import Container from '../components/Container'
 import ContentSection from '../components/ContentSection'
 import Content from '../components/Content'
+import { ContentLeft, ContentRight } from '../components/ContentBox'
 import IndexLayout from '../layouts'
 
 const shortcodes = {
   ContentSection,
-  Content
+  Content,
+  ContentLeft,
+  ContentRight
 }
 interface PageTemplateProps {
   data: {
