@@ -1,13 +1,14 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { HeroText, HeroImage } from './HeroBox'
+import { ContentLeft, ContentRight } from './ContentBox'
 
 const StyledContentSection = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-gap: 10px;
-  background: LightGray;
+  background: none;
+  color: white;
 `
 
 interface ContentSectionProps {
@@ -16,17 +17,8 @@ interface ContentSectionProps {
   imgAlt?: string
 }
 
-const ContentSection: React.FC<ContentSectionProps> = ({ children, className, imgSrc, imgAlt }) => {
-  return (
-    <StyledContentSection className={className}>
-      <HeroText>A</HeroText>
-      <HeroImage>
-        <img src={imgSrc} alt={imgAlt} />
-      </HeroImage>
-
-      {children}
-    </StyledContentSection>
-  )
-}
+const ContentSection: React.FC<ContentSectionProps> = ({ children, className }) => (
+  <StyledContentSection className={className}>{children}</StyledContentSection>
+)
 
 export default ContentSection
