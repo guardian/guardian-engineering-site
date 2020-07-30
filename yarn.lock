@@ -1858,14 +1858,6 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.0.0.tgz#040512320b2c297a9fb2e98d159e4cc368a6cbcf"
   integrity sha512-6F7DwPOeltgkR20yNQ+bJObHwxe5VKsZVOgYewaLoJB8LEdfVaF96DHr+WCeMUS5nV38oa7dMqdlnnPoih4CBg==
-<<<<<<< HEAD
-=======
-
-"@guardian/src-svgs@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-svgs/-/src-svgs-1.1.0.tgz#de52c09359f8b5122e652f35a9c1b8a4402560b4"
-  integrity sha512-24S1S9spRGtz50OMJ0gOGXSYIuoqM7wme+yaYVvCav/ppcrpB1yU49tfqgkWZmo4VUf8BlW8CTEWjm0cO0H3SQ==
->>>>>>> Fix ci errors
 
 "@jimp/bmp@^0.6.4":
   version "0.6.4"
