@@ -1,15 +1,14 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 
-const StyledContentLeft = styled.div`
-  grid-area: 1/1/3/2;
-  background: none;
-  width: 100%;
+import Content from './Content'
+
+const StyledContentLeft = styled(Content)`
+  float: left;
+  padding-left: 8px;
 `
-const StyledContentRight = styled.div`
-  grid-area: 1/2/3/3;
-  background: none;
-  width: 100%;
+const StyledContentRight = styled(Content)`
+  float: right;
 `
 interface ContentLeftProps {
   className?: string
