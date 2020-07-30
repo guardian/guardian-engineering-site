@@ -35,8 +35,9 @@ interface CallToActionProps {
 }
 
 export const Headline: React.FC<HeadlineProps> = ({ children, className }) => (
-<StyledHeadline className={className}>{ children }</StyledHeadline>
+  <StyledHeadline className={className}>{children}</StyledHeadline>
 )
 
-export const CallToAction: React.FC<CallToActionProps> = ({children, className }) => (<StyledCallToAction className={className}>{ children }</StyledCallToAction>)
-
+export const CallToAction: React.FC<CallToActionProps> = ({ children, className }) => (
+  <StyledCallToAction className={className}>{children}</StyledCallToAction>
+)
