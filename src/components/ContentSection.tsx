@@ -3,7 +3,6 @@ import styled from '@emotion/styled'
 // import { ContentLeft, ContentRight } from './ContentBox'
 import { neutral } from '@guardian/src-foundations/palette'
 
-
 const StyledContentSection = styled.section`
   padding-top: 5%;
   padding-bottom: 5%;
