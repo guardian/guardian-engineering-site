@@ -42,7 +42,7 @@ const IndexPage = () => (
           <ContentLeft>
             <Headline>
               <p>We build in pursuit of a cause that is greater than ourselves.</p>{' '}
-              <LearnMoreButton linkUrl="https://www.theguardian.com" />
+              <LearnMoreButton linkUrl="https://www.theguardian.com" isInternal={false} />
             </Headline>
           </ContentLeft>
           <ContentRight />
