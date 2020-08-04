@@ -17,7 +17,6 @@ const InternalButtonLink = styled(Link)`
 
 interface ButtonLinkProps {
   linkUrl: string
-  isInternal: boolean
 }
 
 interface StyledButtonProps {
