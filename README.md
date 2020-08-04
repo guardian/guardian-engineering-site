@@ -4,91 +4,43 @@
   </a>
 </p>
 <h1 align="center">
-  gatsby-starter-typescript-plus
+  theguardian.engineering
 </h1>
 
-> A starter kit for TypeScript-based Gatsby projects with sensible defaults.
+## Installation
 
-This is a starter kit for [Gatsby.js](https://www.gatsbyjs.org/) websites written in TypeScript. It includes the bare essentials for you to get started (styling, Markdown parsing, minimal toolset).
+This project uses Gatsby to build the website before deploying to Github Pages.
 
-## 🗒️ Features
+It should be possible to simply run
 
-- TypeScript
-- ESLint (with custom ESLint rules)
-- Markdown rendering with Remark
-- Basic component structure
-- Styling with [emotion](https://emotion.sh/)
+```bash
+yarn
+```
 
-## 🚀 Quick start
+to install all dependencies.
 
-> A nodejs >= 6.0.0 setup with [yarn](https://yarnpkg.com/) is recommended.
+## Development
 
-1.  **Create a Gatsby site.**
+The dev server can be set up using
 
-    Install `gatsby-cli` package globally on your machine.
+```bash
+yarn dev
+```
 
-    ```bash
-    # using NPM
-    npm install -g gatsby-cli
+which uses gatsby to set up a dev server that will watch for changes on the javascript code. If the GraphQL schema is being updated,the dev server may need restarting in order for the changes to appear.
 
-    # using YARN
-    yarn global add gatsby-cli
-    ```
+The project is tested using
 
-    Use the `gatsby-cli` to create a new site and install its dependencies.
+```bash
+yarn ci
+```
 
-    ```bash
-    gatsby new project-name https://github.com/resir014/gatsby-starter-typescript-plus
-    ```
+which is also run using Github Actions on a `push`.
 
-2.  **Start developing.**
+## Releasing
 
-    Move to project's directory.
-
-    ```bash
-    cd project-name/
-    ```
-
-    Start your site.
-
-    ```bash
-    # using npm
-    npm start
-
-    # using yarn
-    yarn start
-    ```
-
-    Open source code using your favorite IDE/Text editor and navigate to `src/` directory, this is where your application live.
-
-3.  **Build your application for production.**
-
-    Once you're finished, you can make production build of your app using:
-
-    ```bash
-    # using npm
-    npm run build
-
-    # using yarn
-    yarn build
-    ```
-
-4.  **Deploy your app to Github pages!**
-
-    After building your application in step 3, you're ready to publish your app and go online!
-
-    ```bash
-    # using npm
-    npm run deploy
-
-    # using yarn
-    yarn deploy
-    ```
+Release is done automatically upon merging to `main`.
 
 ## ❤️ Credits
 
 Built with [Gatsby](https://www.gatsbyjs.org/) - the blazing-fast static site generator for [React](https://facebook.github.io/react/).
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/resir014/gatsby-starter-typescript-plus)
