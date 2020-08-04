@@ -5,6 +5,7 @@ import { Link } from 'gatsby'
 import { Button, buttonBrandAlt } from '@guardian/src-button'
 import { ThemeProvider } from 'emotion-theming'
 import { SvgArrowRightStraight } from '@guardian/src-icons'
+import { isInternalLink } from 'is-internal-link'
 
 const ExternalButtonLink = styled.a`
   margin-bottom: ${space[1]}px;
@@ -31,8 +32,8 @@ const StyledButton: React.FC<StyledButtonProps> = ({ buttonText }) => (
   </ThemeProvider>
 )
 
-export const LearnMoreButton: React.FC<ButtonLinkProps> = ({ linkUrl, isInternal }) => {
-  if (isInternal) {
+export const LearnMoreButton: React.FC<ButtonLinkProps> = ({ linkUrl }) => {
+  if (isInternalLink(linkUrl)) {
     return (
       <InternalButtonLink to={linkUrl}>
         <StyledButton buttonText="Learn More" />
