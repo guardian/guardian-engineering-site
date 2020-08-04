@@ -2,7 +2,9 @@ import * as React from 'react'
 import styled from '@emotion/styled'
 
 const StyledContent = styled.section`
-  grid-area: 3/1/4/4;
+  background: none;
+  width: 100%;
+  color: white;
 `
 
 interface ContentProps {

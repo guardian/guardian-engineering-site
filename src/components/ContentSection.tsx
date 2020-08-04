@@ -1,13 +1,18 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { HeroText, HeroImage } from './HeroBox'
+// import { ContentLeft, ContentRight } from './ContentBox'
+import { neutral } from '@guardian/src-foundations/palette'
 
 const StyledContentSection = styled.section`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 10px;
-  background: LightGray;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  display: flex;
+  border-bottom: ${neutral[46]} 0.2px solid;
+  /* Mobile Devices */
+  @media (min-width: 320px) and (max-width: 812px) {
+    padding-top: 10%;
+    flex-direction: column;
+  }
 `
 
 interface ContentSectionProps {
@@ -16,17 +21,8 @@ interface ContentSectionProps {
   imgAlt?: string
 }
 
-const ContentSection: React.FC<ContentSectionProps> = ({ children, className, imgSrc, imgAlt }) => {
-  return (
-    <StyledContentSection className={className}>
-      <HeroText>A</HeroText>
-      <HeroImage>
-        <img src={imgSrc} alt={imgAlt} />
-      </HeroImage>
-
-      {children}
-    </StyledContentSection>
-  )
-}
+const ContentSection: React.FC<ContentSectionProps> = ({ children, className }) => (
+  <StyledContentSection className={className}>{children}</StyledContentSection>
+)
 
 export default ContentSection
