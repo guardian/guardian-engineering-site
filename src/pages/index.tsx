@@ -7,6 +7,7 @@ import { ContentLeft, ContentRight } from '../components/ContentBox'
 import ContentSection from '../components/ContentSection'
 import { Headline, CallToAction } from '../components/HomePage/Headline'
 import { BodyContainer } from '../components/HomePage/BodyContainer'
+import { Image } from '../components/Image'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -15,24 +16,12 @@ const IndexPage = () => (
         <ContentSection>
           <ContentLeft>
             <Headline>
-              <p>We're shaping the future of digital journalism.</p> <CallToAction>Join us.</CallToAction>
+              <p>We're shaping the future of digital journalism.</p>
+              <CallToAction>Join us.</CallToAction>
             </Headline>
           </ContentLeft>
           <ContentRight>
-            <StaticQuery
-              query={graphql`
-                query {
-                  fileName: file(relativePath: { eq: "assets/home-about-gnm.jpg" }) {
-                    childImageSharp {
-                      fluid(maxWidth: 450, maxHeight: 500, cropFocus: ENTROPY, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              `}
-              render={data => <Img fluid={data.fileName.childImageSharp.fluid} alt="The Guardian reception" />}
-            />
+            <Image filename="images/home-about-gnm.jpg" />
           </ContentRight>
         </ContentSection>
 
