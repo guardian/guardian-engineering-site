@@ -34,7 +34,7 @@ const IndexPage = () => (
                   }
                 }
               `}
-              render={(data: any) => <Img fluid={data.fileName.childImageSharp.fluid} alt="The Guardian reception" />}
+              render={(data: any) => <Img fluid={data.fileName?.childImageSharp.fluid} alt="The Guardian reception" />}
             />
           </ContentRight>
         </ContentSection>
