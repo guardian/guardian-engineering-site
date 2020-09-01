@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 // import Section from '../components/Section'
