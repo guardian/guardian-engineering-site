@@ -9,14 +9,12 @@ import ContentSection from '../components/ContentSection'
 import Content from '../components/Content'
 import { ContentLeft, ContentRight } from '../components/ContentBox'
 import IndexLayout from '../layouts'
-import { Image } from '../components/Image'
 
 const shortcodes = {
   ContentSection,
   Content,
   ContentLeft,
-  ContentRight,
-  Image
+  ContentRight
 }
 interface PageTemplateProps {
   data: {
