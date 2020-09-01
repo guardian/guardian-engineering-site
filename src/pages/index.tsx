@@ -1,6 +1,4 @@
 import * as React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
-import Img from 'gatsby-image'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
 // import Section from '../components/Section'
@@ -9,6 +7,7 @@ import { ContentLeft, ContentRight } from '../components/ContentBox'
 import ContentSection from '../components/ContentSection'
 import { Headline, CallToAction } from '../components/HomePage/Headline'
 import { BodyContainer } from '../components/HomePage/BodyContainer'
+import { Image } from '../components/Image'
 
 const IndexPage = () => (
   <IndexLayout>
@@ -22,20 +21,7 @@ const IndexPage = () => (
             </Headline>
           </ContentLeft>
           <ContentRight>
-            <StaticQuery
-              query={graphql`
-                query {
-                  fileName: file(relativePath: { eq: "assets/home-about-gnm.jpg" }) {
-                    childImageSharp {
-                      fluid(maxWidth: 450, maxHeight: 500, cropFocus: ENTROPY, quality: 100) {
-                        ...GatsbyImageSharpFluid
-                      }
-                    }
-                  }
-                }
-              `}
-              render={(data: any) => <Img fluid={data.fileName?.childImageSharp.fluid} alt="The Guardian reception" />}
-            />
+            <Image filename="images/home-about-gnm.jpg" />
           </ContentRight>
         </ContentSection>
 
