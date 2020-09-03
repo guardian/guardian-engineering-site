@@ -11,6 +11,7 @@ import arrowRightStraight from './arrowRight.png'
 const JobLink = styled(Link)`
   display: block;
   top: ${space[2]}px;
+  margin-left: ${space[2]}px;
 `
 
 const jobsButton = {
@@ -33,7 +34,7 @@ function JobLinkButton() {
   return (
     <JobLink to="https://workforus.theguardian.com/">
       <ThemeProvider theme={jobsButton}>
-        <Button size="xsmall" iconSide="right" icon={<ArrowRightStraight />}>
+        <Button size="small" iconSide="right" icon={<ArrowRightStraight />}>
           Jobs
         </Button>
       </ThemeProvider>
