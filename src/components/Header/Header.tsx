@@ -118,7 +118,7 @@ const TwitterLinkButton = () => {
         icon={<SvgTwitter />}
         hideLabel
       >
-        <span />
+        Twitter @gdndevelopers
       </LinkButton>
     </ThemeProvider>
   )
@@ -145,7 +145,7 @@ const GithubLinkButton = () => {
   return (
     <ThemeProvider theme={socialButton}>
       <LinkButton size="small" css={socialLinkWrapper} href="https://github.com/guardian" target="_blank" icon={<SvgGithub />} hideLabel>
-        <span />
+        Github @guardian
       </LinkButton>
     </ThemeProvider>
   )
