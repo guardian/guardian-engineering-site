@@ -115,10 +115,10 @@ const regularMenuItem = css`
 
 const menuItems = [
   { id: 'home', text: 'Home', link: '/' },
-  { id: 'diversity', text: 'Diversity & inclusion', link: '/' },
-  { id: 'openPeople', text: 'Open people', link: '/' },
-  { id: 'openSource', text: 'Open source', link: '/' },
-  { id: 'events', text: 'Events & talks', link: '/' }
+  { id: 'diversity', text: 'Diversity & inclusion', link: '/diversity' },
+  { id: 'openPeople', text: 'Open people', link: '/open-people' },
+  { id: 'openSource', text: 'Open source', link: '/open-source' },
+  { id: 'events', text: 'Events & talks', link: '/events' }
 ]
 
 function createList(closeMenu: Function) {

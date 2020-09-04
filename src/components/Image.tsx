@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
-import Img from 'gatsby-image'
+import Img, { FluidObject } from 'gatsby-image'
 import styled from '@emotion/styled'
 
 interface ImageProps {
@@ -39,8 +39,8 @@ export const Image: React.FC<ImageProps> = props => (
         return <div>No image found :(</div>
       }
 
-      const imageSizes = image.node.childImageSharp.sizes
-      return <StyledImg alt={props.alt} sizes={imageSizes} />
+      const imageSizes: FluidObject = image.node.childImageSharp.sizes
+      return <StyledImg alt={props.alt} fluid={imageSizes} />
     }}
   />
 )

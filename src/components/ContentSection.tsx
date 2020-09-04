@@ -7,6 +7,7 @@ const StyledContentSection = styled.section`
   padding-top: 5%;
   padding-bottom: 5%;
   display: flex;
+  color: white;
   border-bottom: ${neutral[46]} 0.2px solid;
   /* Mobile Devices */
   @media (min-width: 320px) and (max-width: 812px) {
