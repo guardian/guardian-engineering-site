@@ -10,9 +10,8 @@ import arrowRightStraight from './arrowRight.png'
 
 const JobLink = styled(Link)`
   display: block;
-  position: absolute;
-  right: 0;
   top: ${space[2]}px;
+  margin-left: ${space[2]}px;
 `
 
 const jobsButton = {
@@ -26,6 +25,7 @@ const arrowRight = css`
   width: 20px;
   height: 20px;
   margin-left: ${space[2]}px;
+  margin-right: ${space[1]}px;
 `
 
 const ArrowRightStraight = () => <img css={arrowRight} src={arrowRightStraight} alt="" />
@@ -34,7 +34,7 @@ function JobLinkButton() {
   return (
     <JobLink to="https://workforus.theguardian.com/">
       <ThemeProvider theme={jobsButton}>
-        <Button size="xsmall" iconSide="right" icon={<ArrowRightStraight />}>
+        <Button size="small" iconSide="right" icon={<ArrowRightStraight />}>
           Jobs
         </Button>
       </ThemeProvider>
