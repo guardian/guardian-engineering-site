@@ -135,7 +135,7 @@ const RSSLinkButton = () => {
         icon={<SvgRSS />}
         hideLabel
       >
-        <span />
+        RSS Feed
       </LinkButton>
     </ThemeProvider>
   )
