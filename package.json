@@ -30,7 +30,7 @@
     "@emotion/styled": "^10.0.12",
     "@guardian/src-button": "^2.0.0",
     "@guardian/src-foundations": "^2.0.0",
-    "@guardian/src-icons": "^2.0.0",
+    "@guardian/src-icons": "^2.3.0",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
     "@types/mdx-js__react": "^1.5.2",

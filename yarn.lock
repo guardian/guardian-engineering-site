@@ -1152,10 +1152,10 @@
   dependencies:
     "@guardian/src-foundations" "^2.2.0"
 
-"@guardian/src-icons@^2.0.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.2.0.tgz#c4cc2f8a96dbba1ca0aa9f9ab379f6a4e0a3be16"
-  integrity sha512-WBIv2Z/aw/jnxUMbZaJ/+cnlfLrqRdSakZsDbopJnSospKZiaphVHAOEkA+5tQaAP1M4C0Z+PpfrEf7iKfsO2w==
+"@guardian/src-icons@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.3.0.tgz#6fb09b37616ebd075ed1ab7a3363412e2f852b9e"
+  integrity sha512-V/qgRZ+bRIkbyhLF45DY8hSiOwyHIxdkNQ6mq0HMxlGkdqg3MPEfrOHes17VQTPT6NJxwD5S2qHcEKxTs7XDIA==
 
 "@hapi/address@2.x.x":
   version "2.1.4"
