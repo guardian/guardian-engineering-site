@@ -16,7 +16,7 @@ const IndexPage = () => (
         <ContentSection>
           <ContentLeft>
             <Headline>
-              <p>We're shaping the future of digital journalism.</p>
+              <p>We're shaping the&nbsp;future of&nbsp;digital journalism.</p>
               <CallToAction>Join us.</CallToAction>
             </Headline>
           </ContentLeft>
