@@ -9,7 +9,7 @@ interface ImageProps {
 }
 
 const StyledImg = styled(Img)`
-  width: 80%;
+  width: 100%;
 `
 
 export const Image: React.FC<ImageProps> = props => (
