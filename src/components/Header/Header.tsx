@@ -11,7 +11,7 @@ import { LinkButton } from '@guardian/src-button/index'
 import { SvgTwitter } from '@guardian/src-icons/twitter'
 import { heights, dimensions, colors } from '../../styles/variables'
 import Container from '../Container'
-import logo from './logo.png'
+import logo from './logo.svg'
 import JobLinkButton from './JobLinkButton'
 import NavBar from './NavBar'
 
