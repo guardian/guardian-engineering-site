@@ -1,13 +1,14 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
+import { colors, fonts } from '../../styles/variables'
 
 const StyledHeadline = styled.h1`
   position: relative;
   top: 5%;
-  font-family: GH Guardian Headline;
+  font-family: ${fonts.headline};
   font-size: 75px;
   line-height: 101.6%;
-  color: #ffffff;
+  color: ${colors.primaryText};
   margin-bottom: 16px;
   /* Tablet/Landscape Mobile Phone */
   @media (min-width: 650px) and (max-width: 812px) {
@@ -22,8 +23,8 @@ const StyledHeadline = styled.h1`
 
 const StyledCallToAction = styled.p`
   display: inline-block;
-  background: white;
-  color: #000000;
+  background: ${colors.white};
+  color: ${colors.black};
 `
 
 interface HeadlineProps {

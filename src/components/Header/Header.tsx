@@ -19,7 +19,7 @@ const StyledHeader = styled.header`
   height: ${heights.header}px;
   padding: 0 ${space[3]}px;
   background-color: ${colors.siteBackground};
-  color: ${transparentize(0.5, colors.white)};
+  color: ${transparentize(0.5, colors.primaryText)};
 
   ${from.desktop} {
     padding: 0 ${dimensions.containerPadding}rem;
