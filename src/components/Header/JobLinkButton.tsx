@@ -16,7 +16,7 @@ const JobLink = styled(Link)`
 
 const jobsButton = {
   button: {
-    textPrimary: colors.primaryText,
+    textPrimary: colors.siteBackground,
     backgroundPrimary: colors.silverGrey
   }
 }
