@@ -1,6 +1,7 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { dimensions, colors } from '../styles/variables'
+// import { dimensions, colors } from '../styles/variables'
 
 const gradients: Record<string, string> = {
   purple: `linear-gradient(180deg, #45CFED 0%, #FFE500 100%);`,
@@ -19,6 +20,8 @@ const StyledFloater = styled.div`
   border-radius: ${(props: FloaterProps) => sizes[props.size]};
   background: red;
   position: absolute;
+  top: 0;
+  right: ${(props: FloaterProps) => (props.right ? '-2' : '95')}%;
   background: ${gradients.green};
   transform: rotate(${(props: FloaterProps) => `${props.rotation}deg`});
 `
@@ -28,8 +31,9 @@ interface FloaterProps {
   size: 'small' | 'medium' | 'large'
   gradient: 'purple' | 'green'
   rotation: number
+  right?: boolean
 }
 
-export const Floater: React.FC<FloaterProps> = ({ className, size, gradient, rotation }) => {
-  return <StyledFloater className={className} size={size} gradient={gradient} rotation={rotation} />
+export const Floater: React.FC<FloaterProps> = props => {
+  return <StyledFloater {...props} />
 }

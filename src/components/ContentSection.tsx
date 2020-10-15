@@ -8,6 +8,8 @@ const StyledContentSection = styled.section`
   display: flex;
   color: ${colors.primaryText};
   border-bottom: ${colors.ui.light} 0.2px solid;
+  position: relative;
+
   /* Mobile Devices */
   @media (min-width: 320px) and (max-width: 812px) {
     padding-top: 10%;
