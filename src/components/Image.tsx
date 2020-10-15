@@ -32,6 +32,7 @@ export const Image: React.FC<ImageProps> = props => (
       }
     `}
     render={data => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const image = data.images.edges.find((n: Record<string, any>) => {
         return n.node.relativePath.includes(props.filename)
       })
