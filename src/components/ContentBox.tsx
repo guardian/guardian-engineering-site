@@ -9,6 +9,8 @@ const StyledContentLeft = styled(Content)`
 `
 const StyledContentRight = styled(Content)`
   float: right;
+  width: 120%;
+  margin-right: -40%;
 `
 interface ContentLeftProps {
   className?: string

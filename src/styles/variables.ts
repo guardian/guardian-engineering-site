@@ -5,7 +5,7 @@ import { brandAltBackground, neutral } from '@guardian/src-foundations/palette'
 export const colors = {
   siteBackground: `${brandAltBackground.ctaPrimary}`,
   silverGrey: `${neutral[86]}`,
-  primaryText: `${neutral[7]}`,
+  primaryText: `${neutral[97]}`,
   brand: 'blue',
   lilac: '#9d7cbf',
   accent: '#ffb238',
@@ -18,8 +18,8 @@ export const colors = {
   },
   code: '#fcf6f0',
   gray: {
-    dark: 'hsla(270, 17.119554496%, 0%, 0.92)',
-    copy: 'hsla(270, 15.797828016000002%, 0%, 0.88)',
+    dark: 'hsla(270, 17%, 0%, 0.92)',
+    copy: 'hsla(270, 16%, 0%, 0.88)',
     calm: 'rgba(0, 0, 0, 0.54)'
   },
   white: '#fff',
@@ -30,7 +30,8 @@ export const fonts = {
   sansSerif:
     '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif',
   serif: 'Georgia, "Times New Roman", Times, serif',
-  monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace'
+  monospace: 'Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace, monospace',
+  headline: 'GH Guardian Headline, Georgia, "Times New Roman", Times, serif'
 }
 
 export const breakpoints = {

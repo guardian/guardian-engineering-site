@@ -23,7 +23,7 @@ export default `
     overflow-y: scroll;
     font-family: ${fonts.sansSerif};
     color: ${colors.black};
-    background-color: ${colors.white};
+    background-color: ${colors.black};
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
   }
@@ -86,7 +86,7 @@ export default `
   h1, h2, h3, h4, h5, h6 {
     margin-top: 1.414rem;
     margin-bottom: .5rem;
-    color: ${colors.white};
+    color: ${colors.primaryText};
     font-weight: 600;
     line-height: ${dimensions.lineHeight.heading};
     text-rendering: optimizeLegibility;

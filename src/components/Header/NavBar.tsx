@@ -4,15 +4,15 @@ import styled from '@emotion/styled'
 import { Link } from 'gatsby'
 import { from } from '@guardian/src-foundations/mq'
 import { space } from '@guardian/src-foundations'
-import { neutral, lifestyle } from '@guardian/src-foundations/palette'
+import { neutral } from '@guardian/src-foundations/palette'
 import { headline } from '@guardian/src-foundations/typography'
+import { colors } from '../../styles/variables'
 import veggieBurger from './veggieBurger.png'
 
 const desktopMenu = css`
   width: 100%;
-  border-top: ${neutral[46]} 0.2px solid;
-  border-right: ${neutral[46]} 0.2px solid;
-  border-left: ${neutral[46]} 0.2px solid;
+  border: ${colors.ui.light} 0.2px solid;
+  border-bottom: none;
   display: flex;
   align-self: flex-end;
   ul {
@@ -23,7 +23,7 @@ const desktopMenu = css`
     li {
       display: block;
       ${headline.xxxsmall()};
-      border-left: ${neutral[46]} 0.2px solid;
+      border-left: ${colors.ui.light} 0.2px solid;
       padding: ${space[1]}px ${space[6]}px 0 ${space[3]}px;
       :first-of-type {
         border-left: none;
@@ -37,7 +37,7 @@ const showNavList = css`
   position: absolute;
   top: 0;
   left: -12px;
-  background: ${lifestyle[400]};
+  background: ${colors.lilac};
   z-index: 10;
   li {
     list-style: none;
@@ -69,7 +69,7 @@ const hideNavList = css`
 `
 
 const MenuItemLink = styled(Link)`
-  color: white;
+  color: ${colors.primaryText};
   &:hover,
   &:focus {
     text-decoration: none;
@@ -97,10 +97,10 @@ const burger = css`
 `
 
 const highlightMenuItem = css`
-  border-bottom: solid 3px ${neutral[100]};
+  border-bottom: solid 3px ${colors.ui.light};
   border-top: none;
   ${from.desktop} {
-    border-top: solid 3px ${neutral[100]};
+    border-top: solid 3px ${colors.ui.light};
     border-bottom: none;
   }
 `
