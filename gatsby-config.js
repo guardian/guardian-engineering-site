@@ -55,6 +55,22 @@ module.exports = {
 
           {
             resolve: `gatsby-remark-smartypants`
+          },
+          {
+            resolve: 'gatsby-remark-custom-blocks',
+            options: {
+              blocks: {
+                contentSection: {
+                  classes: 'content-section'
+                },
+                contentLeft: {
+                  classes: 'content-left'
+                },
+                contentRight: {
+                  classes: 'content-right'
+                }
+              }
+            }
           }
         ]
       }
@@ -65,6 +81,7 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
-    'gatsby-remark-images'
+    'gatsby-remark-images',
+    'gatsby-plugin-sass'
   ]
 }

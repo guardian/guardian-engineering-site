@@ -1,0 +1,41 @@
+$colors: (
+  'primaryText': #f6f6f6,
+  'ui-light': #f5f3f7
+);
+
+@mixin content {
+  background: none;
+  width: 100%;
+  color: map-get($colors, 'primaryText');
+}
+
+.content-section {
+  padding-top: 5%;
+  padding-bottom: 5%;
+  color: map-get($colors, 'primaryText');
+  border-bottom: map-get($colors, 'ui-light') 1px solid;
+  /* Mobile Devices */
+  @media (min-width: 320px) and (max-width: 812px) {
+    padding-top: 10%;
+  }
+}
+
+.content-section > .custom-block-body {
+  display: flex;
+  @media (min-width: 320px) and (max-width: 812px) {
+    flex-direction: column;
+  }
+}
+
+.content-right {
+  @include content;
+  float: right;
+  width: 120%;
+  margin-right: -40%;
+}
+
+.content-left {
+  @include content;
+  float: left;
+  padding-left: 8px;
+}

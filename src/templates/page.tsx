@@ -5,13 +5,15 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import Page from '../components/Page'
 import { BodyContainer } from '../components/HomePage/BodyContainer'
-import ContentSection from '../components/ContentSection'
-import Content from '../components/Content'
-import { ContentLeft, ContentRight } from '../components/ContentBox'
+import ContentSection from '../components/Content/ContentSection'
+import Content from '../components/Content/Content'
+import { ContentLeft, ContentRight } from '../components/Content/ContentBox'
 import { Headline, CallToAction } from '../components/HomePage/Headline'
 import { Image } from '../components/Image'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
 import IndexLayout from '../layouts'
+
+import '../styles/css/global.scss'
 
 const shortcodes = {
   ContentSection,

@@ -9,10 +9,12 @@ import { isInternalLink } from 'is-internal-link'
 
 const ExternalButtonLink = styled.a`
   margin-bottom: ${space[1]}px;
+  clear: left;
 `
 
 const InternalButtonLink = styled(Link)`
   margin-bottom: ${space[1]}px;
+  clear: left;
 `
 
 interface ButtonLinkProps {
