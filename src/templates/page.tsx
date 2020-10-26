@@ -18,8 +18,8 @@ const shortcodes = {
   Content,
   ContentLeft,
   ContentRight,
-  Headline,
-  CallToAction,
+  h1: Headline,
+  em: CallToAction,
   Image,
   LearnMoreButton
 }
@@ -48,7 +48,6 @@ const PageTemplate: React.FC<PageTemplateProps> = ({ data }) => {
     <IndexLayout>
       <Page>
         <BodyContainer>
-          <h1>{post.frontmatter.title}</h1>
           <MDXProvider components={shortcodes}>
             <MDXRenderer>{post.body}</MDXRenderer>
           </MDXProvider>
