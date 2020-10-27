@@ -20,7 +20,7 @@ const shortcodes = {
   Content,
   ContentLeft,
   ContentRight,
-  h1: Headline,
+  h2: Headline,
   em: CallToAction,
   Image,
   LearnMoreButton
