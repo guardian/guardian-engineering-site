@@ -33,7 +33,7 @@
     "@guardian/src-icons": "^2.5.0",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.5",
-    "@types/mdx-js__react": "^1.5.2",
+    "@types/mdx-js__react": "^1.5.3",
     "babel-plugin-styled-components": "^1.10.1",
     "classnames": "^2.2.6",
     "emotion-theming": "^10.0.27",
