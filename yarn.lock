@@ -1320,24 +1320,29 @@
     "@ardatan/aggregate-error" "0.0.1"
     camel-case "4.1.1"
 
-"@guardian/src-button@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-2.1.0.tgz#59e4bec31dce699debcb2c49c128251e00e96ecc"
-  integrity sha512-9k/HudQOVePp4kjBd/NgZTR46X+VRQ2flWkaewxu1v8wcnBMC4Sm4wYgqsj6Jo7qAf1q3r4kLV/nG8rnd7BETQ==
+"@guardian/src-button@^2.5.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-2.7.0.tgz#343406e314d017cce3da28e1c2c270a5b3972bdd"
+  integrity sha512-gpEyKCQtP0euPe3SizZDOzZCAgLa/R2+tZhs8yHi8szOi6obu05ie4v+Lcoo0tN4GwIz9l1tGOpFFx1puhkiKg==
   dependencies:
-    "@guardian/src-helpers" "^2.1.0"
+    "@guardian/src-helpers" "^2.7.0"
 
-"@guardian/src-foundations@^2.0.0", "@guardian/src-foundations@^2.2.0":
+"@guardian/src-foundations@^2.0.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.2.0.tgz#24066902f964bfe4cb4b2056204e10b8787e3e97"
   integrity sha512-wkXxF9O7xoYxZMxg6XQJWiZpnxG/Luff1BnQfvYJGHRgjZs7GMM7pZCueiO4GyB39qXxQH1Rsp1jlzdV+GKRLw==
 
-"@guardian/src-helpers@^2.1.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.2.0.tgz#7d24f612ac1db201e235e0482ad9185b7f230a9d"
-  integrity sha512-3tdF8eemIPhYZBBZFF+EFKo2ltfmZKC+JAB2aZajiRS6mVhsbpjkIU2XhvXFjkmtZRMKbT/K/xHWV1PDJLB5uA==
+"@guardian/src-foundations@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.7.0.tgz#e82c2ff535918beea132a4228b2e2bbab68f669f"
+  integrity sha512-aEn/tloYu7d0iuUZ9VPJPB1xO0WqkOavs9NU0wiGhcLgebEU3FW5Uq62PlZPiGua6CyRYuveXQ0R36teHt7nJw==
+
+"@guardian/src-helpers@^2.7.0":
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.7.0.tgz#90a8068ee768c27408360360019576e014ab58b9"
+  integrity sha512-rUxrUkzQQ9Q1dEnX4Zljw9JvTV6AKwvtX2c46mHTTkc9AtIbNJWpOa06KOkdCKgZb2LS0ywHxAc+OFxZNLDTYg==
   dependencies:
-    "@guardian/src-foundations" "^2.2.0"
+    "@guardian/src-foundations" "^2.7.0"
 
 "@guardian/src-icons@^2.5.0":
   version "2.5.0"
