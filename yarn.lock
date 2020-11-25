@@ -6785,6 +6785,11 @@ gatsby-graphiql-explorer@^0.4.13:
   dependencies:
     "@babel/runtime" "^7.10.3"
 
+gatsby-image-background-slider@0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-image-background-slider/-/gatsby-image-background-slider-0.0.4.tgz#001869cb1c3382e91bd754dfd8aea92d19cabfcb"
+  integrity sha512-g09T4vrKUirl1eOVCnUpWGYXvlYChpjW6Wu7FQfP4jPCk5Jg/ROYXMUtai1ieXbiQ75BaRbWLcVsSkTxeqBYjw==
+
 gatsby-image@^2.2.1:
   version "2.4.16"
   resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.4.16.tgz#65ce1642bb6a0c8d87c74b204ed79995cd43da16"

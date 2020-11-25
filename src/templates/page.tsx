@@ -11,6 +11,7 @@ import { ContentLeft, ContentRight } from '../components/ContentBox'
 import { Headline, CallToAction } from '../components/HomePage/Headline'
 import { Image } from '../components/Image'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
+import ImageSlider from '../components/ImageSlider'
 import IndexLayout from '../layouts'
 
 const shortcodes = {
@@ -21,7 +22,8 @@ const shortcodes = {
   Headline,
   CallToAction,
   Image,
-  LearnMoreButton
+  LearnMoreButton,
+  ImageSlider
 }
 interface PageTemplateProps {
   data: {
