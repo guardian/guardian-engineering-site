@@ -10,10 +10,7 @@ const StyledPage = styled.div`
   position: relative;
   padding: 0 ${space[3]}px;
   margin-bottom: 3rem;
-  h1,
-  p {
-    color: ${colors.primaryText};
-  }
+  color: ${colors.primaryText};
 
   ${from.desktop} {
     padding: 0 ${dimensions.containerPadding}rem;
