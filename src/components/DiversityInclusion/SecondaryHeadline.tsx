@@ -1,11 +1,10 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { headline } from '@guardian/src-foundations/typography'
+import { titlepiece } from '@guardian/src-foundations/typography'
 
 const StyledSecondaryHeadline = styled.h2`
-  ${headline.xlarge({ fontWeight: 'bold' })};
-  font-size: 64px;
-  margin-bottom: 16px;
+  ${titlepiece.large({ fontWeight: 'bold' })};
+  margin-right: 8px;
   /* Tablet/Landscape Mobile Phone */
   @media (min-width: 650px) and (max-width: 812px) {
     font-size: 48px;
