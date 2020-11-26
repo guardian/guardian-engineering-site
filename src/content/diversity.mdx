@@ -3,6 +3,10 @@ layout: page
 title: 'Diversity'
 ---
 
+import Carousel from 'react-elastic-carousel';
+import { events } from '../components/DIEvents/events';
+
+
 We value and respect all differences in all people (seen and unseen) at the Guardian. Here are some of the ways in which we help to promote a diverse and inclusive culture.
 
 <ContentSection>
@@ -17,18 +21,23 @@ We value and respect all differences in all people (seen and unseen) at the Guar
 
 <ContentTitle>Events</ContentTitle>
 
-<ContentSection>
-
-  <ContentLeft>
-    <Image filename="images/home-about-gnm.jpg" />
-  </ContentLeft>
-  <ContentRight>
-    <ContentCard>
-      <h2>Ada Lovelance Day</h2>
-      <p>Girls aged 14-16 from a range of schools were invited to the Guardian’s Education Centre for a day of events and workshops designed to give them insight into working in technology. The students found out about career paths, took a tour of our Digital department and took part in coding, UX and data workshops.</p>
-    </ContentCard>
-  </ContentRight>
-</ContentSection>
+<Carousel>
+     {events.map(event =>
+       <div key={event.title}>
+        <ContentSection>
+          <ContentLeft>
+            <Image filename={event.imgSrc} />
+          </ContentLeft>
+          <ContentRight>
+            <ContentCard>
+              <h2>{event.title}</h2>
+              <p>{event.description}</p>
+            </ContentCard>
+          </ContentRight>
+        </ContentSection>
+       </div>
+       )}
+</Carousel>
 
 
 
