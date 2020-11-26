@@ -7,7 +7,7 @@ import Page from '../components/Page'
 import { BodyContainer } from '../components/HomePage/BodyContainer'
 import ContentSection from '../components/ContentSection'
 import Content from '../components/Content'
-import { ContentLeft, ContentRight } from '../components/ContentBox'
+import { ContentLeft, ContentRight, ContentCard, ContentTitle } from '../components/ContentBox'
 import { Headline, CallToAction } from '../components/HomePage/Headline'
 import { Image } from '../components/Image'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
@@ -19,6 +19,8 @@ const shortcodes = {
   Content,
   ContentLeft,
   ContentRight,
+  ContentCard,
+  ContentTitle,
   Headline,
   CallToAction,
   Image,
