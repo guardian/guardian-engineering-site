@@ -1,16 +1,14 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { headline } from '@guardian/src-foundations/typography'
-import { colors } from '../../styles/variables'
+import { colors } from '../styles/variables'
 
-const StyledHeadline = styled.h1`
-  font-family: GH Guardian Headline;
-  font-weight: 600;
-  position: relative;
-  width: 10ch;
+const StyledSecondaryHeadline = styled.section`
+  position: absolute;
   top: 5%;
+  margin-left: 16px;
   ${headline.small({ fontWeight: 'bold' })};
-  font-size: 75px;
+  font-size: 50px;
   line-height: 101.6%;
   color: ${colors.primaryText};
   margin-bottom: 16px;
@@ -25,10 +23,10 @@ const StyledHeadline = styled.h1`
   }
 `
 
-interface HeadlineProps {
+interface SecondaryHeadlineProps {
   className?: string
 }
 
-export const DIHeadline: React.FC<HeadlineProps> = ({ children, className }) => (
-  <StyledHeadline className={className}>{children}</StyledHeadline>
+export const SecondaryHeadline: React.FC<SecondaryHeadlineProps> = ({ children, className }) => (
+  <StyledSecondaryHeadline className={className}>{children}</StyledSecondaryHeadline>
 )

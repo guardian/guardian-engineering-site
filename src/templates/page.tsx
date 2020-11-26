@@ -8,10 +8,12 @@ import { BodyContainer } from '../components/HomePage/BodyContainer'
 import ContentSection from '../components/ContentSection'
 import Content from '../components/Content'
 import { ContentLeft, ContentRight } from '../components/ContentBox'
-import { Headline, CallToAction } from '../components/HomePage/Headline'
-import { DIHeadline } from '../components/DiversityInclusion/Headline'
-import { Standfirst } from '../components/DiversityInclusion/Standfirst'
-import { StyledContentBox, InnerContentBox } from '../components/DiversityInclusion/ContentBox'
+import { Headline, CallToAction } from '../components/Headline'
+import { Standfirst } from '../components/Standfirst'
+import { StyledContentBox, InnerContentBox, personIcon } from '../components/DiversityInclusion/ContentBox'
+import { SecondaryHeadline } from '../components/SecondaryHeadline'
+import { ContentHeadline } from '../components/ContentHeadline'
+import { BodyText } from '../components/BodyText'
 import { Image } from '../components/Image'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
 import IndexLayout from '../layouts'
@@ -25,10 +27,13 @@ const shortcodes = {
   CallToAction,
   Image,
   LearnMoreButton,
-  DIHeadline,
   Standfirst,
   StyledContentBox,
-  InnerContentBox
+  InnerContentBox,
+  SecondaryHeadline,
+  ContentHeadline,
+  BodyText,
+  personIcon
 }
 interface PageTemplateProps {
   data: {

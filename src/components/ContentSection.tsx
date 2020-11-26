@@ -6,6 +6,7 @@ const StyledContentSection = styled.section<ContentSectionProps>`
   padding-top: 5%;
   padding-bottom: 5%;
   display: flex;
+  position: relative;
   color: ${colors.primaryText};
   border-bottom: ${props => (props.borderBottom ? `${colors.ui.light} 0.2px solid;` : 'none;')};
   /* Mobile Devices */

@@ -1,13 +1,14 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
 import { headline } from '@guardian/src-foundations/typography'
-import { colors } from '../../styles/variables'
+import { colors } from '../styles/variables'
 
 const StyledStandfirst = styled.h2`
   font-family: GH Guardian Headline;
   font-weight: 400;
   position: relative;
   top: 5%;
+  margin-left: 16px;
   ${headline.xxsmall({ fontWeight: 'regular' })};
   color: ${colors.primaryText};
   width: 400px;
