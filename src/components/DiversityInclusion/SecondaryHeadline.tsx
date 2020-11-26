@@ -16,9 +16,9 @@ const StyledSecondaryHeadline = styled.h2`
   }
 `
 interface HeadlineProps {
-    className?: string
+  className?: string
 }
 
 export const DISecondaryHeadline: React.FC<HeadlineProps> = ({ children, className }) => (
-    <StyledSecondaryHeadline className={className}>{children}</StyledSecondaryHeadline>
+  <StyledSecondaryHeadline className={className}>{children}</StyledSecondaryHeadline>
 )
