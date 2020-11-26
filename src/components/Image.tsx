@@ -6,9 +6,13 @@ import styled from '@emotion/styled'
 interface ImageProps {
   filename: string
   alt?: string
+  className?: string
 }
 
 const StyledImg = styled(Img)`
+  &.diImage {
+    margin-top: 200px;
+  }
   width: 100%;
 `
 
@@ -41,7 +45,7 @@ export const Image: React.FC<ImageProps> = props => (
       }
 
       const imageSizes: FluidObject = image.node.childImageSharp.sizes
-      return <StyledImg alt={props.alt} fluid={imageSizes} />
+      return <StyledImg alt={props.alt} fluid={imageSizes} className={props.className} />
     }}
   />
 )

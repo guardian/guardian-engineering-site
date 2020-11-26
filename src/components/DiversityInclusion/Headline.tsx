@@ -7,6 +7,7 @@ const StyledHeadline = styled.h1`
   font-family: GH Guardian Headline;
   font-weight: 600;
   position: relative;
+  width: 10ch;
   top: 5%;
   ${headline.small({ fontWeight: 'bold' })};
   font-size: 75px;
@@ -24,24 +25,10 @@ const StyledHeadline = styled.h1`
   }
 `
 
-const StyledCallToAction = styled.p`
-  display: inline-block;
-  background: ${colors.white};
-  color: ${colors.black};
-`
-
 interface HeadlineProps {
   className?: string
 }
 
-interface CallToActionProps {
-  className?: string
-}
-
-export const Headline: React.FC<HeadlineProps> = ({ children, className }) => (
+export const DIHeadline: React.FC<HeadlineProps> = ({ children, className }) => (
   <StyledHeadline className={className}>{children}</StyledHeadline>
-)
-
-export const CallToAction: React.FC<CallToActionProps> = ({ children, className }) => (
-  <StyledCallToAction className={className}>{children}</StyledCallToAction>
 )
