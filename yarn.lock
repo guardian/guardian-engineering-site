@@ -1302,10 +1302,10 @@
   dependencies:
     "@guardian/src-helpers" "^2.1.0"
 
-"@guardian/src-foundations@^2.0.0", "@guardian/src-foundations@^2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.2.0.tgz#24066902f964bfe4cb4b2056204e10b8787e3e97"
-  integrity sha512-wkXxF9O7xoYxZMxg6XQJWiZpnxG/Luff1BnQfvYJGHRgjZs7GMM7pZCueiO4GyB39qXxQH1Rsp1jlzdV+GKRLw==
+"@guardian/src-foundations@^2.2.0", "@guardian/src-foundations@^2.8.1":
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.8.1.tgz#f684927187006e80988cc617fa110cf2b2d2a962"
+  integrity sha512-CFpmL8ZGYfBp0YdFR9MaZRL+PfbbZFTwV2k4r/0+9KXh4U/mhmQWjJ/75GvtuLc5K2HQK42kf0SMnqRnHL/s1A==
 
 "@guardian/src-helpers@^2.1.0":
   version "2.2.0"
