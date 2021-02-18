@@ -1,6 +1,8 @@
 ---
 layout: page
 ---
+import { events } from '../components/DIEvents/events';
+import Carousel from 'react-elastic-carousel';
 
 <ContentSection>
   <ContentLeft>
@@ -50,3 +52,26 @@ layout: page
   </StyledTextContainer>
 </ContentSection>
 
+<ContentSection>
+  <ContentLeft>
+    <DISecondaryHeadline>Events</DISecondaryHeadline>
+  </ContentLeft>
+</ContentSection>
+
+<Carousel>
+     {events.map(event =>
+       <div key={event.title}>
+        <ContentSection>
+          <ContentLeft>
+            <Image filename={event.imgSrc} />
+          </ContentLeft>
+          <ContentRight>
+            <ContentCard>
+              <h2>{event.title}</h2>
+              <p>{event.description}</p>
+            </ContentCard>
+          </ContentRight>
+        </ContentSection>
+       </div>
+       )}
+</Carousel>
