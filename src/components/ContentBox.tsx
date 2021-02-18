@@ -8,6 +8,9 @@ const StyledContentLeft = styled(Content)`
   padding-left: 8px;
 `
 const StyledContentRight = styled(Content)`
+  &.contentRight {
+    margin-right: -10%;
+  }
   float: right;
 `
 
