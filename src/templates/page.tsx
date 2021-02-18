@@ -40,7 +40,7 @@ const shortcodes = {
   StyledTextContainer,
   ContentBoxTitle,
   ContentBoxText,
-  InnerContainer,
+  InnerContainer
 }
 interface PageTemplateProps {
   data: {

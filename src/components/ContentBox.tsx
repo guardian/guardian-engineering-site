@@ -20,7 +20,6 @@ const StyledContentTitle = styled(Content)`
   font-size: 64px;
   line-height: 55px;
   margin: 50px 0 0 20px;
-
 `
 
 const StyledContentCard = styled(Content)`
