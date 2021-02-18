@@ -1307,6 +1307,11 @@
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.2.0.tgz#24066902f964bfe4cb4b2056204e10b8787e3e97"
   integrity sha512-wkXxF9O7xoYxZMxg6XQJWiZpnxG/Luff1BnQfvYJGHRgjZs7GMM7pZCueiO4GyB39qXxQH1Rsp1jlzdV+GKRLw==
 
+"@guardian/src-foundations@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.7.1.tgz#d245a5ebedd520bf3be1b10ff7c5a0b5962a0a03"
+  integrity sha512-U0XVJWugB6vXoORZPcfvnISAhwaIM5/Pz5uGj628+OcqF3vwm0dBUt1UTesVqOsG7tVUQvGG/n96wXWjGwmVmQ==
+
 "@guardian/src-helpers@^2.1.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.2.0.tgz#7d24f612ac1db201e235e0482ad9185b7f230a9d"
@@ -1314,10 +1319,24 @@
   dependencies:
     "@guardian/src-foundations" "^2.2.0"
 
-"@guardian/src-icons@^2.5.0":
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.5.0.tgz#a84364a9285778fd3f5b752eb96c09fe03e07678"
-  integrity sha512-8RPxI+fYLwKP5ffM2BudF2/K66aw2viOyx67buEFq/+R6aFXlJft9ImNvtDCXKZLRzki8hnLc6yRhv1SihHfkA==
+"@guardian/src-helpers@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.7.1.tgz#b16834473f7f89716f7d98c60f3394e4bb6a3305"
+  integrity sha512-HGc+hkBq+ltlCeRrgsJ5a+tpGnvVg8iZgzOxkzeiMTCxbR8c5vtogFx51trgvb5sH5780UoDFh0ACGY1xyMamw==
+  dependencies:
+    "@guardian/src-foundations" "^2.7.1"
+
+"@guardian/src-icons@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.7.1.tgz#600ba5a16fd3857657360632caac1b2f38740829"
+  integrity sha512-gQ7XrH3R++kZOXSK4e5ajRrUxNMgzQH7LiQ4HSYH51mJceh3YWtsc4934O5sCpJjJjhFiWGYubbg4BG14smUPg==
+
+"@guardian/src-layout@^2.7.1":
+  version "2.7.1"
+  resolved "https://registry.yarnpkg.com/@guardian/src-layout/-/src-layout-2.7.1.tgz#73a817df733fa7b5ee8301cd6992383303e9e519"
+  integrity sha512-VkKSa+K0Fo8oy84oFRujMHOU0icZOo0UjvDZWNAZBXD9SqrEx2a5xasRYGoX6gYFW3Uw5yr3W9u6na1icKdViQ==
+  dependencies:
+    "@guardian/src-helpers" "^2.7.1"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
