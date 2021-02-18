@@ -3,18 +3,7 @@ layout: page
 title: 'Example Markdown page'
 ---
 
-<ContentSection>
-  <ContentLeft>Content Left </ContentLeft>
-  <ContentRight>
-    <img imgSrc="https://via.placeholder.com/350x350.png" imgAlt="Placeholder" />
-  </ContentRight>
-  <Content>
-    <h2>Content Body</h2>
-    This is a content chunk
-  </Content>
-</ContentSection>
-
-## Example MDX Heading
+## Example MD Heading
 
 Now we're writing in Markdown! Pretty nice, huh?
 
