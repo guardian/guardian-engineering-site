@@ -5,7 +5,7 @@ import IndexLayout from '../layouts'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
 import { ContentLeft, ContentRight } from '../components/ContentBox'
 import ContentSection from '../components/ContentSection'
-import { Headline, CallToAction } from '../components/HomePage/Headline'
+import { Headline, CallToAction } from '../components/Headline'
 import { BodyContainer } from '../components/HomePage/BodyContainer'
 import { Image } from '../components/Image'
 
