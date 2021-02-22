@@ -6,6 +6,7 @@ const StyledContent = styled.section`
   background: none;
   width: 100%;
   color: ${colors.primaryText};
+  margin-right: 0;
 `
 
 interface ContentProps {
