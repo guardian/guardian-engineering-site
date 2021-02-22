@@ -1627,43 +1627,36 @@
     is-promise "4.0.0"
     tslib "~2.0.1"
 
-"@guardian/src-button@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-2.1.0.tgz#59e4bec31dce699debcb2c49c128251e00e96ecc"
-  integrity sha512-9k/HudQOVePp4kjBd/NgZTR46X+VRQ2flWkaewxu1v8wcnBMC4Sm4wYgqsj6Jo7qAf1q3r4kLV/nG8rnd7BETQ==
+"@guardian/src-button@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@guardian/src-button/-/src-button-2.8.2.tgz#0b6b09217adb789cc48d9d1be418953adfc220d5"
+  integrity sha512-jymXzWItJLKiItdaQ1meOgttgAIgr40PxI8dTm0s+lpEUA7nB59RKWP4tLAyRCTx8WVUVQiNeOGrwCAFpdUnIw==
   dependencies:
-    "@guardian/src-helpers" "^2.1.0"
+    "@guardian/src-helpers" "^2.8.2"
 
-"@guardian/src-foundations@^2.2.0", "@guardian/src-foundations@^2.7.1", "@guardian/src-foundations@^2.8.2":
+"@guardian/src-foundations@^2.8.2":
   version "2.8.2"
   resolved "https://registry.yarnpkg.com/@guardian/src-foundations/-/src-foundations-2.8.2.tgz#5c6478a159059b044d6b0ac59688b7cae50b21b5"
   integrity sha512-DUluJNGcOIgx5/EvgE4T5JZSKfceR+oMMZw8UAUVWOrKH8W9xeE4AGCquZlh/COXJDCP6YvDyRW6yk4EVqEwww==
 
-"@guardian/src-helpers@^2.1.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.2.0.tgz#7d24f612ac1db201e235e0482ad9185b7f230a9d"
-  integrity sha512-3tdF8eemIPhYZBBZFF+EFKo2ltfmZKC+JAB2aZajiRS6mVhsbpjkIU2XhvXFjkmtZRMKbT/K/xHWV1PDJLB5uA==
+"@guardian/src-helpers@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.8.2.tgz#ea5bd0ebe3ef874aeee0d87655e530d99fa68e5c"
+  integrity sha512-b9AU/HB1RJsj1rmB1bSKixXUbVwcgCiXsdhOiPv0WsZ/5Lhwv0hOXXS9mTXOKsLx96xNlP5dHugBQfYLMnL4/w==
   dependencies:
-    "@guardian/src-foundations" "^2.2.0"
+    "@guardian/src-foundations" "^2.8.2"
 
-"@guardian/src-helpers@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@guardian/src-helpers/-/src-helpers-2.7.1.tgz#b16834473f7f89716f7d98c60f3394e4bb6a3305"
-  integrity sha512-HGc+hkBq+ltlCeRrgsJ5a+tpGnvVg8iZgzOxkzeiMTCxbR8c5vtogFx51trgvb5sH5780UoDFh0ACGY1xyMamw==
+"@guardian/src-icons@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.8.2.tgz#73156da434d45a987f992fe2d9b33dc34e79ad4d"
+  integrity sha512-Bu56mmOczbuHbL6HadhZ6HevsuUgWwiKo6FXmYWaWVI/3EfTNNi7nX8WZgB1mE9jsbhQrPBchfUp7j+tsRD4BA==
+
+"@guardian/src-layout@^2.8.2":
+  version "2.8.2"
+  resolved "https://registry.yarnpkg.com/@guardian/src-layout/-/src-layout-2.8.2.tgz#ab6362bccefa39338217200653996a49d694c55a"
+  integrity sha512-3AFxd7TG7KBFpyfG5WiGG8/XhMAIQ1nMYm+E3Sdo8ZE0/gxWz8zGPoCAcIYlmdv+MGcckYECL5PpGfrLeyKX9Q==
   dependencies:
-    "@guardian/src-foundations" "^2.7.1"
-
-"@guardian/src-icons@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@guardian/src-icons/-/src-icons-2.7.1.tgz#600ba5a16fd3857657360632caac1b2f38740829"
-  integrity sha512-gQ7XrH3R++kZOXSK4e5ajRrUxNMgzQH7LiQ4HSYH51mJceh3YWtsc4934O5sCpJjJjhFiWGYubbg4BG14smUPg==
-
-"@guardian/src-layout@^2.7.1":
-  version "2.7.1"
-  resolved "https://registry.yarnpkg.com/@guardian/src-layout/-/src-layout-2.7.1.tgz#73a817df733fa7b5ee8301cd6992383303e9e519"
-  integrity sha512-VkKSa+K0Fo8oy84oFRujMHOU0icZOo0UjvDZWNAZBXD9SqrEx2a5xasRYGoX6gYFW3Uw5yr3W9u6na1icKdViQ==
-  dependencies:
-    "@guardian/src-helpers" "^2.7.1"
+    "@guardian/src-helpers" "^2.8.2"
 
 "@hapi/address@2.x.x":
   version "2.1.4"
@@ -15354,11 +15347,6 @@ uuid@3.4.0, uuid@^3.0.0, uuid@^3.0.1, uuid@^3.3.2, uuid@^3.4.0:
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.4.0.tgz#b23e4358afa8a202fe7a100af1f5f883f02007ee"
   integrity sha512-HjSDRw6gZE5JMggctHBcjVak08+KEVhSIiDzFnT9S9aegmp85S/bReBVTb4QTFaRNptJ9kuYaNhnbNEOkbKb/A==
-
-uuid@^8.3.0:
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
-  integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==
 
 v8-compile-cache@^1.1.2:
   version "1.1.2"

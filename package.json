@@ -28,10 +28,10 @@
   "dependencies": {
     "@emotion/core": "^10.0.10",
     "@emotion/styled": "^10.0.12",
-    "@guardian/src-button": "^2.5.0",
+    "@guardian/src-button": "^2.8.2",
     "@guardian/src-foundations": "^2.8.2",
-    "@guardian/src-icons": "^2.7.1",
-    "@guardian/src-layout": "^2.7.1",
+    "@guardian/src-icons": "^2.8.2",
+    "@guardian/src-layout": "^2.8.2",
     "@mdx-js/mdx": "^1.6.5",
     "@mdx-js/react": "^1.6.21",
     "@types/mdx-js__react": "^1.5.3",
