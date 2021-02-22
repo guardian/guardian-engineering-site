@@ -3,7 +3,7 @@ layout: page
 title: 'The Guardian Engineering'
 ---
 
-<ContentSection>
+<ContentSection borderBottom="true">
   <ContentLeft>
     <Headline>
       <p>We're shaping the&nbsp;future of&nbsp;digital journalism.</p>
@@ -15,7 +15,7 @@ title: 'The Guardian Engineering'
   </ContentRight>
 </ContentSection>
 
-<ContentSection>
+<ContentSection borderBottom="true">
   <ContentLeft>
     <Headline>
       <p>We build in pursuit of a cause that is greater than ourselves.</p> <LearnMoreButton linkUrl="https://www.theguardian.com" />

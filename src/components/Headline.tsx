@@ -1,11 +1,16 @@
 import * as React from 'react'
 import styled from '@emotion/styled'
-import { colors, fonts } from '../../styles/variables'
+import { headline } from '@guardian/src-foundations/typography'
+import { colors } from '../styles/variables'
 
 const StyledHeadline = styled.h1`
+  font-family: GH Guardian Headline;
+  font-weight: 600;
   position: relative;
   top: 5%;
-  font-family: ${fonts.headline};
+  width: 10ch;
+  margin-left: 16px;
+  ${headline.large({ fontWeight: 'bold' })};
   font-size: 75px;
   line-height: 101.6%;
   color: ${colors.primaryText};
