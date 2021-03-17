@@ -1,7 +1,6 @@
 import * as React from 'react'
 import Page from '../components/Page'
 import IndexLayout from '../layouts'
-// import Section from '../components/Section'
 import { LearnMoreButton } from '../components/HomePage/LearnMoreButton'
 import { ContentLeft, ContentRight } from '../components/ContentBox'
 import ContentSection from '../components/ContentSection'
