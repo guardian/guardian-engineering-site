@@ -58,7 +58,7 @@ const DiversityPage = () => (
               <PersonIcon />
               <ContentHeadline>CV screening</ContentHeadline>
               <BodyText>
-                Three members of the Engineering team independently review redacted CVs before meeting to discuss their decisions together.
+                Two members of the Engineering team independently review redacted CVs before meeting to discuss their decisions together.
                 We encourage rotation of these groups to promote a broad and diverse range of reviewers.
               </BodyText>
             </InnerContentBox>
