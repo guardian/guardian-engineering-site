@@ -6,7 +6,7 @@ const ContentBoxContainer = styled.section`
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex: 1 1 0px
+  flex: 1 1 0px;
   flex-basis: 0;
   margin-right: 8px;
   margin-left: 8px;
@@ -33,7 +33,7 @@ export const InnerContentBox = styled.div`
   }
 `
 
-export const personIcon: React.FC<ContentBoxProps> = () => <SvgPerson />
+export const PersonIcon: React.FC<ContentBoxProps> = () => <SvgPerson />
 
 interface ContentBoxProps {
   className?: string

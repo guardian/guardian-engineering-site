@@ -30,13 +30,9 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-transformer-remark`,
       options: {
-        extensions: ['.mdx', '.md'],
-        // a workaround to solve mdx-remark plugin compat issue
-        // https://github.com/gatsbyjs/gatsby/issues/15486
-        plugins: [`gatsby-remark-images`],
-        gatsbyRemarkPlugins: [
+        plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
