@@ -32,7 +32,7 @@
     "@guardian/src-foundations": "^2.8.2",
     "@guardian/src-icons": "^2.8.2",
     "@guardian/src-layout": "^2.8.2",
-    "babel-plugin-styled-components": "^1.10.1",
+    "babel-plugin-styled-components": "^1.12.0",
     "classnames": "^2.2.6",
     "emotion-theming": "^10.0.27",
     "gatsby": "^2.25.0",
