@@ -1,6 +1,6 @@
 ---
 layout: ../layouts/page.astro
-title: 'Events & Talks'
+title: "Events & Talks"
 ---
 
 Here's a list of events and talks:
