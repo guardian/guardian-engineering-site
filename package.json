@@ -16,6 +16,8 @@
     "npm-check-updates": "^11.8.5"
   },
   "dependencies": {
-    "@guardian/source-foundations": "^4.0.0-alpha.5"
+    "@guardian/source-foundations": "^4.0.0-alpha.5",
+    "@vanilla-extract/css": "^1.6.3",
+    "@vanilla-extract/snowpack-plugin": "^2.0.1"
   }
 }

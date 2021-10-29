@@ -3,29 +3,25 @@
 import MainHead from '../components/MainHead.astro';
 import Button from '../components/Button/index.jsx';
 import Nav from '../components/Nav/index.jsx';
-import Footer from '../components/Footer/index.jsx';
+import Footer from '../components/Footer.astro';
 import PortfolioPreview from '../components/PortfolioPreview/index.jsx';
 import { Markdown } from 'astro/components';
 
-// Data Fetching: List all Markdown posts in the repo.
-const projects = Astro.fetchContent('./project/**/*.md');
-const featuredProject = projects[0];
+import PageLayout from '../layouts/page.astro';
+
+import { body, heading } from '../styles/index.css.ts';
 
 // Full Astro Component Syntax:
 // https://docs.astro.build/core-concepts/astro-components/
 ---
-<html lang="en">
-  <head>
-    <MainHead />
-  </head>
-  <body>
-    <Nav />
-    <Markdown>
-      ## We're shaping the future of digital journalism.
-      ## [Join us.](https://workforus.theguardian.com/)
 
-      We build in pursuit of a cause that is greater than ourselves.
-    </Markdown>
-    <Footer />
-  </body>
-</html>
+<PageLayout>
+<h2 class={heading}>
+      We're shaping the future of digital journalism.
+      <br>
+     <a href="https://workforus.theguardian.com/"
+      >Join Us</a> 
+      </h2>
+
+      <h3 class={heading}>We build in pursuit of a cause that is greater than ourselves.</h3>
+</PageLayout>
