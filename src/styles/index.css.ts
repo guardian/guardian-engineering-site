@@ -12,9 +12,17 @@ const footer = style({
   color: "#ccc",
   backgroundColor: "#111",
   padding: paddingPx(space[2]),
+  fontFamily: cleanUpFamily(textBody.medium()),
 });
 
-const header = style([footer]);
+const header = style([
+  footer,
+  {
+    borderTop: "solid",
+    borderColor: "#ccc",
+    borderWidth: 1,
+  },
+]);
 
 const body = style({
   color: "#ccc",
@@ -22,6 +30,7 @@ const body = style({
   fontFamily: cleanUpFamily(textBody.medium()),
   maxWidth: "1300px",
   margin: "0 auto",
+  minHeight: "100vh",
 });
 
 const heading = style({

@@ -1,0 +1,60 @@
+---
+
+import { header } from '../styles/index.css';
+---
+<style lang="scss">
+    header {
+        padding: 1rem;
+    }
+
+    nav {
+        display: flex;
+
+        * {
+            &.active {
+                font-weight: bold;
+            }
+
+            &:focus,
+            &:hover {
+                color: red;
+            }
+
+            &:nth-child(n + 2) {
+                margin-left: 1em;
+            }
+        }
+    }
+</style>
+<header>
+    <nav class={header}>
+        <a href="/">
+            Home
+        </a>
+        
+        <a href="https://workforus.theguardian.com/">
+            Jobs &rarr;
+        </a>
+
+        <span>
+            <!-- circle -->
+            &#x25CF;
+        </span>
+
+        <a href="/open#people">
+            Open People
+        </a>
+
+        <a href="/open#source">
+            Open Source
+        </a>
+
+        <a href="/diversity">
+            Diversity
+        </a>
+
+        <a  href="/events">
+            Events &amp; Talks
+        </a>
+    </nav>
+</header>
