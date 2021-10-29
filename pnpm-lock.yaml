@@ -2,12 +2,12 @@ lockfileVersion: 5.3
 
 specifiers:
   '@astrojs/renderer-preact': ^0.2.2
-  '@guardian/src-foundations': ^3.10.2-alpha.1
+  '@guardian/source-foundations': ^4.0.0-alpha.5
   astro: ^0.20.12
   npm-check-updates: ^11.8.5
 
 dependencies:
-  '@guardian/src-foundations': 3.10.2-alpha.1
+  '@guardian/source-foundations': 4.0.0-alpha.5
 
 devDependencies:
   '@astrojs/renderer-preact': 0.2.2
@@ -424,8 +424,8 @@ packages:
     resolution: {integrity: sha512-82cpyJyKRoQoRi+14ibCeGPu0CwypgtBAdBhq1WfvagpCZNKqwXbKwXllYSMG91DhmG4jt9gN8eP6lGOtozuaw==}
     dev: true
 
-  /@guardian/src-foundations/3.10.2-alpha.1:
-    resolution: {integrity: sha512-Z1uzk2WfQ5Kxti6f/v99AVPhXubV95o9sTTRQExETkFYc7DFzC57sSBZNi+8zqY4TKqN78//49johpPU3183uA==}
+  /@guardian/source-foundations/4.0.0-alpha.5:
+    resolution: {integrity: sha512-m2ACiPCr5cKLdE5XKGhqi7wOF0VgTdDbvCONlrKiKaCMDbv5FyJJ1Pq89YdLIZ5c+TCqWUd09Azit1krblYpkQ==}
     dev: false
 
   /@isaacs/string-locale-compare/1.1.0:
