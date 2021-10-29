@@ -11,6 +11,7 @@
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.2.2",
+    "@guardian/eslint-plugin-source": "^4.0.0-alpha.3",
     "astro": "^0.20.12",
     "npm-check-updates": "^11.8.5"
   },
