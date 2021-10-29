@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "upgrade-src": "pnpm ncu \"/^@guardian/src-.*$/\" -u --target greatest && pnpm install",
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview"
@@ -11,6 +12,9 @@
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.2.2",
     "astro": "^0.20.12",
-    "@astrojs/renderer-preact": "^0.2.2"
+    "npm-check-updates": "^11.8.5"
+  },
+  "dependencies": {
+    "@guardian/src-foundations": "^3.10.2-alpha.1"
   }
 }
