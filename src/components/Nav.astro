@@ -1,6 +1,7 @@
 ---
-
 import { header } from '../styles/index.css';
+
+import { LinkButton } from '@guardian/source-react-components'
 ---
 <style lang="scss">
     header {
@@ -10,7 +11,10 @@ import { header } from '../styles/index.css';
     nav {
         display: flex;
 
-        * {
+        *:nth-child(n + 2) {
+            margin-left: 1em;
+        }
+        a {
             &.active {
                 font-weight: bold;
             }
@@ -19,27 +23,32 @@ import { header } from '../styles/index.css';
             &:hover {
                 color: red;
             }
-
-            &:nth-child(n + 2) {
-                margin-left: 1em;
-            }
         }
     }
 </style>
 <header>
+    <section id="social-presence">
+    <ul>
+        <li>
+            
+      
+    <a href=""></a>
+        </li>
+        <li>
+        <LinkButton href="https://github.com/guardian" target="_blank">
+        Github @guardian
+        </LinkButton>
+            <a ></a>
+        </li>
+        <a href="https://workforus.theguardian.com/">
+            Jobs &rarr;
+        </a>
+    </ul>
+    </section>
     <nav class={header}>
         <a href="/">
             Home
         </a>
-        
-        <a href="https://workforus.theguardian.com/">
-            Jobs &rarr;
-        </a>
-
-        <span>
-            <!-- circle -->
-            &#x25CF;
-        </span>
 
         <a href="/open#people">
             Open People

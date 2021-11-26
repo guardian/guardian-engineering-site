@@ -10,14 +10,18 @@
     "preview": "astro preview"
   },
   "devDependencies": {
-    "@astrojs/renderer-preact": "^0.2.2",
-    "@guardian/eslint-plugin-source": "^4.0.0-alpha.3",
-    "astro": "^0.20.12",
-    "npm-check-updates": "^11.8.5"
+    "@astrojs/renderer-preact": "^0.3.0",
+    "@babel/core": "^7.16.0",
+    "@emotion/react": "^11.7.0",
+    "astro": "^0.21.4",
+    "npm-check-updates": "^11.8.5",
+    "react": "^17.0.2",
+    "vite": "^2.6.14"
   },
   "dependencies": {
-    "@guardian/source-foundations": "^4.0.0-alpha.5",
-    "@vanilla-extract/css": "^1.6.3",
-    "@vanilla-extract/snowpack-plugin": "^2.0.1"
+    "@guardian/source-foundations": "^4.0.0-rc.4",
+    "@guardian/source-react-components": "^4.0.0-rc.2",
+    "@vanilla-extract/css": "^1.6.4",
+    "@vanilla-extract/vite-plugin": "^3.0.1"
   }
 }

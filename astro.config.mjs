@@ -1,6 +1,8 @@
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+
 // @type-check enabled!
 // VSCode and other TypeScript-enabled text editors will provide auto-completion,
 // helpful tooltips, and warnings if your exported object is invalid.
@@ -9,5 +11,8 @@
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
   // Enable the Preact renderer to support Preact JSX components.
-  renderers: ['@astrojs/renderer-preact'],
+  renderers: ["@astrojs/renderer-preact"],
+  vite: {
+    plugins: [vanillaExtractPlugin()],
+  },
 });
