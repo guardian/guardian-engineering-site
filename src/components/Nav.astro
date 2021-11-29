@@ -1,19 +1,42 @@
 ---
-import { header } from '../styles/index.css';
+import { LinkGithub } from './icons/Github.tsx';
+import { LinkTwitter } from './icons/Twitter.tsx';
+import { LinkJobs } from './icons/Jobs.tsx';
+import {
+  LinkButton,
+  SvgArrowRightStraight,
+  SvgTwitter,
+} from "@guardian/source-react-components";
 
-import { LinkButton } from '@guardian/source-react-components'
+import { borderColor } from '../styles/shared.ts'
+
 ---
-<style lang="scss">
+<style lang="scss" define:vars={{borderColor}}>
     header {
         padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    ul#social-presence {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
     }
 
     nav {
+        border-top: 1px solid var(--borderColor);
+        
+        flex-basis: 100%;
         display: flex;
 
         *:nth-child(n + 2) {
             margin-left: 1em;
+            padding-left: 1em;
+            border-left: 1px solid var(--borderColor);
         }
+
         a {
             &.active {
                 font-weight: bold;
@@ -25,27 +48,28 @@ import { LinkButton } from '@guardian/source-react-components'
             }
         }
     }
+
+    h1 {
+
+    }
 </style>
 <header>
-    <section id="social-presence">
-    <ul>
-        <li>
-            
-      
-    <a href=""></a>
-        </li>
-        <li>
-        <LinkButton href="https://github.com/guardian" target="_blank">
-        Github @guardian
-        </LinkButton>
-            <a ></a>
-        </li>
-        <a href="https://workforus.theguardian.com/">
-            Jobs &rarr;
-        </a>
-    </ul>
-    </section>
-    <nav class={header}>
+    
+    <ul id="social-presence">
+    <li>
+        <LinkGithub />
+    </li>
+    <li>
+        <LinkTwitter />
+    </li>
+    <li>
+        <LinkJobs />
+    </li>
+  </ul>
+    
+    <h1>The Guardian Developers</h1>
+
+    <nav>
         <a href="/">
             Home
         </a>
@@ -66,4 +90,5 @@ import { LinkButton } from '@guardian/source-react-components'
             Events &amp; Talks
         </a>
     </nav>
+
 </header>
