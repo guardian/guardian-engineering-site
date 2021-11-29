@@ -1,6 +1,6 @@
 import { fonts } from "@guardian/source-foundations";
 
-export const borderColor = "#ccc";
+export const borderColor = "#555";
 export const font = {
     body: fonts.textSans,
     heading: fonts.titlepiece,
