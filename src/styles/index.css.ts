@@ -1,3 +1,6 @@
+// This file isn’t currently used, but it may be useful for future
+// explorations in vanilla-extract
+
 import { style } from "@vanilla-extract/css";
 import {
   space,
