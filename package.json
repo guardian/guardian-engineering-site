@@ -20,9 +20,8 @@
     "vite": "^2.6.14"
   },
   "dependencies": {
+    "@emotion/core": "^11.0.0",
     "@guardian/source-foundations": "^4.0.0-rc.4",
-    "@guardian/source-react-components": "^4.0.0-rc.2",
-    "@vanilla-extract/css": "^1.6.4",
-    "@vanilla-extract/vite-plugin": "^3"
+    "@guardian/source-react-components": "^4.0.0-rc.2"
   }
 }
