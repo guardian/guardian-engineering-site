@@ -1,69 +1,70 @@
 ---
-import Nav from '../components/Nav.astro';
-import Footer from '../components/Footer.astro';
-import Social from '../components/Social.astro';
+import Nav from "../components/Nav.astro";
+import Footer from "../components/Footer.astro";
+import Social from "../components/Social.astro";
 
 import { font } from "../styles/shared.ts";
 
-const { title = 'The Guardian : Engineering' } = Astro.props;
+const { title = "The Guardian : Engineering" } = Astro.props;
 
 const { pathname = "/" } = Astro.request.url;
 
 const { body, heading } = font;
 ---
+
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{title}</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
 
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-        <!-- this Font-face import is slow - do not use it for production Guardian sites -->
-        <link
-            href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
-            rel="stylesheet"
-        />
-    </head>
+    <!-- this Font-face import is slow - do not use it for production Guardian sites -->
+    <link
+      href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
+      rel="stylesheet"
+    />
+  </head>
 
-    <body>
-        <style global define:vars={{body, heading}}>
-            body {
-                font-family: var(--body);
-                max-width: 1300px;
-                margin: 0 auto;
-                min-height: 100vh;
-                background-color: #111;
-                color: #ccc;
-            }
+  <body>
+    <style global define:vars={{ body, heading }}>
+      body {
+        font-family: var(--body);
+        max-width: 1300px;
+        margin: 0 auto;
+        min-height: 100vh;
+        background-color: #111;
+        color: #ccc;
+      }
 
-            h1, h2, h3 {
-                font-family: var(--heading);
-            }
+      h1,
+      h2,
+      h3 {
+        font-family: var(--heading);
+      }
 
+      header {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
 
-            header {
-                padding: 1rem;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: space-between;
-            }
+      main {
+        border: 1px solid #444;
+      }
+    </style>
 
-            main {
-                border: 1px solid #444;
-            }
-        </style>
+    <header>
+      <Social />
+    </header>
 
-        <header>
-            <Social />
-        </header>
+    <main id="content">
+      <Nav path={pathname} />
 
-        <main id="content">
-            <Nav path={pathname} />
+      <slot />
 
-            <slot />
-
-            <Footer />
-        </main>
-    </body>
-
+      <Footer />
+    </main>
+  </body>
 </html>

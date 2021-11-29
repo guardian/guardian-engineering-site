@@ -1,55 +1,70 @@
 ---
-import PageLayout from '../layouts/page.astro';
+import PageLayout from "../layouts/page.astro";
 
-const card = "card"
+const card = "card";
 
 const title = "Diversity &amp; Inclusion";
 ---
 
-<PageLayout title={title}>
-    <style>
-        ul {
-            display: flex;
-            list-style-type: none;
-            padding: 0;
-            align-content: space-between;
-        }
+<PageLayout {title}>
+  <style>
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      align-content: space-between;
+    }
 
-        li {
-            margin: 1em;
-            padding: 1em;
-            width: 30%;
-        }
-    </style>
-    <h1>{title}</h1>
+    li {
+      margin: 1em;
+      padding: 1em;
+      width: 30%;
+    }
+  </style>
+  <h1>{title}</h1>
 
-    <p>We value and respect all differences in all people (seen and unseen) at the Guardian. Here are some of the ways in which we help to promote a diverse and inclusive culture.
-    </p>
+  <p>
+    We value and respect all differences in all people (seen and unseen) at the
+    Guardian. Here are some of the ways in which we help to promote a diverse
+    and inclusive culture.
+  </p>
 
+  <h2>Recruitment</h2>
 
-    <h2>Recruitment</h2>
+  <ul>
+    <li class={card}>
+      <h3>Job advertisement and description screening</h3>
+      <p>
+        We use an augmented writing tool which uses a combination of natural
+        language processing and data mining to screen our job postings for
+        unconscious bias, reveal gendered language and help our job ads to
+        appeal to a more diverse range of candidates.
+      </p>
+    </li>
 
-    <ul>
-        <li class={card}>
-            <h3>Job advertisement and description screening</h3>
-            <p>We use an augmented writing tool which uses a combination of natural language processing and data mining to screen our job postings for unconscious bias, reveal gendered language and help our job ads to appeal to a more diverse range of candidates.</p>
-            </li>
-        
-        <li class={card}>
-            <h3>Blind CV reviews</h3>
-            <p>We redact candidate's names and educational institutions from CVs before they are reviewed by members of the Engineering team to avoid unconscious bias in the selection process.</p></li>
-            
-        <li class={card}>
-            <h3>CV screening</h3>
-            <p>Two members of the Engineering team independently review redacted CVs before meeting to discuss their decisions together. We encourage rotation of these groups to promote a broad and diverse range of reviewers.</p>
-        </li>
-    </ul>
+    <li class={card}>
+      <h3>Blind CV reviews</h3>
+      <p>
+        We redact candidate's names and educational institutions from CVs before
+        they are reviewed by members of the Engineering team to avoid
+        unconscious bias in the selection process.
+      </p>
+    </li>
 
-    <h2>Benefits</h2>
+    <li class={card}>
+      <h3>CV screening</h3>
+      <p>
+        Two members of the Engineering team independently review redacted CVs
+        before meeting to discuss their decisions together. We encourage
+        rotation of these groups to promote a broad and diverse range of
+        reviewers.
+      </p>
+    </li>
+  </ul>
 
-    <h3>Flexible working</h3>
+  <h2>Benefits</h2>
 
-    <h3>Shared parental leave</h3>
+  <h3>Flexible working</h3>
 
-    
+  <h3>Shared parental leave</h3>
 </PageLayout>

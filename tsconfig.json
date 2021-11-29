@@ -3,5 +3,5 @@
   "compilerOptions": {
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react"
-}
+  }
 }

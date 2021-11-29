@@ -1,8 +1,8 @@
 ---
-
 const { content } = Astro.props;
 ---
-<html lang={ content.lang || 'en' }>
+
+<html lang={content.lang || "en"}>
   <head>
     <style lang="scss">
       .hero {
@@ -62,12 +62,10 @@ const { content } = Astro.props;
     </style>
   </head>
   <body>
-    
-    <header >
+    <header>
       <h1 class="title">{content.title}</h1>
     </header>
-    
-      <div class="content"><slot></slot></div>
-    
+
+    <div class="content"><slot /></div>
   </body>
 </html>

@@ -1,62 +1,57 @@
 ---
-import { borderColor } from '../styles/shared.ts'
+import { borderColor } from "../styles/shared.ts";
 
-const {path} = Astro.props;
-
+const { path } = Astro.props;
 ---
-<style lang="scss" define:vars={{borderColor}}>
-    nav {
-        display: flex;
-        border-bottom: 1px solid var(--borderColor);
-
-        * {
-            padding: 0 1em;
-            border-right: 1px solid var(--borderColor);
-        }
-
-        a {
-            color: inherit;
-            padding-top: 5px;
-            padding-bottom: 8px;
-            text-decoration: none;
-
-            &.active {
-                padding-top: 2px;
-                border-top: 3px solid;
-            }
-
-            &:focus,
-            &:hover {
-                color: deepskyblue;
-            }
-
-        }
-    }
-
-    h1 {
-
-    }
-</style>
-
 
 <nav>
-    <a class={path === "/" ? "active" : ""} href="/">
-        Home
-    </a>
+  <a class={path === "/" ? "active" : ""} href="/"> Home </a>
 
-    <a class={path === "/open" ? "active" : ""} href="/open#people">
-        Open People
-    </a>
+  <a class={path === "/open" ? "active" : ""} href="/open#people">
+    Open People
+  </a>
 
-    <a class={path === "/open" ? "active" : ""} href="/open#source">
-        Open Source
-    </a>
+  <a class={path === "/open" ? "active" : ""} href="/open#source">
+    Open Source
+  </a>
 
-    <a class={path === "/diversity" ? "active" : ""} href="/diversity">
-        Diversity
-    </a>
+  <a class={path === "/diversity" ? "active" : ""} href="/diversity">
+    Diversity
+  </a>
 
-    <a class={path === "/events" ? "active" : ""} href="/events">
-        Events &amp; Talks
-    </a>
+  <a class={path === "/events" ? "active" : ""} href="/events">
+    Events &amp; Talks
+  </a>
 </nav>
+
+<style lang="scss" define:vars={{ borderColor }}>
+  nav {
+    display: flex;
+    border-bottom: 1px solid var(--borderColor);
+
+    * {
+      padding: 0 1em;
+      border-right: 1px solid var(--borderColor);
+    }
+
+    a {
+      color: inherit;
+      padding-top: 5px;
+      padding-bottom: 8px;
+      text-decoration: none;
+
+      &.active {
+        padding-top: 2px;
+        border-top: 3px solid;
+      }
+
+      &:focus,
+      &:hover {
+        color: deepskyblue;
+      }
+    }
+  }
+
+  h1 {
+  }
+</style>

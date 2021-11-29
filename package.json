@@ -7,7 +7,8 @@
     "upgrade-src": "pnpm ncu \"/^@guardian/src-.*$/\" -u --target greatest && pnpm install",
     "start": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "format": "pnpm prettier --write src --plugin=prettier-plugin-astro"
   },
   "devDependencies": {
     "@astrojs/renderer-preact": "^0.3.0",
@@ -16,6 +17,7 @@
     "@emotion/react": "^11.7.0",
     "astro": "^0.21.4",
     "npm-check-updates": "^12",
+    "prettier-plugin-astro": "^0.0.11",
     "react": "^17.0.2",
     "vite": "^2.6.14"
   },
