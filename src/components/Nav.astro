@@ -16,17 +16,18 @@ const {path} = Astro.props;
 
         a {
             color: inherit;
-            border-top: 5px solid transparent;
+            padding-top: 5px;
             padding-bottom: 8px;
             text-decoration: none;
 
             &.active {
-                border-top: 5px solid;
+                padding-top: 2px;
+                border-top: 3px solid;
             }
 
             &:focus,
             &:hover {
-                color: red;
+                color: deepskyblue;
             }
 
         }
