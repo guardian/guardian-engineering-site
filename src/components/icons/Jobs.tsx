@@ -9,6 +9,7 @@ export const LinkJobs = () => (
   <LinkButton
     cssOverrides={buttonOverrides}
     href="https://workforus.theguardian.com/"
+    target="_blank"
     icon={<SvgArrowRightStraight />}
     iconSide="right"
   >
