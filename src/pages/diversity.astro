@@ -1,26 +1,10 @@
 ---
 import PageLayout from "../layouts/page.astro";
 
-const card = "card";
-
 const title = "Diversity &amp; Inclusion";
 ---
 
 <PageLayout {title}>
-  <style>
-    ul {
-      display: flex;
-      list-style-type: none;
-      padding: 0;
-      align-content: space-between;
-    }
-
-    li {
-      margin: 1em;
-      padding: 1em;
-      width: 30%;
-    }
-  </style>
   <h1>{title}</h1>
 
   <p>
@@ -32,7 +16,7 @@ const title = "Diversity &amp; Inclusion";
   <h2>Recruitment</h2>
 
   <ul>
-    <li class={card}>
+    <li>
       <h3>Job advertisement and description screening</h3>
       <p>
         We use an augmented writing tool which uses a combination of natural
@@ -42,7 +26,7 @@ const title = "Diversity &amp; Inclusion";
       </p>
     </li>
 
-    <li class={card}>
+    <li>
       <h3>Blind CV reviews</h3>
       <p>
         We redact candidate's names and educational institutions from CVs before
@@ -51,7 +35,7 @@ const title = "Diversity &amp; Inclusion";
       </p>
     </li>
 
-    <li class={card}>
+    <li>
       <h3>CV screening</h3>
       <p>
         Two members of the Engineering team independently review redacted CVs
@@ -68,3 +52,19 @@ const title = "Diversity &amp; Inclusion";
 
   <h3>Shared parental leave</h3>
 </PageLayout>
+
+<style>
+  ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    align-content: space-between;
+  }
+
+  li {
+    margin: 1em;
+    padding: 1em;
+    width: 30%;
+    background-color: #333;
+  }
+</style>
