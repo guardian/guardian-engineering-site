@@ -1,6 +1,6 @@
 ---
 import PageLayout from "../layouts/page.astro";
-import { Markdown } from 'astro/components';
+import { Markdown } from "astro/components";
 
 import { borderColor } from "../styles/shared.ts";
 import home from "../../public/assets/home.jpg";
@@ -35,7 +35,7 @@ import home from "../../public/assets/home.jpg";
           We do much of our coding in public. Check out [our GitHub profile][] to see what
           we’ve been working on.
 
-          [our GitHub profile]: https://github.com/guardian
+          [our github profile]: https://github.com/guardian
         </Markdown>
       </li>
       <li>
@@ -61,8 +61,12 @@ import home from "../../public/assets/home.jpg";
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    border-bottom: 1px solid var(--borderColor);
     padding: 1rem;
+  }
+
+  // All but the first section
+  section:nth-of-type(n + 2) {
+    border-top: 1px solid var(--borderColor);
   }
 
   h2 {
