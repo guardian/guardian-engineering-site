@@ -1,5 +1,5 @@
 ---
-import { borderColor } from "../styles/shared.ts";
+import { border } from "../styles/shared.ts";
 
 const { path } = Astro.props;
 ---
@@ -24,14 +24,14 @@ const { path } = Astro.props;
   </a>
 </nav>
 
-<style lang="scss" define:vars={{ borderColor }}>
+<style lang="scss" define:vars={{ border }}>
   nav {
     display: flex;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: var(--border);
 
     * {
       padding: 0 1em;
-      border-right: 1px solid var(--borderColor);
+      border-right: var(--border);
     }
 
     a {

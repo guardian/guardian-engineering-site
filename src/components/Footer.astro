@@ -1,10 +1,12 @@
 ---
+import { border } from "../styles/shared.ts";
 ---
 
 <footer>© 2021 The Guardian</footer>
 
-<style>
+<style define:vars={{ border }}>
   footer {
-    border: solid 1px var(--borderColor);
+    padding: 1rem;
+    border-top: var(--border);
   }
 </style>

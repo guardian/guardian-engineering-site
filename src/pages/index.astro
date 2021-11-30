@@ -2,18 +2,15 @@
 import PageLayout from "../layouts/page.astro";
 import { Markdown } from "astro/components";
 
-import { borderColor } from "../styles/shared.ts";
+import { border } from "../styles/shared.ts";
 import home from "../../public/assets/home.jpg";
 ---
 
 <PageLayout>
   <section id="shaping-the-future-of-digital-journalism">
     <div>
-      <h2>
-        We're shaping the future of digital journalism.
-        <br />
-        <a href="https://workforus.theguardian.com/">Join Us.</a>
-      </h2>
+      <h2>We're shaping the future of digital journalism.</h2>
+      <h2><a href="https://workforus.theguardian.com/">Join Us.</a></h2>
     </div>
 
     <img id="home" src={home} />
@@ -52,7 +49,7 @@ import home from "../../public/assets/home.jpg";
   </section>
 </PageLayout>
 
-<style lang="scss" define:vars={{ borderColor }}>
+<style lang="scss" define:vars={{ border }}>
   a {
     color: gold;
   }
@@ -66,7 +63,12 @@ import home from "../../public/assets/home.jpg";
 
   // All but the first section
   section:nth-of-type(n + 2) {
-    border-top: 1px solid var(--borderColor);
+    border-top: var(--border);
+  }
+
+  h2,
+  h3 {
+    line-height: 1.1;
   }
 
   h2 {
