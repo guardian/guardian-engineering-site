@@ -79,11 +79,14 @@ const { body, heading } = font;
   }
 
   main {
-    h1, h2, h3, p {
+    & > h1,
+    & > h2,
+    & > h3,
+    & > p {
       padding: 0 1rem;
     }
 
-    ul {
+    & > ul {
       padding-left: 2rem;
     }
   }

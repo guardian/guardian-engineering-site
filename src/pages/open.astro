@@ -1,17 +1,78 @@
 ---
-layout: "../layouts/page.astro"
-title: "Open People & Source"
-edit: "open.md"
+import PageLayout from "../layouts/page.astro";
+import { Markdown } from "astro/components";
+
+import { border } from "../styles/shared.ts";
+
+const url =
+  "https://raw.githubusercontent.com/guardian/our-engineering-culture/master/README.md";
+const content = await fetch(url).then((r) => r.text());
 ---
 
-# Open People
+<PageLayout title="Open People &amp; Source" edit="open.astro">
+  <section id="people">
+    <Markdown>
+      # Open People
 
-The people are us!
+      As defined in our [engineering culture][], the key pillars are:
 
-# Open Source
+      [engineering culture]: https://github.com/guardian/our-engineering-culture
+    </Markdown>
+    <ul>
+      {content
+        .split("\n")
+        .filter((line) => line.startsWith("#### "))
+        .map((pillar) => {
+          const name = pillar.slice(5);
+          const link = name
+            .trim()
+            .replaceAll("&", "")
+            .replaceAll(" ", "-")
+            .toLowerCase();
+          return (
+            <li>
+              <a href={`#${link}`}>{name}</a>
+            </li>
+          );
+        })}
+    </ul>
 
-The source code is at [github.com/guardian](https://github.com/guardian)
+    <hr />
 
-# Culture
+    <Markdown {content}>
 
-<>
+    </Markdown>
+  </section>
+
+  <section id="source">
+    <Markdown>
+      # Open Source
+
+      The source code is at [github.com/guardian](https://github.com/guardian)
+    </Markdown>
+  </section>
+</PageLayout>
+
+<style lang="scss" define:vars={{ border }}>
+  section {
+    padding: 0 1rem;
+
+    // All but the first section
+    &:nth-of-type(n + 2) {
+      border-top: var(--border);
+    }
+
+    p,
+    ul {
+      max-width: 36rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: var(--border);
+  }
+
+  #people {
+  }
+</style>
