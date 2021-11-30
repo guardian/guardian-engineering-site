@@ -19,6 +19,7 @@ const content = await fetch(url).then((r) => r.text());
       [engineering culture]: https://github.com/guardian/our-engineering-culture
     </Markdown>
     <ul>
+      <!-- Extract titles from markdown for linking to sections directly -->
       {content
         .split("\n")
         .filter((line) => line.startsWith("#### "))
