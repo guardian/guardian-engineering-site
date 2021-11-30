@@ -34,45 +34,57 @@ const { body, heading } = font;
   </head>
 
   <body>
-    <style global define:vars={{ body, heading }}>
-      body {
-        font-family: var(--body);
-        margin: 0 auto;
-        min-height: 100vh;
-        background-color: #111;
-        color: #ccc;
-        max-width: 1300px;
-        padding: 1rem;
-      }
-
-      h1,
-      h2,
-      h3 {
-        font-family: var(--heading);
-      }
-
-      header {
-        padding: 1rem;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-      }
-
-      main {
-        border: 1px solid #444;
-      }
-    </style>
-
     <header>
       <Social />
     </header>
 
-    <main id="content">
+    <div class="frame">
       <Nav path={pathname} />
 
-      <slot />
+      <main id="content">
+        <slot />
+      </main>
 
       <Footer {edit} />
-    </main>
+    </div>
   </body>
 </html>
+
+<style lang="scss" global define:vars={{ body, heading }}>
+  body {
+    font-family: var(--body);
+    margin: 0 auto;
+    min-height: 100vh;
+    background-color: #111;
+    color: #ccc;
+    max-width: 1300px;
+    padding: 1rem;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--heading);
+  }
+
+  header {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .frame {
+    border: 1px solid #444;
+  }
+
+  main {
+    h1, h2, h3, p {
+      padding: 0 1rem;
+    }
+
+    ul {
+      padding-left: 2rem;
+    }
+  }
+</style>
