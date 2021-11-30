@@ -1,4 +1,5 @@
 ---
+import Debug from "astro/debug";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Social from "../components/Social.astro";
@@ -6,7 +7,7 @@ import Social from "../components/Social.astro";
 import { font } from "../styles/shared.ts";
 
 const { title = "The Guardian : Engineering" } = Astro.props;
-
+const edit = Astro.props.edit ?? Astro.props.content?.edit ?? null;
 const { pathname = "/" } = Astro.request.url;
 
 const { body, heading } = font;
@@ -23,6 +24,12 @@ const { body, heading } = font;
     <link
       href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
       rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href={Astro.resolve("../styles/global.css")}
     />
   </head>
 
@@ -65,7 +72,7 @@ const { body, heading } = font;
 
       <slot />
 
-      <Footer />
+      <Footer {edit} />
     </main>
   </body>
 </html>

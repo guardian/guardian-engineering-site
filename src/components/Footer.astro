@@ -1,12 +1,25 @@
 ---
+import Debug from "astro/debug";
 import { border } from "../styles/shared.ts";
+
+const { edit = null }= Astro.props;
+const branch = "mxdvl/astro"; // main
 ---
 
-<footer>© 2021 The Guardian</footer>
+<footer>
+  <div>© 2021 The Guardian</div>
+  {edit ? (
+    <a
+      href={`https://github.com/guardian/guardian-engineering-site/blob/${branch}/src/pages/${edit}`}
+    >Edit this page</a>
+  ) : null}
+</footer>
 
 <style define:vars={{ border }}>
   footer {
     padding: 1rem;
     border-top: var(--border);
+    display: flex;
+    justify-content: space-between;
   }
 </style>

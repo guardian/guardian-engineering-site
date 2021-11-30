@@ -6,7 +6,7 @@ import { border } from "../styles/shared.ts";
 import home from "../../public/assets/home.jpg";
 ---
 
-<PageLayout>
+<PageLayout edit="index.astro">
   <section id="shaping-the-future-of-digital-journalism">
     <div>
       <h2>We're shaping the future of digital journalism.</h2>
@@ -50,10 +50,6 @@ import home from "../../public/assets/home.jpg";
 </PageLayout>
 
 <style lang="scss" define:vars={{ border }}>
-  a {
-    color: gold;
-  }
-
   section {
     display: flex;
     flex-wrap: wrap;

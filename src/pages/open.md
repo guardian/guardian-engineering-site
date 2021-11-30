@@ -1,6 +1,7 @@
 ---
 layout: "../layouts/page.astro"
 title: "Open People & Source"
+edit: "open.md"
 ---
 
 # Open People
