@@ -2,7 +2,7 @@
 import Debug from "astro/debug";
 import { border } from "../styles/shared.ts";
 
-const { edit = null }= Astro.props;
+const { edit = null } = Astro.props;
 const branch = "mxdvl/astro"; // main
 ---
 
@@ -11,7 +11,9 @@ const branch = "mxdvl/astro"; // main
   {edit ? (
     <a
       href={`https://github.com/guardian/guardian-engineering-site/blob/${branch}/src/pages/${edit}`}
-    >Edit this page</a>
+    >
+      Edit this page
+    </a>
   ) : null}
 </footer>
 

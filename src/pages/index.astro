@@ -1,9 +1,32 @@
 ---
 import PageLayout from "../layouts/page.astro";
 import { Markdown } from "astro/components";
+import { timeAgo } from "@guardian/libs";
 
 import { border } from "../styles/shared.ts";
 import home from "../../public/assets/home.jpg";
+
+type Result = {
+  id: string;
+  type: string;
+  sectionId: string;
+  sectionName: string;
+  webPublicationDate: string;
+  webTitle: string;
+  webUrl: string;
+  apiUrl: string;
+  isHosted: boolean;
+  pillarId: string;
+  pillarName: string;
+};
+
+const posts: Result[] = await fetch(
+  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&api-key=test"
+)
+  .then((r) => r.json())
+  .then((d) => d.response.results);
+
+console.log(posts);
 ---
 
 <PageLayout edit="index.astro">
@@ -45,6 +68,24 @@ import home from "../../public/assets/home.jpg";
         We mostly program in Scala and JavaScript, but we use the best tool that
         solves the problem.
       </li>
+    </ul>
+  </section>
+  <section id="engineering-blog-posts">
+
+    <h3>Latest Engineering blog posts</h3>
+    <ul>
+      {posts.slice(0,9).map((post) => {
+        const time = new Date(post.webPublicationDate).getTime();
+        const pubDate = timeAgo(time);
+        return (
+          <li>
+            <a href={post.webUrl}>
+              <h4>{post.webTitle}</h4>
+              <h5>{pubDate}</h5>
+            </a>
+          </li>
+        );
+      })}
     </ul>
   </section>
 </PageLayout>
@@ -137,4 +178,38 @@ import home from "../../public/assets/home.jpg";
       }
     }
   }
+
+  #engineering-blog-posts {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style-type: none;
+
+      li {
+        flex: 0 1 30%;
+        padding: 0.5rem;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+          padding: 0.5rem;
+          display: block;
+          box-sizing: border-box;
+          height: 100%;
+          background-color: #333;
+        }
+
+        h4, h5 {
+          margin: 0;
+        }
+
+        h5 {
+          padding-top: 0.5rem;
+          font-weight: normal;
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }  
 </style>
