@@ -25,8 +25,6 @@ const posts: Result[] = await fetch(
 )
   .then((r) => r.json())
   .then((d) => d.response.results);
-
-console.log(posts);
 ---
 
 <PageLayout edit="index.astro">
@@ -71,10 +69,9 @@ console.log(posts);
     </ul>
   </section>
   <section id="engineering-blog-posts">
-
     <h3>Latest Engineering blog posts</h3>
     <ul>
-      {posts.slice(0,9).map((post) => {
+      {posts.slice(0, 9).map((post) => {
         const time = new Date(post.webPublicationDate).getTime();
         const pubDate = timeAgo(time);
         return (
@@ -199,7 +196,8 @@ console.log(posts);
           background-color: #333;
         }
 
-        h4, h5 {
+        h4,
+        h5 {
           margin: 0;
         }
 
@@ -211,5 +209,5 @@ console.log(posts);
         }
       }
     }
-  }  
+  }
 </style>
