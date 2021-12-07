@@ -1,0 +1,175 @@
+---
+import { timeAgo } from "@guardian/libs";
+import PageLayout from "../layouts/page.astro";
+import { Markdown } from "astro/components";
+
+import { border } from "../styles/shared.ts";
+
+const url =
+  "https://raw.githubusercontent.com/guardian/our-engineering-culture/master/README.md";
+const content = await fetch(url).then((r) => r.text());
+
+const reposUrl = `https://api.github.com/orgs/guardian/repos?per_page=100&sort=updated&direction=desc`;
+const reposRaw: Array<{
+  name: string;
+  description: string;
+  html_url: string;
+  stargazers_count: number;
+  archived: boolean;
+  updated_at: string;
+}> = await fetch(reposUrl).then((r) => r.json());
+
+/**
+ * A mix of recently updated a most stargazed repos
+ */
+const repos = reposRaw
+  .filter((repo) => !repo.archived)
+  .sort(
+    (a, b) =>
+      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+  )
+  .slice(0, 21)
+  .sort((a, b) => b.stargazers_count - a.stargazers_count)
+  .slice(0, 10);
+---
+
+<PageLayout title="Open People &amp; Source" edit="open.astro">
+  <section id="people">
+    <Markdown>
+      # Open People
+
+      As defined in our [engineering culture][], the key pillars are:
+
+      [engineering culture]: https://github.com/guardian/our-engineering-culture
+    </Markdown>
+    <ul>
+      <!-- Extract titles from markdown for linking to sections directly -->
+      {content
+        .split("\n")
+        .filter((line) => line.startsWith("#### "))
+        .map((pillar) => {
+          const name = pillar.slice(5);
+          const link = name
+            .trim()
+            .replaceAll("&", "")
+            .replaceAll(" ", "-")
+            .toLowerCase();
+          return (
+            <li>
+              <a href={`#${link}`}>{name}</a>
+            </li>
+          );
+        })}
+    </ul>
+
+    <hr />
+
+    <Markdown {content}>
+
+    </Markdown>
+  </section>
+
+  <section id="source">
+    <Markdown>
+      # Open Source
+
+      The source code is at [github.com/guardian](https://github.com/guardian)
+
+      ## What we work with
+
+      ### Languages
+
+      - [Scala](https://www.scala-lang.org/)
+      - [JavaScript](https://www.javascript.com/)
+      - [TypeScript](https://www.typescriptlang.org/)
+
+      ### Frameworks
+
+      - [React](https://reactjs.org/)
+      - [Preact](https://preactjs.com/)
+      - [Play](https://www.playframework.com/)
+
+      ### Tools
+
+      - [Storybook](https://storybook.js.org/)
+      - [Elasticsearch](https://www.elastic.co/)
+
+      There are plenty more where these came from, but they are good starting points. If you want to
+      see our code in action...
+
+      ## Here’s 10 recently updated repositories:
+    </Markdown>
+
+    <ol>
+      {repos.map((repo) => {
+        return (
+          <li>
+            <a href={repo.html_url}>
+              <h4>{repo.name}</h4>
+              <h5>
+                ({repo.stargazers_count} stars - updated{" "}
+                {timeAgo(repo.updated_at, { daysUntilAbsolute: 1 })})
+              </h5>
+              <p>{repo.description}</p>
+            </a>
+          </li>
+        );
+      })}
+    </ol>
+  </section>
+</PageLayout>
+
+<style lang="scss" define:vars={{ border }}>
+  section {
+    padding: 0 1rem;
+
+    // All but the first section
+    &:nth-of-type(n + 2) {
+      border-top: var(--border);
+    }
+
+    p,
+    ul {
+      max-width: 36rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: var(--border);
+  }
+
+  #people {
+  }
+
+  #source {
+    ol {
+      li {
+        padding-bottom: 1rem;
+        a {
+          display: block;
+          max-width: 36rem;
+          padding: 0.5rem;
+          background-color: #333;
+
+          color: inherit;
+          text-decoration: none;
+
+          h4 {
+            color: gold;
+          }
+          h4,
+          h5 {
+            display: inline;
+          }
+
+          p {
+            flex-basis: 100%;
+            padding-top: 0.5rem;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+</style>

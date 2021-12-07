@@ -1,0 +1,7 @@
+{
+  "moduleResolution": "node",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "@emotion/react"
+  }
+}
