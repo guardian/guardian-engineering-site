@@ -13,10 +13,13 @@ type SeriesResult = {
   isHosted: boolean;
   pillarId: string;
   pillarName: string;
+  fields: {
+    byline: string;
+  }
 };
 
 const posts: SeriesResult[] = await fetch(
-  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&api-key=test"
+  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&show-fields=byline&api-key=test"
 )
   .then((r) => r.json())
   .then((d) => d.response.results);
@@ -66,7 +69,8 @@ type ArticleResult = {
           <figure>
             <img src={image.src} width={image.width} alt={media.data.alt} />
           </figure>
-          <h4>{post.webTitle}</h4>
+          <h4>{post.webTitle}</h4> 
+          <h5><em>{post.fields.byline}</em></h5>
           <h5>{pubDate}</h5>
         </a>
       </li>
