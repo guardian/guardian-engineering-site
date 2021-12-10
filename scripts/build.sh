@@ -3,6 +3,8 @@
 # abort on errors
 set -e
 
+node -v
+
 # build
 pnpm run build
 
