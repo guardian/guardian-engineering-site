@@ -6,7 +6,7 @@ set -e
 node -v
 
 # build
-pnpm run build
+pnpm run build -- --verbose
 
 # navigate into the build output directory
 cd dist
