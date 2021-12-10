@@ -108,7 +108,10 @@ const repos = reposRaw
               <h4>{repo.name}</h4>
               <h5>
                 ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(repo.updated_at, { daysUntilAbsolute: 1 })})
+                {timeAgo(repo.updated_at, {
+                  daysUntilAbsolute: 1,
+                })}
+                )
               </h5>
               <p>{repo.description}</p>
             </a>
