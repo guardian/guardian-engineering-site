@@ -16,10 +16,23 @@ type SeriesResult = {
   fields: {
     byline: string;
   }
+  tags?: Tag[];
 };
 
+type Tag = {
+  id: string,
+  type: string,
+  webTitle: string,
+  webUrl: string,
+  apiUrl: string,
+  references?: string[],
+  bio: string,
+  firstName: string,
+  lastName: string
+}
+
 const posts: SeriesResult[] = await fetch(
-  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&show-fields=byline&api-key=test"
+  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&show-fields=byline&show-tags=contributor&api-key=test"
 )
   .then((r) => r.json())
   .then((d) => d.response.results);
@@ -70,9 +83,14 @@ type ArticleResult = {
             <img src={image.src} width={image.width} alt={media.data.alt} />
           </figure>
           <h4>{post.webTitle}</h4>
-          <h5 class="byline">{post.fields.byline}</h5>
+          </a>
+          <h5 class="byline">
+          {post.tags[0] ? 
+            (<a href={post.tags[0].webUrl} rel="author">{post.tags[0].webTitle}</a>) 
+            : post.fields.byline}
+          </h5>
           <h5>{pubDate}</h5>
-        </a>
+
       </li>
     );
   })}
@@ -86,17 +104,13 @@ type ArticleResult = {
 
     li {
       flex: 0 1 30%;
+      color: inherit;
+      text-decoration: none;
       padding: 0.5rem;
-
-      a {
-        color: inherit;
-        text-decoration: none;
-        padding: 0.5rem;
-        display: block;
-        box-sizing: border-box;
-        height: 100%;
-        background-color: #333;
-      }
+      margin: 0.5rem;
+      display: block;
+      box-sizing: border-box;
+      background-color: #333;
 
       figure {
         margin: 0;
@@ -133,6 +147,11 @@ type ArticleResult = {
 
       .byline {
         font-style: italic;
+      }
+
+      a {
+      text-decoration: none;
+      color: #ccc;
       }
     }
   }
