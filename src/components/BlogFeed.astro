@@ -70,7 +70,7 @@ type ArticleResult = {
             <img src={image.src} width={image.width} alt={media.data.alt} />
           </figure>
           <h4>{post.webTitle}</h4>
-          <h5><em>{post.fields.byline}</em></h5>
+          <h5 class="byline">{post.fields.byline}</h5>
           <h5>{pubDate}</h5>
         </a>
       </li>
@@ -129,6 +129,10 @@ type ArticleResult = {
         font-weight: normal;
         text-decoration: none;
         color: inherit;
+      }
+
+      .byline {
+        font-style: italic;
       }
     }
   }
