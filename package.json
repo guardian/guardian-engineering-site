@@ -8,7 +8,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "ci": "tsc --noEmit --skipLibCheck && npm run prettier --check src --plugin=prettier-plugin-astro && npm run build",
+    "ci": "tsc --noEmit --skipLibCheck && prettier --check src --plugin=prettier-plugin-astro && npm run build",
     "format": "pnpm prettier --write src --plugin=prettier-plugin-astro"
   },
   "devDependencies": {
