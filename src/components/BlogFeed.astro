@@ -15,7 +15,7 @@ type SeriesResult = {
   pillarName: string;
   fields: {
     byline: string;
-  }
+  };
 };
 
 const posts: SeriesResult[] = await fetch(
@@ -69,7 +69,7 @@ type ArticleResult = {
           <figure>
             <img src={image.src} width={image.width} alt={media.data.alt} />
           </figure>
-          <h4>{post.webTitle}</h4>  
+          <h4>{post.webTitle}</h4>
           <h5 class="byline">{post.fields.byline}</h5>
           <h5>{pubDate}</h5>
         </a>
