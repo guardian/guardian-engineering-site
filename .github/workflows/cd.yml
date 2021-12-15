@@ -1,24 +1,50 @@
 name: CD
 on:
+  # Triggers the workflow on push and pull request events but only for the main branch
   push:
-    branches:
-      - main
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+  # Allows you to run this workflow manually from the Actions tab.
+  workflow_dispatch:
+
+  schedule:
+    - cron: "42 6,16 * * *"
+
 jobs:
-  validate:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
+
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: yarn ci
-      - name: Build and deploy to gh-pages
-        uses: enriikke/gatsby-gh-pages-action@v2
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: guardian/actions-setup-node@main
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
         with:
-          access-token: ${{ secrets.ACCESS_TOKEN }}
-          deploy-branch: gh-pages
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
+          run_install: true
+
+      - name: Build
+        run: |
+          pnpm run build -- --verbose
+          touch ./dist/.nojekyll
+
+      - name: Deploy if `main`
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.ref == 'refs/heads/main' }}
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
