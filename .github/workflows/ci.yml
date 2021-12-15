@@ -3,14 +3,32 @@ on: pull_request
 jobs:
   validate:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [16.x]
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
-      - run: yarn
-      - run: yarn ci
+          fetch-depth: 0
+
+      - name: Setup node
+        uses: guardian/actions-setup-node@main
+
+      - name: Cache pnpm modules
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - uses: pnpm/action-setup@v2.0.1
+        with:
+          version: 6.23.6
+          run_install: true
+      
+      - name: Types
+        run: pnpm types
+
+      - name: Build
+        run: pnpm build
+
+      - name: Formatting
+        run: pnpm validate
