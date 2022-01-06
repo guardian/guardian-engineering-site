@@ -9,7 +9,7 @@ specifiers:
   '@guardian/libs': ^3.5.1
   '@guardian/source-foundations': ^4.0.0-rc.4
   '@guardian/source-react-components': ^4.0.0-rc.2
-  astro: ^0.22.5
+  astro: ^0.22.6
   npm-check-updates: ^12
   prettier-plugin-astro: ^0.0.11
   react: ^17.0.2
