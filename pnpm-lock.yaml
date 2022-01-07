@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@astrojs/renderer-react': ^0.3.0
+  '@astrojs/renderer-react': ^0.4.0
   '@babel/core': ^7.16.0
   '@emotion/core': ^11.0.0
   '@emotion/react': ^11.7.0
@@ -21,7 +21,7 @@ dependencies:
   '@guardian/source-react-components': 4.0.0-rc.2_1d19db2fde19f6cae2945a49706e29c2
 
 devDependencies:
-  '@astrojs/renderer-react': 0.3.0_@babel+core@7.16.0
+  '@astrojs/renderer-react': 0.4.0_@babel+core@7.16.0
   '@babel/core': 7.16.0
   '@emotion/react': 11.7.0_@babel+core@7.16.0+react@17.0.2
   '@guardian/libs': 3.5.1_web-vitals@2.1.2
@@ -109,8 +109,8 @@ packages:
       - '@babel/core'
     dev: true
 
-  /@astrojs/renderer-react/0.3.0_@babel+core@7.16.0:
-    resolution: {integrity: sha512-pb9gKVHJwtFNoYrtSnBfOPm/0IerEGe6MCDrgys5lwVPWiZ9Di+7uK+C2/UdBuHDM8NEKw+zXA+6qZi/endy+g==}
+  /@astrojs/renderer-react/0.3.1_@babel+core@7.16.0:
+    resolution: {integrity: sha512-TqwQyVHhzbFKuF8+jMOlrxM767nubzZzCKuKTAzmrCRLa8vMXPqcPS7JXWD7Q6s6gXln3yhat6+3iodwgurwlw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.16.0_@babel+core@7.16.0
@@ -120,9 +120,9 @@ packages:
       - '@babel/core'
     dev: true
 
-  /@astrojs/renderer-react/0.3.1_@babel+core@7.16.0:
-    resolution: {integrity: sha512-TqwQyVHhzbFKuF8+jMOlrxM767nubzZzCKuKTAzmrCRLa8vMXPqcPS7JXWD7Q6s6gXln3yhat6+3iodwgurwlw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+  /@astrojs/renderer-react/0.4.0_@babel+core@7.16.0:
+    resolution: {integrity: sha512-4vU2fqRDGdMVYsmM5WgzSA8Wlsmcefa80fQVBHyt1rHZWfW+bOPJVLO7nR6BzixFCoum5PzXD1TraD971O7BLA==}
+    engines: {node: ^14.15.0 || >=16.0.0}
     dependencies:
       '@babel/plugin-transform-react-jsx': 7.16.0_@babel+core@7.16.0
       react: 17.0.2
