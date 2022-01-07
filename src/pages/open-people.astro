@@ -1,0 +1,68 @@
+---
+import PageLayout from "../layouts/page.astro";
+import { Markdown } from "astro/components";
+
+import { border } from "../styles/shared.ts";
+
+const url =
+  "https://raw.githubusercontent.com/guardian/our-engineering-culture/master/README.md";
+const content = await fetch(url).then((r) => r.text());
+---
+
+<PageLayout title="Open People" edit="open-people.astro">
+  <section id="people">
+    <Markdown>
+      # Open People
+
+      As defined in our [engineering culture][], the key pillars are:
+
+      [engineering culture]: https://github.com/guardian/our-engineering-culture
+    </Markdown>
+    <ul>
+      <!-- Extract titles from markdown for linking to sections directly -->
+      {content
+        .split("\n")
+        .filter((line) => line.startsWith("#### "))
+        .map((pillar) => {
+          const name = pillar.slice(5);
+          const link = name
+            .trim()
+            .replaceAll("&", "")
+            .replaceAll(" ", "-")
+            .toLowerCase();
+          return (
+            <li>
+              <a href={`#${link}`}>{name}</a>
+            </li>
+          );
+        })}
+    </ul>
+
+    <hr />
+
+    <Markdown {content}>
+
+    </Markdown>
+  </section>
+</PageLayout>
+
+<style lang="scss" define:vars={{ border }}>
+  section {
+    padding: 0 1rem;
+
+    // All but the first section
+    &:nth-of-type(n + 2) {
+      border-top: var(--border);
+    }
+
+    p,
+    ul {
+      max-width: 36rem;
+    }
+  }
+
+  hr {
+    border: none;
+    border-top: var(--border);
+  }
+</style>

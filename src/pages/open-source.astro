@@ -5,10 +5,6 @@ import { Markdown } from "astro/components";
 
 import { border } from "../styles/shared.ts";
 
-const url =
-  "https://raw.githubusercontent.com/guardian/our-engineering-culture/master/README.md";
-const content = await fetch(url).then((r) => r.text());
-
 const reposUrl = `https://api.github.com/orgs/guardian/repos?per_page=100&sort=updated&direction=desc`;
 const reposRaw: Array<{
   name: string;
@@ -33,47 +29,12 @@ const repos = reposRaw
   .slice(0, 10);
 ---
 
-<PageLayout title="Open People &amp; Source" edit="open.astro">
-  <section id="people">
-    <Markdown>
-      # Open People
-
-      As defined in our [engineering culture][], the key pillars are:
-
-      [engineering culture]: https://github.com/guardian/our-engineering-culture
-    </Markdown>
-    <ul>
-      <!-- Extract titles from markdown for linking to sections directly -->
-      {content
-        .split("\n")
-        .filter((line) => line.startsWith("#### "))
-        .map((pillar) => {
-          const name = pillar.slice(5);
-          const link = name
-            .trim()
-            .replaceAll("&", "")
-            .replaceAll(" ", "-")
-            .toLowerCase();
-          return (
-            <li>
-              <a href={`#${link}`}>{name}</a>
-            </li>
-          );
-        })}
-    </ul>
-
-    <hr />
-
-    <Markdown {content}>
-
-    </Markdown>
-  </section>
-
+<PageLayout title="Open Source" edit="open-source.astro">
   <section id="source">
     <Markdown>
       # Open Source
 
-      The source code is at [github.com/guardian](https://github.com/guardian)
+      Our source code is available at [github.com/guardian](https://github.com/guardian)
 
       ## What we work with
 
@@ -140,9 +101,6 @@ const repos = reposRaw
   hr {
     border: none;
     border-top: var(--border);
-  }
-
-  #people {
   }
 
   #source {
