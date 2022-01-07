@@ -12,7 +12,6 @@
     "validate": "prettier src --plugin=prettier-plugin-astro --check"
   },
   "devDependencies": {
-    "@astrojs/renderer-preact": "^0.3.0",
     "@astrojs/renderer-react": "^0.3.0",
     "@babel/core": "^7.16.0",
     "@emotion/react": "^11.7.0",

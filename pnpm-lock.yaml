@@ -1,7 +1,6 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@astrojs/renderer-preact': ^0.3.0
   '@astrojs/renderer-react': ^0.3.0
   '@babel/core': ^7.16.0
   '@emotion/core': ^11.0.0
@@ -22,7 +21,6 @@ dependencies:
   '@guardian/source-react-components': 4.0.0-rc.2_1d19db2fde19f6cae2945a49706e29c2
 
 devDependencies:
-  '@astrojs/renderer-preact': 0.3.0_@babel+core@7.16.0
   '@astrojs/renderer-react': 0.3.0_@babel+core@7.16.0
   '@babel/core': 7.16.0
   '@emotion/react': 11.7.0_@babel+core@7.16.0+react@17.0.2
@@ -98,17 +96,6 @@ packages:
   /@astrojs/prism/0.3.0:
     resolution: {integrity: sha512-5U+jcgfibLKW8PwnHQEdmgb+uZVeMVLz+paEr3vxKgikYfjXDjQu6qEDLOW3WTc/cIWrOF9rAtTKy8R/ArPscw==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dev: true
-
-  /@astrojs/renderer-preact/0.3.0_@babel+core@7.16.0:
-    resolution: {integrity: sha512-gw+LpSdJXeSXdMTc9aIvVHiOyBs9w37D1yGogE/cleStIN9nTM6TVeU06gtZkIHOViOGAsMXTCrM7enr6VBMKQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
-    dependencies:
-      '@babel/plugin-transform-react-jsx': 7.16.0_@babel+core@7.16.0
-      preact: 10.6.1
-      preact-render-to-string: 5.1.19_preact@10.6.1
-    transitivePeerDependencies:
-      - '@babel/core'
     dev: true
 
   /@astrojs/renderer-preact/0.3.2_@babel+core@7.16.0:
@@ -4240,21 +4227,8 @@ packages:
       pretty-format: 3.8.0
     dev: true
 
-  /preact-render-to-string/5.1.19_preact@10.6.1:
-    resolution: {integrity: sha512-bj8sn/oytIKO6RtOGSS/1+5CrQyRSC99eLUnEVbqUa6MzJX5dYh7wu9bmT0d6lm/Vea21k9KhCQwvr2sYN3rrQ==}
-    peerDependencies:
-      preact: '>=10'
-    dependencies:
-      preact: 10.6.1
-      pretty-format: 3.8.0
-    dev: true
-
   /preact/10.5.15:
     resolution: {integrity: sha512-5chK29n6QcJc3m1lVrKQSQ+V7K1Gb8HeQY6FViQ5AxCAEGu3DaHffWNDkC9+miZgsLvbvU9rxbV1qinGHMHzqA==}
-    dev: true
-
-  /preact/10.6.1:
-    resolution: {integrity: sha512-ydCg+ISIq70vqiThvNWStZWLRjR9U2awP/JAmGdWUKm9+Tyuy+MqVdAIyEByeIspAVtD4GWC/SJtxO8XD4knVA==}
     dev: true
 
   /prepend-http/2.0.0:
