@@ -14,7 +14,9 @@ import home from "/assets/home-digital-development.jpg";
       <h2><a href="https://workforus.theguardian.com/">Join Us.</a></h2>
     </div>
 
-    <img id="home" src={home} />
+    <div class="flexedImage">
+      <img id="home" src={home} />
+    </div>
   </section>
 
   <section id="build-for-a-greater-cause">
@@ -80,8 +82,8 @@ import home from "/assets/home-digital-development.jpg";
   }
 
   #shaping-the-future-of-digital-journalism {
-    div {
-      flex-basis: 42rem;
+    div:first-child {
+      flex-basis: 50%;
     }
 
     a {
@@ -97,16 +99,19 @@ import home from "/assets/home-digital-development.jpg";
 
     img {
       object-fit: cover;
-      flex: 1 1 40%;
-      max-height: 60vh;
-      position: relative;
-      // right: -2rem;
+      max-width: 100%;
+    }
+
+    .flexedImage {
+      display: flex;
+      flex: 1 1 50%;
+      align-items: center;
     }
   }
 
   #build-for-a-greater-cause {
     h3 {
-      flex: 24rem;
+      flex: 50%;
     }
 
     ul {
