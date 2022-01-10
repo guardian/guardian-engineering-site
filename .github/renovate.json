@@ -5,6 +5,11 @@
     {
       "matchPackagePatterns": ["astro"],
       "addLabels": ["question"]
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "automerge": true,
+      "automergeType": "squash"
     }
   ]
 }
