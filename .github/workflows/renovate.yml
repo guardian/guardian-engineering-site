@@ -2,9 +2,9 @@ name: Renovate
 on:
   schedule:
     # The "*" (#42, asterisk) character has special semantics in YAML, so this
-    # string has to be quoted. 
+    # string has to be quoted.
     # https://crontab.guru/#54_6-18/4_*_*_MON-THU : Run every 4 hours
-    - cron: '54 6-18/4 * * MON-THU'
+    - cron: "54 6-18/4 * * MON-THU"
 
   # For debugging purposes, allow manual triggering
   workflow_dispatch:
