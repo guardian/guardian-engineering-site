@@ -11,5 +11,8 @@
       "automerge": true,
       "automergeType": "squash"
     }
-  ]
+  ],
+  "ignorePaths": [
+      "gatsby/*"
+  ],
 }
