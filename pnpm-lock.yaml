@@ -9,6 +9,7 @@ specifiers:
   '@guardian/source-foundations': 4.0.0-rc.5
   '@guardian/source-react-components': 4.0.0-rc.3
   astro: 0.21.12
+  husky: ^7.0.0
   npm-check-updates: 12.1.0
   prettier-plugin-astro: 0.0.11
   react: 17.0.2
@@ -26,6 +27,7 @@ devDependencies:
   '@emotion/react': 11.7.1_@babel+core@7.16.7+react@17.0.2
   '@guardian/libs': 3.6.0_web-vitals@2.1.3
   astro: 0.21.12
+  husky: 7.0.4
   npm-check-updates: 12.1.0
   prettier-plugin-astro: 0.0.11
   react: 17.0.2
@@ -2605,6 +2607,12 @@ packages:
     resolution: {integrity: sha1-xG4xWaKT9riW2ikxbYtv6Lt5u+0=}
     dependencies:
       ms: 2.1.3
+    dev: true
+
+  /husky/7.0.4:
+    resolution: {integrity: sha512-vbaCKN2QLtP/vD4yvs6iz6hBEo6wkSzs8HpRah1Z6aGmF2KW5PdYuAd7uX5a+OyBZHBhd+TFLqgjUgytQr4RvQ==}
+    engines: {node: '>=12'}
+    hasBin: true
     dev: true
 
   /iconv-lite/0.6.3:

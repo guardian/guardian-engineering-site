@@ -20,6 +20,8 @@ const { body, heading } = font;
 
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <!-- this Font-face import is slow - do not use it for production Guardian sites -->
     <link
       href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
@@ -57,8 +59,17 @@ const { body, heading } = font;
     min-height: 100vh;
     background-color: #111;
     color: #ccc;
+    box-sizing: border-box;
+    width: 100vw;
     max-width: 1300px;
-    padding: 1rem;
+    overflow-x: hidden;
+    padding: 0.5rem;
+
+    @media (min-width: 740px) {
+      & {
+        padding: 1rem;
+      }
+    }
   }
 
   h1,
