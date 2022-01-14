@@ -115,13 +115,21 @@ import home from "/assets/home-digital-development.jpg";
     }
 
     ul {
-      flex: 1 0 30rem;
-      padding: 2rem;
+      flex: 1 auto;
+      padding: 0rem;
       list-style-type: none;
       display: grid;
       gap: 1rem;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
       counter-reset: card;
+
+      @media (min-width: 740px) {
+        & {
+          flex: 1 0 30rem;
+          padding: 2rem;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
 
       li {
         padding: 0.5em;

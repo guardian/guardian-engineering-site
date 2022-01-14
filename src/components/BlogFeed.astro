@@ -83,13 +83,21 @@ type ArticleResult = {
 
 <style lang="scss">
   ul {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     list-style-type: none;
+    padding: 0;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (min-width: 740px) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     li {
-      flex: 0 1 30%;
-      padding: 0.5rem;
+      padding: 0;
+
 
       a {
         color: inherit;
