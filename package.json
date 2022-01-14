@@ -10,7 +10,7 @@
     "types": "tsc --noEmit --skipLibCheck",
     "format": "prettier src --plugin=prettier-plugin-astro --write",
     "validate": "prettier src --plugin=prettier-plugin-astro --check",
-    "precommit": "git-format-staged -f prettier-standard 'src'",
+    "precommit": "git-format-staged -f 'prettier src --plugin=prettier-plugin-astro' src",
     "prepare": "husky install"
   },
   "devDependencies": {
