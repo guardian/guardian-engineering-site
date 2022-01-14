@@ -9,7 +9,7 @@ import home from "/assets/home-digital-development.jpg";
 
 <PageLayout edit="index.astro">
   <section id="shaping-the-future-of-digital-journalism">
-    <div>
+    <div class="flexedText">
       <h2>We're shaping the future of digital journalism.</h2>
       <h2><a href="https://workforus.theguardian.com/">Join Us.</a></h2>
     </div>
@@ -74,16 +74,23 @@ import home from "/assets/home-digital-development.jpg";
   }
 
   h2 {
-    font-size: 3.75rem;
+    font-size: clamp(2rem, 8vw, 3.75rem);
   }
 
   h3 {
-    font-size: 3.75rem;
+    font-size: clamp(1.5rem, 6vw, 3rem);
   }
 
   #shaping-the-future-of-digital-journalism {
-    div:first-child {
-      flex-basis: 50%;
+    div.flexedText {
+      flex: 1 0 50%;
+    }
+
+    .flexedImage {
+      display: flex;
+      flex: 1 0 420px;
+      align-items: center;
+      max-width: 100%;
     }
 
     a {
@@ -100,12 +107,6 @@ import home from "/assets/home-digital-development.jpg";
     img {
       object-fit: cover;
       max-width: 100%;
-    }
-
-    .flexedImage {
-      display: flex;
-      flex: 1 1 50%;
-      align-items: center;
     }
   }
 
