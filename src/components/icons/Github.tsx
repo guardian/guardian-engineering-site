@@ -1,8 +1,4 @@
-import React from "react";
-import { LinkButton } from "@guardian/source-react-components";
-import { buttonOverrides } from "../../styles/shared";
-
-const SvgGithub = () => {
+export const SvgGithub = () => {
   return (
     <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
@@ -13,15 +9,3 @@ const SvgGithub = () => {
     </svg>
   );
 };
-
-export const LinkGithub = () => (
-  <LinkButton
-    cssOverrides={buttonOverrides}
-    href="https://github.com/guardian"
-    target="_blank"
-    hideLabel={true}
-    icon={<SvgGithub />}
-  >
-    Github @guardian
-  </LinkButton>
-);
