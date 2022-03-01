@@ -8,7 +8,7 @@
 
 // @ts-check
 export default /** @type {import('astro').AstroUserConfig} */ ({
-  renderers: ["@astrojs/renderer-react"],
+  renderers: ["@astrojs/renderer-react", "@astrojs/renderer-svelte"],
   buildOptions: {
     site: "https://theguardian.engineering/",
   },
