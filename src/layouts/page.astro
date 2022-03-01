@@ -3,6 +3,7 @@ import Debug from "astro/debug";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Social from "../components/Social.astro";
+import Bubbles from "../components/Bubbles.svelte";
 
 import { font } from "../styles/shared.ts";
 
@@ -49,6 +50,8 @@ const { body, heading } = font;
 
       <Footer {edit} />
     </div>
+
+    <Bubbles client:load />
   </body>
 </html>
 
