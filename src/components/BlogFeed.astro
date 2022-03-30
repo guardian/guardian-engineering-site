@@ -1,5 +1,6 @@
 ---
 import { timeAgo } from "@guardian/libs";
+const { CAPI_KEY } = import.meta.env;
 
 type SeriesResult = {
   id: string;
@@ -18,8 +19,13 @@ type SeriesResult = {
   };
 };
 
+const queryParams = new URLSearchParams();
+queryParams.append("tag", "info/series/engineering-blog");
+queryParams.append("show-fields", "byline");
+queryParams.append("api-key", CAPI_KEY);
+
 const posts: SeriesResult[] = await fetch(
-  "https://content.guardianapis.com/search?tag=info%2Fseries%2Fengineering-blog&show-fields=byline&api-key=test"
+  `https://content.guardianapis.com/search?${queryParams.toString()}`
 )
   .then((r) => r.json())
   .then((d) => d.response.results);
