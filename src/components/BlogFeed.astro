@@ -19,10 +19,11 @@ type SeriesResult = {
   };
 };
 
-const queryParams = new URLSearchParams();
-queryParams.append("tag", "info/series/engineering-blog");
-queryParams.append("show-fields", "byline");
-queryParams.append("api-key", CAPI_KEY ?? "test");
+const queryParams = new URLSearchParams({
+  tag: "info/series/engineering-blog",
+  "show-fields": "byline",
+  "api-key": CAPI_KEY ?? "test",
+});
 
 const posts: SeriesResult[] = await fetch(
   `https://content.guardianapis.com/search?${queryParams.toString()}`
