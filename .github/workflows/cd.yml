@@ -41,6 +41,8 @@ jobs:
         run: |
           pnpm run build -- --verbose
           touch ./dist/.nojekyll
+        env:
+          CAPI_KEY: ${{ secrets.CAPI_KEY }}
 
       - name: Deploy if `main`
         uses: peaceiris/actions-gh-pages@v3
