@@ -1,98 +1,134 @@
 <script lang="ts">
-  const count = 12;
-  const wrap = 250;
-  const bubbles = Array(count);
+  import { onMount } from "svelte";
 
-  let scroll: number = -1;
-  let height: number = 600;
+  type Layer = { speed: number; bubbles: Bubble[] };
+  type Bubble = {
+    colour: "blue" | "green";
+    x: number;
+    y: number;
+    rotation: number;
+  };
 
+  const wrap = 3600;
+  const layers: Layer[] = [
+    {
+      speed: 0.96,
+      bubbles: [
+        { colour: "green", x: 0.02, y: 0.1, rotation: 15 },
+        { colour: "blue", x: 0.91, y: 0.3, rotation: 120 },
+        { colour: "blue", x: 0.06, y: 0.6, rotation: 270 },
+        { colour: "green", x: 0.96, y: 0.9, rotation: 60 },
+      ],
+    },
+    {
+      speed: 1.2,
+      bubbles: [
+        { colour: "blue", x: 0.09, y: 0.35, rotation: 300 },
+        { colour: "green", x: 0.92, y: 0.85, rotation: 200 },
+      ],
+    },
+    {
+      speed: 2.4,
+      bubbles: [
+        { colour: "blue", x: 0.99, y: 0.1, rotation: 350 },
+        { colour: "green", x: 0.03, y: 0.6, rotation: 70 },
+        { colour: "green", x: 0.92, y: 0.9, rotation: 140 },
+      ],
+    },
+  ];
+
+  let scroll: number;
   let ready = false;
-  $: !ready && (ready = scroll >= 0);
 
-  const speed = (index: number) => {
-    switch (index % (count / 4)) {
-      case 0:
-        return 2.8;
-      case 1:
-        return 0.9;
-      case 2:
-        return 1.6;
-    }
-  };
-  const top = (index: number) => (index * wrap * 2) / count;
-  const left = (index: number) => {
-    switch (index % (count / 2)) {
-      case 0:
-        return 99;
-      case 1:
-        return 7;
-      case 2:
-        return 6;
-      case 3:
-        return 90;
-      case 4:
-        return 1;
-      case 5:
-        return 5;
-      case 6:
-        return 96;
-    }
-  };
+  onMount(() => {
+    ready = true;
+  });
 
-  const layer = (index: number) => (speed(index) > 1 ? 1 : -1);
+  const getCSSVars = (vars: Record<string, string | number>): string =>
+    Object.entries(vars)
+      .map(([name, value]) => `--${name}:${value}`)
+      .join(";");
 </script>
 
-<svelte:window bind:scrollY={scroll} bind:innerHeight={height} />
+<svelte:window bind:scrollY={scroll} />
 
-<aside>
-  {#each bubbles as _, index}
+<aside class={ready && "ready"}>
+  {#each layers as { speed, bubbles }}
     <div
-      class={`${index % 2 === 1 ? "green" : "blue"} ${ready && "ready"}`}
-      style={`
-        --top: ${top(index)}vh;
-        --left: ${left(index)}vw;
-        --scroll: ${-(((speed(index) * 100 * scroll) / height) % wrap)}vh;
-        --speed: ${speed(index)};
-        --layer: ${layer(index)};
-        --degrees: ${((index % count) * 360) / 6}deg;
-      `}
-    />
+      class="layer"
+      style={getCSSVars({
+        speed,
+        scroll: `${-(scroll % (wrap / speed))}px`,
+        wrap: `${wrap}px`,
+        index: speed > 1 ? 1 : -1,
+      })}
+    >
+      {#each [0, 1] as offset}
+        {#each bubbles as bubble}
+          <div
+            class={`bubble ${bubble.colour}`}
+            style={getCSSVars({
+              left: `${bubble.x * 100}vw`,
+              top: `${(bubble.y + offset) * 50}%`,
+              rotation: `${bubble.rotation}deg`,
+            })}
+          />
+        {/each}
+      {/each}
+    </div>
   {/each}
 </aside>
 
 <style>
+  aside {
+    display: none;
+  }
+
   @media (prefers-reduced-motion: no-preference) {
-    div {
-      width: calc(var(--speed) * 4rem);
-      height: calc(var(--speed) * 4rem);
+    aside {
+      display: block;
+    }
+
+    .layer {
+      pointer-events: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: calc(var(--wrap) * 2);
+      transform: translate3d(0, calc(var(--scroll) * var(--speed)), 0);
+      opacity: 0;
+      z-index: var(--index);
+    }
+
+    .ready .layer {
+      transition: opacity 300ms;
+      opacity: calc(var(--index) * 0.5 + 1);
+    }
+
+    .bubble {
+      width: calc(var(--speed) * 2rem + 1rem);
+      height: calc(var(--speed) * 2rem + 1rem);
       line-height: 4rem;
-      background-color: aquamarine;
       color: black;
       border-radius: 100%;
       text-align: center;
       position: fixed;
-      z-index: var(--layer);
+      transform: translate(-50%, -50%);
       top: var(--top);
-      transform: translate(-50%, calc(var(--scroll)));
       left: var(--left);
-      opacity: 0;
-    }
-    div.ready {
-      transition: opacity 300ms;
-      opacity: calc(1 + 0.5 * var(--layer));
     }
 
-    .blue {
+    .blue.bubble {
       background-image: linear-gradient(
-        var(--degrees),
+        var(--rotation, 15deg),
         #20c9ef 0%,
         #905ae9 100%
       );
     }
 
-    .green {
+    .green.bubble {
       background-image: linear-gradient(
-        var(--degrees),
+        var(--rotation, 15deg),
         #45cfed 0%,
         #ffe500 100%
       );
