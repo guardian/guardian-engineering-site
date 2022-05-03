@@ -52,7 +52,7 @@
 
 <svelte:window bind:scrollY={scroll} />
 
-<aside class={ready && "ready"}>
+<aside class:ready>
   {#each layers as { speed, bubbles }}
     <div
       class="layer"
@@ -87,11 +87,14 @@
   @media (prefers-reduced-motion: no-preference) {
     aside {
       display: block;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
     }
 
     .layer {
       pointer-events: none;
-      position: fixed;
+      position: absolute;
       top: 0;
       left: 0;
       height: calc(var(--wrap) * 2);
