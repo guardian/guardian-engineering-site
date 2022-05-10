@@ -82,6 +82,7 @@
 <style>
   aside {
     display: none;
+    pointer-events: none;
   }
 
   @media (prefers-reduced-motion: no-preference) {
