@@ -12,22 +12,29 @@
     "validate": "prettier src --plugin=prettier-plugin-astro --check",
     "prepare": "husky install"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@astrojs/react": "^0.1.2",
+    "@astrojs/svelte": "^0.1.3",
     "@babel/core": "7.16.7",
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/core": "11.0.0",
     "@emotion/react": "11.7.1",
     "@guardian/libs": "3.6.0",
     "@guardian/source-foundations": "4.1.0",
-    "@guardian/source-react-components": "4.0.3",
-    "astro": "0.23.2",
+    "@guardian/source-react-components": "4.4.0",
+    "@sveltejs/vite-plugin-svelte": "1.0.0-next.44",
+    "astro": "1.0.0-beta.34",
     "husky": "^7.0.4",
     "npm-check-updates": "12.1.0",
     "postcss-load-config": "^3.1.3",
     "prettier-plugin-astro": "0.0.11",
-    "react": "17.0.2",
+    "react": "18",
+    "react-dom": "^18.1.0",
     "sass": "^1.49.9",
-    "vite": "2.8.4",
+    "svelte": "^3.48.0",
+    "svelte-hmr": "^0.14.11",
+    "svelte-preprocess": "^4.10.6",
+    "vite": "2.9.9",
     "web-vitals": "2.1.3"
   }
 }

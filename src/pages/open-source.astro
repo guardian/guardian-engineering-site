@@ -3,7 +3,7 @@ import { timeAgo } from "@guardian/libs";
 import PageLayout from "../layouts/page.astro";
 import { Markdown } from "astro/components";
 
-import { border } from "../styles/shared.ts";
+import { border } from "../styles/shared";
 
 const reposUrl = `https://api.github.com/orgs/guardian/repos?per_page=100&sort=updated&direction=desc`;
 const reposRaw: Array<{
@@ -74,7 +74,7 @@ const repos = reposRaw
               <h4>{repo.name}</h4>
               <h5>
                 ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(repo.updated_at, {
+                {timeAgo(new Date(repo.updated_at).getTime(), {
                   daysUntilAbsolute: 1,
                 })}
                 )
