@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: "42 6,16 * * *"
+    - cron: "42 5/4 * * *"
 
 jobs:
   build-and-deploy:
@@ -50,5 +50,5 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-          git-config-name: Github Actions
-          git-config-email: <>
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
