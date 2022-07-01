@@ -1,3 +1,7 @@
+import react from '@astrojs/react';
+import svelte from '@astrojs/svelte';
+
+import { defineConfig } from 'astro/config';
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -7,9 +11,9 @@
 // You can disable this by removing "@ts-check" and `@type` comments below.
 
 // @ts-check
-export default /** @type {import('astro').AstroUserConfig} */ ({
-  renderers: ["@astrojs/renderer-react", "@astrojs/renderer-svelte"],
-  buildOptions: {
+export default defineConfig({
+  integrations: [react(), svelte()],
+  build: {
     site: "https://theguardian.engineering/",
   },
 });
