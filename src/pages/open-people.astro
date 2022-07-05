@@ -2,22 +2,23 @@
 import PageLayout from "../layouts/page.astro";
 import { Markdown } from "astro/components";
 
-import { border } from "../styles/shared.ts";
+import { border } from "../styles/shared.js";
 
 const url =
-  "https://raw.githubusercontent.com/guardian/our-engineering-culture/master/README.md";
+  "https://raw.githubusercontent.com/guardian/our-engineering-culture/main/README.md";
 const content = await fetch(url).then((r) => r.text());
 ---
 
 <PageLayout title="Open People" edit="open-people.astro">
   <section id="people">
-    <Markdown>
-      # Open People
+    <h1>Open People</h1>
 
-      As defined in our [engineering culture][], the key pillars are:
-
-      [engineering culture]: https://github.com/guardian/our-engineering-culture
-    </Markdown>
+    <p>
+      As defined in our <a
+        href="https://github.com/guardian/our-engineering-culture"
+        >engineering culture</a
+      >, the key pillars are:
+    </p>
     <ul>
       <!-- Extract titles from markdown for linking to sections directly -->
       {content
