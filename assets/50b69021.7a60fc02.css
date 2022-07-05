@@ -1,0 +1,1 @@
+.markdown{padding:0 1rem}.markdown ul{display:flex;list-style-type:none;padding:0;align-content:space-between}.markdown li{margin:1em;padding:1em;background-color:#333;width:30%}@media only screen and (max-width: 650px){.markdown ul{flex-direction:column}.markdown li{box-sizing:border-box;width:auto}}
