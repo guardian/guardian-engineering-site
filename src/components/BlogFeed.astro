@@ -1,7 +1,7 @@
 ---
 import { timeAgo } from "@guardian/libs";
 // workaround for buggy import.meta in SSR build (https://github.com/withastro/astro/issues/2903)
-const CAPI_KEY = import.meta.env.CAPI_KEY ?? process.env.CAPI_KEY;
+const CAPI_KEY = import.meta.env.CAPI_KEY ?? "test";
 
 type SeriesResult = {
   id: string;
@@ -23,7 +23,7 @@ type SeriesResult = {
 const queryParams = new URLSearchParams({
   tag: "info/series/engineering-blog",
   "show-fields": "byline",
-  "api-key": CAPI_KEY ?? "test",
+  "api-key": CAPI_KEY,
 });
 
 const posts: SeriesResult[] = await fetch(
