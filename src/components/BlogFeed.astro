@@ -1,6 +1,5 @@
 ---
 import { timeAgo } from "@guardian/libs";
-// workaround for buggy import.meta in SSR build (https://github.com/withastro/astro/issues/2903)
 const CAPI_KEY = import.meta.env.CAPI_KEY ?? "test";
 
 type SeriesResult = {
