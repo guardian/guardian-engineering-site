@@ -41,7 +41,7 @@ const repos = reposRaw
               <h4>{repo.name}</h4>
               <h5>
                 ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(parseInt(repo.updated_at, 10), {
+                {timeAgo(new Date(repo.updated_at).getTime(), {
                   daysUntilAbsolute: 1,
                 })}
                 )
