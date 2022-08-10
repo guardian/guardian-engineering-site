@@ -16,7 +16,7 @@ const reposRaw: Array<{
 }> = await fetch(reposUrl).then((r) => r.json());
 
 /**
- * A mix of recently updated a most stargazed repos
+ * A mix of recently updated and most stargazed repos
  */
 const repos = reposRaw
   .filter((repo) => !repo.archived)
