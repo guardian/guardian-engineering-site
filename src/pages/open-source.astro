@@ -21,8 +21,7 @@ const reposRaw: Array<{
 const repos = reposRaw
   .filter((repo) => !repo.archived)
   .sort(
-    (a, b) =>
-      new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
+    (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
   )
   .slice(0, 21)
   .sort((a, b) => b.stargazers_count - a.stargazers_count)
