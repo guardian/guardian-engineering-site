@@ -12,17 +12,16 @@ const reposRaw: Array<{
   html_url: string;
   stargazers_count: number;
   archived: boolean;
-  updated_at: string;
+  pushed_at: string;
 }> = await fetch(reposUrl).then((r) => r.json());
 
 /**
- * A mix of recently updated a most stargazed repos
+ * A mix of recently updated and most stargazed repos
  */
 const repos = reposRaw
   .filter((repo) => !repo.archived)
   .sort(
-    (a, b) =>
-      new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
+    (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
   )
   .slice(0, 21)
   .sort((a, b) => b.stargazers_count - a.stargazers_count)
@@ -41,7 +40,7 @@ const repos = reposRaw
               <h4>{repo.name}</h4>
               <h5>
                 ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(parseInt(repo.updated_at, 10), {
+                {timeAgo(new Date(repo.pushed_at).getTime(), {
                   daysUntilAbsolute: 1,
                 })}
                 )
