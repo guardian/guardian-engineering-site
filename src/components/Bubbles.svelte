@@ -91,6 +91,8 @@
       position: absolute;
       inset: 0;
       overflow: hidden;
+      width: 100vw;
+      left: min(calc((1300px - 100vw) / 2), 0px);
     }
 
     .layer {
