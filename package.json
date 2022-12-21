@@ -1,6 +1,4 @@
 {
-  "name": "@example/portfolio",
-  "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "astro dev",
@@ -20,7 +18,7 @@
     "@guardian/libs": "3.6.0",
     "@guardian/source-foundations": "5.0.0",
     "@guardian/source-react-components": "5.0.0",
-    "astro": "1.0.0-beta.61",
+    "astro": "^1.7.2",
     "husky": "^7.0.4",
     "npm-check-updates": "12.1.0",
     "postcss-load-config": "^3.1.3",
