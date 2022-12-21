@@ -1,22 +1,27 @@
 ---
-import { Markdown } from "astro/components";
+import { marked } from 'marked';
 import PageLayout from "../layouts/page.astro";
 
 const title = "Progression Framework";
 
 const performance = await fetch(
   "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/README.md"
-).then((r) => r.text());
+)
+  .then((r) => r.text())
+  // remove everything after the first h4
+  .then(t => t.split("####").slice(0, 1).join("\n ####"))
+  .then(marked.parse);
 
 const salaries = await fetch(
   "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/salary-bands.md"
-).then((r) => r.text());
+)
+  .then((r) => r.text())
+  .then(marked.parse);
 ---
 
-<PageLayout {title} edit="progression.astro">
-  <Markdown content={performance.split("####").slice(0, 1).join("\n ####")}>
+<PageLayout title={title} edit="progression.astro">
 
-  </Markdown>
+  <article set:html={performance} />
 
   <p>
     Read more about it <a
@@ -26,7 +31,6 @@ const salaries = await fetch(
   </p>
 
   <h1>Salary Bands</h1>
-  <Markdown content={salaries}>
 
-  </Markdown>
+  <article set:html={salaries} />
 </PageLayout>

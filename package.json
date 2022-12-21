@@ -11,6 +11,8 @@
     "prepare": "husky install"
   },
   "devDependencies": {
+    "@astrojs/react": "^1.2.2",
+    "@astrojs/svelte": "^1.0.2",
     "@babel/core": "7.16.7",
     "@emotion/babel-plugin": "^11.7.2",
     "@emotion/core": "11.0.0",
@@ -18,20 +20,21 @@
     "@guardian/libs": "3.6.0",
     "@guardian/source-foundations": "5.0.0",
     "@guardian/source-react-components": "5.0.0",
+    "@types/marked": "^4.0.8",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
     "astro": "^1.7.2",
     "husky": "^7.0.4",
+    "marked": "^4.2.4",
     "npm-check-updates": "12.1.0",
     "postcss-load-config": "^3.1.3",
     "prettier-plugin-astro": "0.0.11",
     "react": "17",
+    "react-dom": "^17.0.2",
     "sass": "^1.49.9",
-    "vite": "2.8.4",
+    "svelte": "^3.55.0",
+    "typescript": "^4.9.4",
+    "vite": "3",
     "web-vitals": "2.1.3"
-  },
-  "dependencies": {
-    "@astrojs/react": "^0.2.0",
-    "@astrojs/svelte": "^0.2.0",
-    "react-dom": "17",
-    "svelte": "3"
   }
 }
