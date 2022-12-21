@@ -1,5 +1,5 @@
 ---
-import { marked } from 'marked';
+import { marked } from "marked";
 import PageLayout from "../layouts/page.astro";
 
 const title = "Progression Framework";
@@ -9,7 +9,7 @@ const performance = await fetch(
 )
   .then((r) => r.text())
   // remove everything after the first h4
-  .then(t => t.split("####").slice(0, 1).join("\n ####"))
+  .then((t) => t.split("####").slice(0, 1).join("\n ####"))
   .then(marked.parse);
 
 const salaries = await fetch(
@@ -19,9 +19,8 @@ const salaries = await fetch(
   .then(marked.parse);
 ---
 
-<PageLayout title={title} edit="progression.astro">
-
-  <article set:html={performance} />
+<PageLayout {title} edit="progression.astro">
+  <article set:html={performance}></article>
 
   <p>
     Read more about it <a
@@ -32,5 +31,5 @@ const salaries = await fetch(
 
   <h1>Salary Bands</h1>
 
-  <article set:html={salaries} />
+  <article set:html={salaries}></article>
 </PageLayout>
