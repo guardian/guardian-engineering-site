@@ -1,12 +1,14 @@
 ---
 import PageLayout from "../layouts/page.astro";
-import { Markdown } from "astro/components";
+import { marked } from "marked";
 
 import { border } from "../styles/shared.js";
 
-const url =
-  "https://raw.githubusercontent.com/guardian/our-engineering-culture/main/README.md";
-const content = await fetch(url).then((r) => r.text());
+const response = await fetch(
+  "https://raw.githubusercontent.com/guardian/our-engineering-culture/main/README.md"
+);
+const markdown = await response.text();
+const content = marked.parse(markdown);
 ---
 
 <PageLayout title="Open People" edit="open-people.astro">
@@ -41,9 +43,7 @@ const content = await fetch(url).then((r) => r.text());
 
     <hr />
 
-    <Markdown {content}>
-
-    </Markdown>
+    <article set:html={content}></article>
   </section>
 </PageLayout>
 
