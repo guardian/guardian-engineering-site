@@ -1,9 +1,9 @@
 ---
 import PageLayout from "../layouts/page.astro";
 
-import { Content as Diversity, getHeaders } from "../../content/diversity.md";
+import { Content as Diversity, getHeadings } from "../../content/diversity.md";
 
-const title = (await getHeaders())[0].text;
+const title = getHeadings()[0].text;
 ---
 
 <PageLayout {title} edit="diversity.astro">
