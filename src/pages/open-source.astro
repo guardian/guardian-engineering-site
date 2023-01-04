@@ -1,5 +1,4 @@
 ---
-import { timeAgo } from "@guardian/libs";
 import PageLayout from "../layouts/page.astro";
 import { Content } from "../../content/open-source.md";
 
@@ -26,6 +25,24 @@ const repos = reposRaw
   .slice(0, 21)
   .sort((a, b) => b.stargazers_count - a.stargazers_count)
   .slice(0, 10);
+
+const timeAgo = (date: Date) =>
+  `${
+    [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ][date.getMonth()]
+  } ${date.getDate()}, ${date.getFullYear()}`;
 ---
 
 <PageLayout title="Open Source" edit="open-source.astro">
@@ -40,10 +57,7 @@ const repos = reposRaw
               <h4>{repo.name}</h4>
               <h5>
                 ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(new Date(repo.pushed_at).getTime(), {
-                  daysUntilAbsolute: 1,
-                })}
-                )
+                {timeAgo(new Date(repo.pushed_at))})
               </h5>
               <p>{repo.description}</p>
             </a>
