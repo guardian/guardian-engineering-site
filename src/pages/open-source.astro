@@ -50,20 +50,22 @@ const timeAgo = (date: Date) =>
     <Content />
 
     <ol>
-      {repos.map((repo) => {
-        return (
-          <li>
-            <a href={repo.html_url}>
-              <h4>{repo.name}</h4>
-              <h5>
-                ({repo.stargazers_count} stars - updated{" "}
-                {timeAgo(new Date(repo.pushed_at))})
-              </h5>
-              <p>{repo.description}</p>
-            </a>
-          </li>
-        );
-      })}
+      {
+        repos.map((repo) => {
+          return (
+            <li>
+              <a href={repo.html_url}>
+                <h4>{repo.name}</h4>
+                <h5>
+                  ({repo.stargazers_count} stars - updated{" "}
+                  {timeAgo(new Date(repo.pushed_at))})
+                </h5>
+                <p>{repo.description}</p>
+              </a>
+            </li>
+          );
+        })
+      }
     </ol>
   </section>
 </PageLayout>

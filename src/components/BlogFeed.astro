@@ -54,35 +54,37 @@ type ArticleResult = {
 
 <h3>Latest Engineering blog posts</h3>
 <ul>
-  {posts.slice(0, 9).map(async (post) => {
-    const time = new Date(post.webPublicationDate).getTime();
-    const pubDate = timeAgo(time);
+  {
+    posts.slice(0, 9).map(async (post) => {
+      const time = new Date(post.webPublicationDate).getTime();
+      const pubDate = timeAgo(time);
 
-    const article: ArticleResult = await fetch(post.webUrl + ".json?dcr").then(
-      (r) => r.json()
-    );
+      const article: ArticleResult = await fetch(
+        post.webUrl + ".json?dcr"
+      ).then((r) => r.json());
 
-    const media = article.mainMediaElements[0];
+      const media = article.mainMediaElements[0];
 
-    const image = media.imageSources
-      .find((source) => source.weighting === "inline")
-      .srcSet.slice()
-      .sort((a, b) => a.width - b.width)
-      .find((src) => src.width > 600);
+      const image = media.imageSources
+        .find((source) => source.weighting === "inline")
+        .srcSet.slice()
+        .sort((a, b) => a.width - b.width)
+        .find((src) => src.width > 600);
 
-    return (
-      <li>
-        <a href={post.webUrl}>
-          <figure>
-            <img src={image.src} width={image.width} alt={media.data.alt} />
-          </figure>
-          <h4>{post.webTitle}</h4>
-          <h5 class="byline">{post.fields.byline}</h5>
-          <h5>{pubDate}</h5>
-        </a>
-      </li>
-    );
-  })}
+      return (
+        <li>
+          <a href={post.webUrl}>
+            <figure>
+              <img src={image.src} width={image.width} alt={media.data.alt} />
+            </figure>
+            <h4>{post.webTitle}</h4>
+            <h5 class="byline">{post.fields.byline}</h5>
+            <h5>{pubDate}</h5>
+          </a>
+        </li>
+      );
+    })
+  }
 </ul>
 <a href="https://www.theguardian.com/info/series/engineering-blog"
   >Read more on our Engineering blog</a

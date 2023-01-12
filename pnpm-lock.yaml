@@ -15,7 +15,7 @@ specifiers:
   astro: ^1.9.2
   husky: ^8.0.3
   marked: ^4.2.5
-  prettier-plugin-astro: 0.0.11
+  prettier-plugin-astro: ~0.7.2
   react: ^17.0.2
   react-dom: ^17.0.2
   sass: ^1.57.1
@@ -39,7 +39,7 @@ devDependencies:
   astro: 1.9.2_sass@1.57.1
   husky: 8.0.3
   marked: 4.2.5
-  prettier-plugin-astro: 0.0.11
+  prettier-plugin-astro: 0.7.2
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   sass: 1.57.1
@@ -123,16 +123,6 @@ packages:
       micromark-util-types: 1.0.2
       uvu: 0.5.6
       vfile-message: 3.1.3
-    dev: true
-
-  /@astrojs/parser/0.20.3:
-    resolution: {integrity: sha512-GyNWuVJU/VecbhDMlGFP+bNfvXvkN8w9fwOehNUa26fT3ONwb/qBS+TRQW034N05y/N5it0wGFT0MU+wzq+XSw==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0, npm: '>=6.14.0'}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    dependencies:
-      acorn: 7.4.1
-      locate-character: 2.0.5
-      magic-string: 0.25.9
     dev: true
 
   /@astrojs/prism/1.0.2:
@@ -881,12 +871,6 @@ packages:
       acorn: ^6.0.0 || ^7.0.0 || ^8.0.0
     dependencies:
       acorn: 8.8.1
-    dev: true
-
-  /acorn/7.4.1:
-    resolution: {integrity: sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==}
-    engines: {node: '>=0.4.0'}
-    hasBin: true
     dev: true
 
   /acorn/8.8.1:
@@ -2240,10 +2224,6 @@ packages:
       strip-bom: 3.0.0
     dev: true
 
-  /locate-character/2.0.5:
-    resolution: {integrity: sha512-n2GmejDXtOPBAZdIiEFy5dJ5N38xBCXLNOtw2WpB9kGh6pnrEuKlwYI+Tkpofc4wDtVXHtoAOJaMRlYG/oYaxg==}
-    dev: true
-
   /locate-path/5.0.0:
     resolution: {integrity: sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==}
     engines: {node: '>=8'}
@@ -3146,15 +3126,6 @@ packages:
       find-yarn-workspace-root2: 1.2.16
       path-exists: 4.0.0
       which-pm: 2.0.0
-    dev: true
-
-  /prettier-plugin-astro/0.0.11:
-    resolution: {integrity: sha512-6y2XMRi4FIF0Z8milimHBM93nXZIUpTlkzoSW+wOY0olBvW9s+uY5HTqq0e63ML5mS6f0tJk3tonWIrxH9znpQ==}
-    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0, npm: '>=6.14.0'}
-    dependencies:
-      '@astrojs/parser': 0.20.3
-      prettier: 2.8.2
-      sass-formatter: 0.7.5
     dev: true
 
   /prettier-plugin-astro/0.7.2:

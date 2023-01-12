@@ -23,27 +23,29 @@ const content = marked.parse(markdown);
     </p>
     <ul>
       <!-- Extract titles from markdown for linking to sections directly -->
-      {content
-        .split("\n")
-        .filter((line) => line.startsWith("#### "))
-        .map((pillar) => {
-          const name = pillar.slice(5);
-          const link = name
-            .trim()
-            .replaceAll("&", "")
-            .replaceAll(" ", "-")
-            .toLowerCase();
-          return (
-            <li>
-              <a href={`#${link}`}>{name}</a>
-            </li>
-          );
-        })}
+      {
+        content
+          .split("\n")
+          .filter((line) => line.startsWith("#### "))
+          .map((pillar) => {
+            const name = pillar.slice(5);
+            const link = name
+              .trim()
+              .replaceAll("&", "")
+              .replaceAll(" ", "-")
+              .toLowerCase();
+            return (
+              <li>
+                <a href={`#${link}`}>{name}</a>
+              </li>
+            );
+          })
+      }
     </ul>
 
     <hr />
 
-    <article set:html={content}></article>
+    <article set:html={content} />
   </section>
 </PageLayout>
 

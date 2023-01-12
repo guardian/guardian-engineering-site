@@ -6,7 +6,7 @@ import { Content as Diversity, getHeadings } from "../../content/diversity.md";
 const title = getHeadings()[0].text;
 ---
 
-<PageLayout {title} edit="diversity.astro">
+<PageLayout title={title} edit="diversity.astro">
   <section class="markdown">
     <Diversity />
   </section>
