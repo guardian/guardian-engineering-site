@@ -14,13 +14,15 @@ const year = new Date().getUTCFullYear();
       >Guardian developers</a
     >
   </div>
-  {edit ? (
-    <a
-      href={`https://github.com/guardian/guardian-engineering-site/blob/${branch}/src/pages/${edit}`}
-    >
-      Edit this page
-    </a>
-  ) : null}
+  {
+    edit ? (
+      <a
+        href={`https://github.com/guardian/guardian-engineering-site/blob/${branch}/src/pages/${edit}`}
+      >
+        Edit this page
+      </a>
+    ) : null
+  }
 </footer>
 
 <style define:vars={{ border }}>

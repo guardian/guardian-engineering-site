@@ -1,7 +1,7 @@
-import react from '@astrojs/react';
-import svelte from '@astrojs/svelte';
+import react from "@astrojs/react";
+import svelte from "@astrojs/svelte";
 
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 // Full Astro Configuration API Documentation:
 // https://docs.astro.build/reference/configuration-reference
 
@@ -15,5 +15,6 @@ export default defineConfig({
   integrations: [react(), svelte()],
   build: {
     site: "https://theguardian.engineering/",
+    format: "file",
   },
 });
