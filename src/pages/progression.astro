@@ -20,7 +20,7 @@ const salaries = await fetch(
 ---
 
 <PageLayout title={title} edit="progression.astro">
-  <article set:html={performance} />
+  <article class="markdown" set:html={performance} />
 
   <p>
     Read more about it <a
@@ -31,5 +31,11 @@ const salaries = await fetch(
 
   <h1>Salary Bands</h1>
 
-  <article set:html={salaries} />
+  <article class="markdown" set:html={salaries} />
 </PageLayout>
+
+<style lang="scss">
+  .markdown {
+    padding: 0 1rem;
+  }
+</style>
