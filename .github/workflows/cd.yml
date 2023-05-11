@@ -1,9 +1,7 @@
 name: CD
 on:
-  # Triggers the workflow on push and pull request events but only for the main branch
+  # Triggers the workflow on push only for the main branch
   push:
-    branches: [main]
-  pull_request:
     branches: [main]
 
   # Allows you to run this workflow manually from the Actions tab.
@@ -11,6 +9,18 @@ on:
 
   schedule:
     - cron: "42 5/4 * * *"
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -21,21 +31,14 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup node
-        uses: guardian/actions-setup-node@main
+      - uses: pnpm/action-setup@v2.2.4
 
-      - name: Cache pnpm modules
-        uses: actions/cache@v2
+      - uses: actions/setup-node@v3
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
+          node-version-file: ".nvmrc"
+          cache: "pnpm"
 
-      - uses: pnpm/action-setup@v2.0.1
-        with:
-          version: 6.23.6
-          run_install: true
+      - run: pnpm install --frozen-lockfile
 
       - name: Build
         run: |
@@ -44,11 +47,14 @@ jobs:
         env:
           CAPI_KEY: ${{ secrets.CAPI_KEY }}
 
-      - name: Deploy if `main`
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.ref == 'refs/heads/main' }}
+      - name: Setup Pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
-          user_name: 'github-actions[bot]'
-          user_email: 'github-actions[bot]@users.noreply.github.com'
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
