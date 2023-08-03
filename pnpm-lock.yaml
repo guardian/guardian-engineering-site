@@ -180,7 +180,7 @@ packages:
       dset: 3.1.2
       is-docker: 3.0.0
       is-wsl: 2.2.0
-      undici: 5.16.0
+      undici: 5.22.1
       which-pm-runs: 1.1.0
     transitivePeerDependencies:
       - supports-color
@@ -189,7 +189,7 @@ packages:
   /@astrojs/webapi@2.0.0:
     resolution: {integrity: sha512-gziwy+XvY+/B9mq/eurgJMZ4iFnkcqg1wb0tA8BsVfiUPwl7yQKAFrBxrs2rWfKMXyWlVaTFc8rAYcB5VXQEuw==}
     dependencies:
-      undici: 5.16.0
+      undici: 5.22.1
     dev: true
 
   /@babel/code-frame@7.18.6:
@@ -3227,9 +3227,9 @@ packages:
     hasBin: true
     dev: true
 
-  /undici@5.16.0:
-    resolution: {integrity: sha512-KWBOXNv6VX+oJQhchXieUznEmnJMqgXMbs0xxH2t8q/FUAWSJvOSr/rMaZKnX5RIVq7JDn0JbP4BOnKG2SGXLQ==}
-    engines: {node: '>=12.18'}
+  /undici@5.22.1:
+    resolution: {integrity: sha512-Ji2IJhFXZY0x/0tVBXeQwgPlLWw13GVzpsWPQ3rV50IFMMof2I55PZZxtm4P6iNq+L5znYN9nSTAq0ZyE6lSJw==}
+    engines: {node: '>=14.0'}
     dependencies:
       busboy: 1.6.0
     dev: true
