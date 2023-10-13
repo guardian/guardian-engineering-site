@@ -3,7 +3,8 @@ import PageLayout from "../layouts/page.astro";
 import BlogFeed from "../components/BlogFeed.astro";
 
 import { border } from "../styles/shared.js";
-import home from "/assets/home-digital-development.jpg";
+import home from "./home-digital-development.jpg";
+import { Image } from "astro:assets";
 ---
 
 <PageLayout edit="index.astro">
@@ -20,7 +21,7 @@ import home from "/assets/home-digital-development.jpg";
     <div class="flexedImage">
       <img
         id="home"
-        src={home}
+        src={home.src}
         alt="Five people gathered around a table, with a man in the centre wearing an 'I heart the Guardian' tshirt"
       />
     </div>
