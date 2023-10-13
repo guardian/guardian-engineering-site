@@ -13,18 +13,18 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@astrojs/react": "2.0.0",
-    "@astrojs/svelte": "2.0.0",
+    "@astrojs/react": "3.0.3",
+    "@astrojs/svelte": "4.0.3",
     "@babel/core": "7.20.12",
-    "@emotion/babel-plugin": "11.10.5",
-    "@emotion/react": "11.7.1",
-    "@guardian/libs": "3.6.0",
-    "@guardian/source-foundations": "11.0.0",
-    "@guardian/source-react-components": "14.0.2",
+    "@emotion/babel-plugin": "11.11.0",
+    "@emotion/react": "11.11.1",
+    "@guardian/libs": "15.8.0",
+    "@guardian/source-foundations": "13.0.0",
+    "@guardian/source-react-components": "16.0.0",
     "@types/marked": "4.0.8",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
-    "astro": "2.0.1",
+    "astro": "3.3.0",
     "husky": "8.0.3",
     "marked": "4.2.5",
     "prettier-plugin-astro": "0.7.2",
@@ -32,9 +32,9 @@
     "react-dom": "18.2.0",
     "sass": "1.57.1",
     "svelte": "3.55.1",
-    "typescript": "4.9.5",
-    "vite": "4.0.5",
-    "web-vitals": "2.1.3"
+    "typescript": "5.1.6",
+    "vite": "4.4.11",
+    "web-vitals": "3.5.0"
   },
   "packageManager": "pnpm@8.5.0"
 }
