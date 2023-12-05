@@ -33,7 +33,7 @@
     "sass": "1.57.1",
     "svelte": "3.55.1",
     "typescript": "5.1.6",
-    "vite": "4.4.11",
+    "vite": "4.4.12",
     "web-vitals": "3.5.0"
   },
   "packageManager": "pnpm@8.5.0"
