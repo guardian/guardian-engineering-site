@@ -2,6 +2,8 @@
   "include": ["src"],
   "moduleResolution": "node",
   "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react"
   }
