@@ -1,23 +1,34 @@
 ---
+import {
+  parse,
+  object,
+  string,
+  number,
+  literal,
+  array,
+  picklist,
+  optional,
+} from "valibot";
 import { timeAgo } from "@guardian/libs";
 const CAPI_KEY = import.meta.env.CAPI_KEY ?? "test";
 
-type SeriesResult = {
-  id: string;
-  type: string;
-  sectionId: string;
-  sectionName: string;
-  webPublicationDate: string;
-  webTitle: string;
-  webUrl: string;
-  apiUrl: string;
-  isHosted: boolean;
-  pillarId: string;
-  pillarName: string;
-  fields: {
-    byline: string;
-  };
-};
+const searchResponseSchema = object({
+  response: object({
+    status: literal("ok"),
+    results: array(
+      object({
+        webUrl: string(),
+        webPublicationDate: string(),
+        webTitle: string(),
+        fields: optional(
+          object({
+            byline: string(),
+          })
+        ),
+      })
+    ),
+  }),
+});
 
 const queryParams = new URLSearchParams({
   tag: "info/series/engineering-blog",
@@ -25,65 +36,95 @@ const queryParams = new URLSearchParams({
   "api-key": CAPI_KEY,
 });
 
-const posts: SeriesResult[] = await fetch(
+const contentResultSchema = object({
+  mainMediaElements: array(
+    object({
+      data: object({
+        alt: string(),
+      }),
+      imageSources: array(
+        object({
+          weighting: picklist([
+            "inline",
+            "thumbnail",
+            "showcase",
+            "immersive",
+            "supporting",
+            "halfwidth",
+          ]),
+          srcSet: array(
+            object({
+              src: string(),
+              width: number(),
+            })
+          ),
+        })
+      ),
+    })
+  ),
+});
+
+const posts = await fetch(
   `https://content.guardianapis.com/search?${queryParams.toString()}`
 )
   .then((r) => r.json())
-  .then((d) => d.response.results);
+  .then((d) => parse(searchResponseSchema, d).response.results)
+  .then((r) =>
+    Promise.all(
+      r.slice(0, 9).map(async (post) => {
+        const time = new Date(post.webPublicationDate).getTime();
+        const pubDate = timeAgo(time);
 
-/**
- * It would be good to use https://raw.githubusercontent.com/guardian/dotcom-rendering/main/dotcom-rendering/src/model/json-schema.json
- */
-type ArticleResult = {
-  mainMediaElements: Array<{
-    data: {
-      alt: string;
-      caption: string;
-      credit: string;
-    };
-    imageSources: Array<{
-      weighting: "inline" | "thumbnail" | "showcase" | "immersive";
-      srcSet: Array<{
-        src: `https://i.guim.co.uk/${string}`;
-        width: number;
-      }>;
-    }>;
-  }>;
-};
+        const article = await fetch(post.webUrl + ".json?dcr")
+          .then((r) => r.json())
+          .then((d) => parse(contentResultSchema, d));
+
+        const media = article.mainMediaElements[0];
+
+        const { src, width } =
+          media?.imageSources
+            .find((source) => source.weighting === "inline")
+            ?.srcSet.slice()
+            .sort((a, b) => a.width - b.width)
+            .find((src) => src.width > 600) ?? {};
+
+        const image = {
+          src,
+          width,
+          alt: media?.data.alt,
+        };
+
+        return {
+          time,
+          image,
+          url: post.webUrl,
+          title: post.webTitle,
+          byline: post.fields?.byline,
+        };
+      })
+    )
+  );
 ---
 
 <h3>Latest Engineering blog posts</h3>
 <ul>
   {
-    posts.slice(0, 9).map(async (post) => {
-      const time = new Date(post.webPublicationDate).getTime();
-      const pubDate = timeAgo(time);
-
-      const article: ArticleResult = await fetch(
-        post.webUrl + ".json?dcr"
-      ).then((r) => r.json());
-
-      const media = article.mainMediaElements[0];
-
-      const image = media.imageSources
-        .find((source) => source.weighting === "inline")
-        .srcSet.slice()
-        .sort((a, b) => a.width - b.width)
-        .find((src) => src.width > 600);
-
-      return (
-        <li>
-          <a href={post.webUrl}>
-            <figure>
-              <img src={image.src} width={image.width} alt={media.data.alt} />
-            </figure>
-            <h4>{post.webTitle}</h4>
-            <h5 class="byline">{post.fields.byline}</h5>
-            <h5>{pubDate}</h5>
-          </a>
-        </li>
-      );
-    })
+    posts.map((post) => (
+      <li>
+        <a href={post.url}>
+          <figure>
+            <img
+              src={post.image.src}
+              width={post.image.width}
+              alt={post.image.alt}
+            />
+          </figure>
+          <h4>{post.title}</h4>
+          <h5 class="byline">{post.byline}</h5>
+          <h5>{timeAgo(post.time)}</h5>
+        </a>
+      </li>
+    ))
   }
 </ul>
 <a href="https://www.theguardian.com/info/series/engineering-blog"
