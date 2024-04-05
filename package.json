@@ -34,7 +34,7 @@
     "svelte": "4.2.8",
     "typescript": "5.1.6",
     "valibot": "^0.28.1",
-    "vite": "5.0.12",
+    "vite": "5.0.13",
     "web-vitals": "3.5.0"
   },
   "packageManager": "pnpm@8.5.0"
