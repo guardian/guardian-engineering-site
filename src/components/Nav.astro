@@ -42,13 +42,11 @@ const { path } = Astro.props;
       padding-bottom: 8px;
       text-decoration: none;
 
-      &.active {
+      &.active,
+      &:hover,
+      :focus {
         padding-top: 2px;
         border-top: 3px solid;
-      }
-
-      &:focus,
-      &:hover {
         color: gold;
       }
     }
