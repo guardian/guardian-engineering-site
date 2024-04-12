@@ -1,4 +1,5 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 import Nav from "../components/Nav.astro";
 import Footer from "../components/Footer.astro";
 import Social from "../components/Social.astro";
@@ -28,6 +29,8 @@ const { body, heading } = font;
       href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
       rel="stylesheet"
     />
+
+    <ViewTransitions />
   </head>
 
   <body>
@@ -46,57 +49,56 @@ const { body, heading } = font;
     </div>
 
     <Bubbles client:load />
+    <style lang="scss" is:global define:vars={{ body, heading }}>
+      body {
+        font-family: var(--body);
+        margin: 0 auto;
+        min-height: 100vh;
+        background-color: #111;
+        color: #ccc;
+        box-sizing: border-box;
+        width: 100vw;
+        max-width: 1300px;
+        position: relative;
+        overflow-x: hidden;
+        padding: 0.5rem;
+
+        @media (min-width: 740px) {
+          & {
+            padding: 1rem;
+          }
+        }
+      }
+
+      h1,
+      h2,
+      h3 {
+        font-family: var(--heading);
+      }
+
+      header {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .frame {
+        border: 1px solid #444;
+      }
+
+      main {
+        & > h1,
+        & > h2,
+        & > h3,
+        & > p {
+          padding: 0 1rem;
+        }
+
+        & > ul {
+          padding-left: 2rem;
+        }
+      }
+    </style>
   </body>
 </html>
-
-<style lang="scss" is:global define:vars={{ body, heading }}>
-  body {
-    font-family: var(--body);
-    margin: 0 auto;
-    min-height: 100vh;
-    background-color: #111;
-    color: #ccc;
-    box-sizing: border-box;
-    width: 100vw;
-    max-width: 1300px;
-    position: relative;
-    overflow-x: hidden;
-    padding: 0.5rem;
-
-    @media (min-width: 740px) {
-      & {
-        padding: 1rem;
-      }
-    }
-  }
-
-  h1,
-  h2,
-  h3 {
-    font-family: var(--heading);
-  }
-
-  header {
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .frame {
-    border: 1px solid #444;
-  }
-
-  main {
-    & > h1,
-    & > h2,
-    & > h3,
-    & > p {
-      padding: 0 1rem;
-    }
-
-    & > ul {
-      padding-left: 2rem;
-    }
-  }
-</style>
