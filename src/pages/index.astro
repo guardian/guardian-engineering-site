@@ -19,9 +19,11 @@ import { Image } from "astro:assets";
     </div>
 
     <div class="flexedImage">
-      <img
+      <Image
         id="home"
-        src={home.src}
+        src={home}
+        height={home.height / 2}
+        width={home.width / 2}
         alt="Five people gathered around a table, with a man in the centre wearing an 'I heart the Guardian' tshirt"
       />
     </div>
@@ -65,6 +67,7 @@ import { Image } from "astro:assets";
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 1rem;
+    gap: 1em;
   }
 
   // All but the first section
@@ -94,7 +97,6 @@ import { Image } from "astro:assets";
       display: flex;
       flex: 1 0 420px;
       align-items: center;
-      max-width: 100%;
     }
 
     a {
@@ -109,8 +111,9 @@ import { Image } from "astro:assets";
     }
 
     img {
-      object-fit: cover;
       max-width: 100%;
+      height: auto;
+      width: auto;
     }
   }
 
