@@ -37,5 +37,8 @@
     "vite": "5.0.13",
     "web-vitals": "3.5.0"
   },
+  "overrides": {
+    "gh-pages": "5.0.0"
+  },
   "packageManager": "pnpm@8.5.0"
 }
