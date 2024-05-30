@@ -5,7 +5,7 @@ import PageLayout from "../layouts/page.astro";
 const title = "Progression Framework";
 
 const performance = await fetch(
-  "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/README.md"
+  "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/README.md",
 )
   .then((r) => r.text())
   // remove everything after the first h4
@@ -13,7 +13,7 @@ const performance = await fetch(
   .then((t) => marked.parse(t, { async: true }));
 
 const salaries = await fetch(
-  "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/salary-bands.md"
+  "https://raw.githubusercontent.com/guardian/engineering-performance-framework/main/salary-bands.md",
 )
   .then((r) => r.text())
   .then((t) => marked.parse(t, { async: true }));

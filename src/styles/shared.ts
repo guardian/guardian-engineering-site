@@ -1,4 +1,4 @@
-import { fonts } from "@guardian/source-foundations";
+import { fonts } from "@guardian/source/foundations";
 
 const borderColor = "#555";
 export const border = `1px solid ${borderColor}`;
