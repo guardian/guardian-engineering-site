@@ -23,9 +23,9 @@ const searchResponseSchema = object({
         fields: optional(
           object({
             byline: string(),
-          })
+          }),
         ),
-      })
+      }),
     ),
   }),
 });
@@ -56,16 +56,16 @@ const contentResultSchema = object({
             object({
               src: string(),
               width: number(),
-            })
+            }),
           ),
-        })
+        }),
       ),
-    })
+    }),
   ),
 });
 
 const posts = await fetch(
-  `https://content.guardianapis.com/search?${queryParams.toString()}`
+  `https://content.guardianapis.com/search?${queryParams.toString()}`,
 )
   .then((r) => r.json())
   .then((d) => parse(searchResponseSchema, d).response.results)
@@ -101,8 +101,8 @@ const posts = await fetch(
           title: post.webTitle,
           byline: post.fields?.byline,
         };
-      })
-    )
+      }),
+    ),
   );
 ---
 
