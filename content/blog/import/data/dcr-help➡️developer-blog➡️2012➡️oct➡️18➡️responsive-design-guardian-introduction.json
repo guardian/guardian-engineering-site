@@ -1,0 +1,1904 @@
+{
+  "version": 3,
+  "headline": "Responsive design at the Guardian: an introduction",
+  "standfirst": "An overview of what responsive design is and how we're planning to make use of it at the Guardian",
+  "webTitle": "Responsive design at the Guardian: an introduction",
+  "mainMediaElements": [
+    {
+      "displayCredit": false,
+      "_type": "model.dotcomrendering.pageElements.ImageBlockElement",
+      "role": "inline",
+      "media": {
+        "allImages": [
+          {
+            "index": 0,
+            "fields": {
+              "height": "275",
+              "width": "460"
+            },
+            "mediaType": "Image",
+            "mimeType": "image/jpeg",
+            "url": "http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg"
+          }
+        ]
+      },
+      "elementId": "a1ced48c-38c4-4b5c-904c-9e5a9bd4d8b9",
+      "imageSources": [
+        {
+          "weighting": "inline",
+          "srcSet": [
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=620&quality=85&auto=format&fit=max&s=a2c00e781f0de5f6b259cb3d757a1d7f",
+              "width": 620
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=f9f0bdedd147e9a1acadc16663de7a4b",
+              "width": 1240
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=85&auto=format&fit=max&s=70fe6c708e34cd70bf04352623d1b1f6",
+              "width": 700
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=45&auto=format&fit=max&dpr=2&s=e309d0c828004271ab14a1510b71736e",
+              "width": 1400
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=620&quality=85&auto=format&fit=max&s=a2c00e781f0de5f6b259cb3d757a1d7f",
+              "width": 620
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=620&quality=45&auto=format&fit=max&dpr=2&s=f9f0bdedd147e9a1acadc16663de7a4b",
+              "width": 1240
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=645&quality=85&auto=format&fit=max&s=d5ea01eb8ad24062776e82adc05c6c8d",
+              "width": 645
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=645&quality=45&auto=format&fit=max&dpr=2&s=b4a07b5a26b73e79aad259d3fdda985f",
+              "width": 1290
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=465&quality=85&auto=format&fit=max&s=41ab8b8b8871bb9c07398943b7dbc08a",
+              "width": 465
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=a9be9afa3042931639f887f074eba1a4",
+              "width": 930
+            }
+          ]
+        },
+        {
+          "weighting": "thumbnail",
+          "srcSet": []
+        },
+        {
+          "weighting": "supporting",
+          "srcSet": []
+        },
+        {
+          "weighting": "showcase",
+          "srcSet": [
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1020&quality=85&auto=format&fit=max&s=13bfe1b7be13159722839608c8d00ad6",
+              "width": 1020
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1020&quality=45&auto=format&fit=max&dpr=2&s=984845e982221bce0f6f77e84fa5a9a3",
+              "width": 2040
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=940&quality=85&auto=format&fit=max&s=31fff97704667f237f7cad5fdc23ff9b",
+              "width": 940
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=940&quality=45&auto=format&fit=max&dpr=2&s=8baef99275e94a13f233d73e43827a44",
+              "width": 1880
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=85&auto=format&fit=max&s=70fe6c708e34cd70bf04352623d1b1f6",
+              "width": 700
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=45&auto=format&fit=max&dpr=2&s=e309d0c828004271ab14a1510b71736e",
+              "width": 1400
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=85&auto=format&fit=max&s=70fe6c708e34cd70bf04352623d1b1f6",
+              "width": 700
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=700&quality=45&auto=format&fit=max&dpr=2&s=e309d0c828004271ab14a1510b71736e",
+              "width": 1400
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=660&quality=85&auto=format&fit=max&s=a1417506ad4c01d44e0973c6380844fa",
+              "width": 660
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=660&quality=45&auto=format&fit=max&dpr=2&s=c26bcdaf7dcad04c5e92b2827f36d9c7",
+              "width": 1320
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=645&quality=85&auto=format&fit=max&s=d5ea01eb8ad24062776e82adc05c6c8d",
+              "width": 645
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=645&quality=45&auto=format&fit=max&dpr=2&s=b4a07b5a26b73e79aad259d3fdda985f",
+              "width": 1290
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=465&quality=85&auto=format&fit=max&s=41ab8b8b8871bb9c07398943b7dbc08a",
+              "width": 465
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=465&quality=45&auto=format&fit=max&dpr=2&s=a9be9afa3042931639f887f074eba1a4",
+              "width": 930
+            }
+          ]
+        },
+        {
+          "weighting": "halfwidth",
+          "srcSet": []
+        },
+        {
+          "weighting": "immersive",
+          "srcSet": [
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1900&quality=85&auto=format&fit=max&s=0b0b06b06ca099145e205ab8cc546025",
+              "width": 1900
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1900&quality=45&auto=format&fit=max&dpr=2&s=78cf245a694f9f611d70e64b73d61045",
+              "width": 3800
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1300&quality=85&auto=format&fit=max&s=a34bb1b09ab3b2cabf6d5b9b2b68aeca",
+              "width": 1300
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1300&quality=45&auto=format&fit=max&dpr=2&s=17ee4a82c92ad9847cf8660a6fdd9a45",
+              "width": 2600
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1140&quality=85&auto=format&fit=max&s=f84264299e4323e75ec1387d2ea98f54",
+              "width": 1140
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1140&quality=45&auto=format&fit=max&dpr=2&s=2074dd22445b63493827128b5eb9e454",
+              "width": 2280
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=980&quality=85&auto=format&fit=max&s=b022bdf6a0f12475d7fd0791fff6a8aa",
+              "width": 980
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=980&quality=45&auto=format&fit=max&dpr=2&s=538092a507f5c5b55a6bba166db415d2",
+              "width": 1960
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=740&quality=85&auto=format&fit=max&s=32f61a6792348f57a61e1eda23e7566e",
+              "width": 740
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=740&quality=45&auto=format&fit=max&dpr=2&s=8e46dde99a4dcbd1899652b08beee533",
+              "width": 1480
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=660&quality=85&auto=format&fit=max&s=a1417506ad4c01d44e0973c6380844fa",
+              "width": 660
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=660&quality=45&auto=format&fit=max&dpr=2&s=c26bcdaf7dcad04c5e92b2827f36d9c7",
+              "width": 1320
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=480&quality=85&auto=format&fit=max&s=1c6c2bc4b37de56666e4650c7a59deb8",
+              "width": 480
+            },
+            {
+              "src": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=480&quality=45&auto=format&fit=max&dpr=2&s=463578a8359add412183a0f230fc2e78",
+              "width": 960
+            }
+          ]
+        }
+      ],
+      "data": {
+        "alt": "Responsive design: the same Guardian webpage, rendered on multiple devices",
+        "caption": "Responsive design: the same Guardian webpage, rendered on multiple devices",
+        "credit": "Photograph: Matt Andrews/guardian.co.uk"
+      }
+    }
+  ],
+  "main": "<figure class=\"element element-image\" data-media-id=\"gu-image-404327015\"> <img src=\"http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg\" alt=\"Responsive design: the same Guardian webpage, rendered on multiple devices\" width=\"460\" height=\"275\" class=\"gu-image\" /> <figcaption> <span class=\"element-image__caption\">Responsive design: the same Guardian webpage, rendered on multiple devices</span> <span class=\"element-image__credit\">Photograph: Matt Andrews/guardian.co.uk</span> </figcaption> </figure>",
+  "filterKeyEvents": false,
+  "keyEvents": [],
+  "blocks": [
+    {
+      "id": "a84a6967-caad-4ccc-a6c5-e9d988ab4627",
+      "elements": [
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>The rise of \"responsive design\", as the technique was coined by Ethan Marcotte in his now-classic <a href=\"http://www.alistapart.com/articles/responsive-web-design/\"><em>A List Apart</em> article of the same name</a>, is currently making waves all over the web. Perhaps most prominently displayed in the high-profile relaunch of the <a href=\"http://bostonglobe.com/\">Boston Globe</a> (a project presided over by Marcotte himself), it's also been used in recent revamps of more home-grown websites, including <a href=\"http://www.channel4.com/news/\">Channel 4 News</a> and <a href=\"http://m.bbc.co.uk/news\">BBC News</a>.</p>",
+          "elementId": "ef8a6601-8d3e-4d6d-9f69-7c512de3877b"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>Here at the Guardian we've been keen to dive into this approach ourselves. The benefits to us as developers are clear: we can avoid the headache of re-implementing features and concepts across multiple platforms multiple times, and streamline our release process to allow us to push updates and enhancements out to several of these platforms simultaneously. The benefit to the end user is the experience of browsing a webpage which is tailored for their particular viewing context, rather than attempting a one-size-fits-all approach which either forces everybody into a lowest common denominator pigeon hole, or assumes a high bar of entry which not all visitors can match.</p>",
+          "elementId": "0b92ac93-40ec-4f49-8ca4-51c7f8575831"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>This process has involved a restructure of almost our entire technology stack, ranging from JavaScript frameworks to server configurations. Our responsive design project is still in its early stages and we've yet to launch a release candidate, but we're experimenting with putting our work-in-progress beta site in public as we develop it. This page is by no means finished (and there's no guarantee it'll even work correctly at this stage) but it represents a snapshot of where the project is at the current time. <strong><a href=\"http://beta.guardian.co.uk\">You can view the current work-in-progress beta site here</a></strong> – ideally on a mobile device, as this is our design starting point.</p>",
+          "elementId": "529605cd-2352-483b-8baf-8f7defbd98b3"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>This is the first entry of what will hopefully be several in a series about how we've architected this new responsive Guardian and where we see it developing, but for now consider this a brief overview of the project.</p>",
+          "elementId": "1401e83a-fa8d-4826-b563-d429de616440"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>One major enhancement of the in-progress system is the concept of <a href=\"http://akfpartners.com/techblog/2008/05/30/fault-isolative-architectures-or-%E2%80%9Cswimlaning%E2%80%9D/\">\"swimlaning\"</a>. Broadly speaking, this is the process of structuring a web application in such a way that if one part of it fails, the rest of the app carries on as normal - decoupling unrelated parts so that they can be released and updated independently. We've put in a lot of structural groundwork to enable this, meaning that, for example, our articles are served via different servers from our galleries – and if our gallery server crashes and burns, access to articles won't be impeded. Equally, we can roll out a code update to galleries without interrupting anyone's experience of articles – this is swimlaning.</p>",
+          "elementId": "7cbf119d-42ee-4ba4-b91b-9de7885366c0"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>We're using <a href=\"http://www.playframework.org/\">Play</a>, a Scala framework, to power the site. The flexibility and power of <a href=\"http://www.scala-lang.org/\">Scala</a> over its internal predecessor, Java, has opened up our development and allowed us to code quickly and responsibly. Similarly, our fantastic <a href=\"http://www.guardian.co.uk/open-platform\">Content API</a> has meant that we've never had to write a database query – all of our code communicates with the API to receive its data.</p>",
+          "elementId": "42aacbec-e198-4701-988a-9f358f72ba7b"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>On the client-side, the app is heavily structured around the <a href=\"http://addyosmani.com/writing-modular-js/\">AMD JavaScript pattern</a>, with use of <a href=\"http://requirejs.org/\">RequireJS</a> to load distinct modules which are then combined together at build time. CSS is organised according to <a href=\"http://smacss.com/\">Jonathan Snook's SMACSS standards</a> and we're also making use of <a href=\"http://pasteup.gu.com/\">Pasteup</a>, the Guardian's in-house styleguide and baseline CSS library, to manage some of our styling.</p>",
+          "elementId": "5999482e-9601-48ca-9374-d7d947914be4"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>The responsive aspect of the project is still fairly brief – our initial goal is simply to update the Guardian's <a href=\"http://m.guardian.co.uk\">current mobile website</a>. Eventually we aim to scale up to handle resolutions up to desktop width, but this goal is a while away yet. With that in mind, the site currently feels a little unwieldy when viewed at large resolutions, but we expect this to evolve gradually as the project continues. There are a few nods to the responsive concept, though – watch as \"trail text\" appears underneath related content headlines as the device width increases (or you resize your browser).</p>",
+          "elementId": "c611a45e-3ff7-4804-a965-7f272f53dddb"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>Over the coming months we expect to share more about <a href=\"https://github.com/guardian/frontend\">our code</a>, what we've learned, and what we're planning, but for now, this is all. I'd like to point out again that what we're sharing today is a work-in-progress, and should be considered only as a \"beta\" project (as the page's URLs should confirm). That said, we welcome feedback – if you have any initial thoughts and opinions on the project, we'd love to hear them below. It's likely that we're already aware of any major issues, but if you've spotted an annoying bug or have a device which renders our content in an unusual-looking way, please let us know.</p>",
+          "elementId": "36cf43ff-32ea-4810-a242-d0318ef6fb35"
+        },
+        {
+          "_type": "model.dotcomrendering.pageElements.TextBlockElement",
+          "html": "<p>This is just the beginning of a long-term project we'll be working on – stay tuned to hear more about it.</p>",
+          "elementId": "ada4a848-19ec-4b8b-91a7-11489d26d2a7"
+        }
+      ],
+      "attributes": {
+        "pinned": false,
+        "keyEvent": false,
+        "summary": false
+      },
+      "blockCreatedOn": 1450883331000,
+      "blockCreatedOnDisplay": "15.08 GMT",
+      "blockLastUpdated": 1450883331000,
+      "blockLastUpdatedDisplay": "15.08 GMT",
+      "contributors": [],
+      "primaryDateLine": "Thu 18 Oct 2012 15.54 BST",
+      "secondaryDateLine": "First published on Thu 18 Oct 2012 15.54 BST"
+    }
+  ],
+  "author": {
+    "byline": "Matt Andrews",
+    "twitterHandle": "mattpointblank"
+  },
+  "byline": "Matt Andrews",
+  "webPublicationDate": "2012-10-18T14:54:00.000Z",
+  "webPublicationDateDeprecated": "2012-10-18T14:54:00.000Z",
+  "webPublicationDateDisplay": "Thu 18 Oct 2012 15.54 BST",
+  "webPublicationSecondaryDateDisplay": "First published on Thu 18 Oct 2012 15.54 BST",
+  "editionLongForm": "UK edition",
+  "editionId": "UK",
+  "pageId": "help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+  "canonicalUrl": "https://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+  "format": {
+    "design": "ArticleDesign",
+    "theme": "NewsPillar",
+    "display": "StandardDisplay"
+  },
+  "designType": "Article",
+  "tags": [
+    {
+      "id": "info/series/engineering-blog",
+      "type": "Series",
+      "title": "Engineering blog"
+    },
+    {
+      "id": "help/help",
+      "type": "Keyword",
+      "title": "Help"
+    },
+    {
+      "id": "tone/blog",
+      "type": "Tone",
+      "title": "Blogposts"
+    },
+    {
+      "id": "type/article",
+      "type": "Type",
+      "title": "Article"
+    },
+    {
+      "id": "profile/matt-andrews",
+      "type": "Contributor",
+      "title": "Matt Andrews",
+      "twitterHandle": "mattpointblank",
+      "bylineImageUrl": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2013/4/29/1367249285860/Matt-Andrews2.jpg?width=300&quality=85&auto=format&fit=max&s=5ef22e3287cd1820aae01ef14851bd48"
+    }
+  ],
+  "pillar": "news",
+  "isLegacyInteractive": false,
+  "isImmersive": false,
+  "sectionLabel": "Help",
+  "sectionUrl": "help/help",
+  "sectionName": "info",
+  "subMetaSectionLinks": [
+    {
+      "url": "/help/help",
+      "title": "Help"
+    },
+    {
+      "url": "/info/series/engineering-blog",
+      "title": "Engineering blog"
+    }
+  ],
+  "subMetaKeywordLinks": [
+    {
+      "url": "/tone/blog",
+      "title": "blogposts"
+    }
+  ],
+  "shouldHideAds": false,
+  "isAdFreeUser": false,
+  "webURL": "https://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+  "linkedData": [
+    {
+      "@type": "NewsArticle",
+      "@context": "https://schema.org",
+      "@id": "https://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+      "publisher": {
+        "@type": "Organization",
+        "@context": "https://schema.org",
+        "@id": "https://www.theguardian.com#publisher",
+        "name": "The Guardian",
+        "url": "https://www.theguardian.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://uploads.guim.co.uk/2018/01/31/TheGuardian_AMP.png",
+          "width": 190,
+          "height": 60
+        },
+        "sameAs": [
+          "https://www.facebook.com/theguardian",
+          "https://twitter.com/guardian",
+          "https://www.youtube.com/user/TheGuardian"
+        ]
+      },
+      "isAccessibleForFree": true,
+      "isPartOf": {
+        "@type": [
+          "CreativeWork",
+          "Product"
+        ],
+        "name": "The Guardian",
+        "productID": "theguardian.com:basic"
+      },
+      "image": [
+        "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctYWdlLTIwMTIucG5n&enable=upscale&s=f4303c4689697f29acec75e130e33fdf",
+        "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa3a89d3fbae0d/fallback-logo.png",
+        "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa3a89d3fbae0d/fallback-logo.png",
+        "https://assets.guim.co.uk/images/eada8aa27c12fe2d5afa3a89d3fbae0d/fallback-logo.png"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Matt Andrews",
+          "sameAs": "https://www.theguardian.com/profile/matt-andrews"
+        }
+      ],
+      "datePublished": "2012-10-18T14:54:00.000Z",
+      "headline": "Responsive design at the Guardian: an introduction",
+      "dateModified": "2020-11-12T16:31:18.000Z",
+      "mainEntityOfPage": "https://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+    },
+    {
+      "@type": "WebPage",
+      "@context": "https://schema.org",
+      "@id": "https://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+      "potentialAction": {
+        "@type": "ViewAction",
+        "target": "android-app://com.guardian/https/www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+      }
+    }
+  ],
+  "openGraphData": {
+    "og:url": "http://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+    "article:author": "https://www.theguardian.com/profile/matt-andrews",
+    "og:image:width": "1200",
+    "og:image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctYWdlLTIwMTIucG5n&enable=upscale&s=f4303c4689697f29acec75e130e33fdf",
+    "al:ios:url": "gnmguardian://help/developer-blog/2012/oct/18/responsive-design-guardian-introduction?contenttype=Article&source=applinks",
+    "article:publisher": "https://www.facebook.com/theguardian",
+    "og:title": "Responsive design at the Guardian: an introduction",
+    "fb:app_id": "180444840287",
+    "article:modified_time": "2020-11-12T16:31:18.000Z",
+    "og:image:height": "717",
+    "og:description": "An overview of what responsive design is and how we're planning to make use of it at the Guardian",
+    "og:type": "article",
+    "al:ios:app_store_id": "409128287",
+    "article:section": "Info",
+    "article:published_time": "2012-10-18T14:54:00.000Z",
+    "article:tag": "Help",
+    "al:ios:app_name": "The Guardian",
+    "og:site_name": "the Guardian"
+  },
+  "twitterData": {
+    "twitter:app:id:iphone": "409128287",
+    "twitter:app:name:googleplay": "The Guardian",
+    "twitter:app:name:ipad": "The Guardian",
+    "twitter:card": "summary_large_image",
+    "twitter:app:name:iphone": "The Guardian",
+    "twitter:creator": "@mattpointblank",
+    "twitter:app:id:ipad": "409128287",
+    "twitter:app:id:googleplay": "com.guardian",
+    "twitter:app:url:googleplay": "guardian://www.theguardian.com/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+    "twitter:app:url:iphone": "gnmguardian://help/developer-blog/2012/oct/18/responsive-design-guardian-introduction?contenttype=Article&source=twitter",
+    "twitter:image": "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2012/10/17/1350469579687/responsive-devices.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctYWdlLTIwMTIucG5n&s=7e1e6aacdc456f299fcec6f3a56723bf",
+    "twitter:site": "@guardian",
+    "twitter:app:url:ipad": "gnmguardian://help/developer-blog/2012/oct/18/responsive-design-guardian-introduction?contenttype=Article&source=twitter"
+  },
+  "config": {
+    "switches": {
+      "lightbox": true,
+      "abPrebidKeywords": true,
+      "personaliseSignInGateAfterCheckout": true,
+      "abSignInGateMainVariant": true,
+      "prebidAppnexusUkRow": true,
+      "prebidMagnite": true,
+      "commercialMetrics": true,
+      "prebidTrustx": true,
+      "scAdFreeBanner": false,
+      "adaptiveSite": true,
+      "prebidPermutiveAudience": true,
+      "compareVariantDecision": false,
+      "enableSentryReporting": true,
+      "lazyLoadContainers": true,
+      "ampArticleSwitch": false,
+      "remarketing": true,
+      "articleEndSlot": true,
+      "keyEventsCarousel": true,
+      "registerWithPhone": false,
+      "darkModeWeb": true,
+      "targeting": true,
+      "remoteHeader": true,
+      "slotBodyEnd": true,
+      "ampPrebidOzone": false,
+      "extendedMostPopularFronts": true,
+      "emailInlineInFooter": true,
+      "showNewPrivacyWordingOnEmailSignupEmbeds": true,
+      "prebidAnalytics": true,
+      "extendedMostPopular": true,
+      "ampContentAbTesting": false,
+      "prebidCriteo": true,
+      "okta": true,
+      "imrWorldwide": true,
+      "acast": true,
+      "twitterUwt": true,
+      "abAuxiaSignInGate": false,
+      "abDeferPermutiveLoad": true,
+      "prebidAppnexusInvcode": true,
+      "ampPrebidPubmatic": false,
+      "a9HeaderBidding": true,
+      "prebidAppnexus": true,
+      "enableDiscussionSwitch": true,
+      "prebidXaxis": true,
+      "stickyVideos": true,
+      "interactiveFullHeaderSwitch": true,
+      "discussionAllPageSize": true,
+      "prebidUserSync": true,
+      "audioOnwardJourneySwitch": true,
+      "abMovePermutiveSegmentation": false,
+      "brazeTaylorReport": false,
+      "externalVideoEmbeds": true,
+      "abTheTradeDesk": true,
+      "callouts": true,
+      "sentinelLogger": true,
+      "geoMostPopular": true,
+      "weAreHiring": false,
+      "relatedContent": true,
+      "thirdPartyEmbedTracking": true,
+      "prebidOzone": true,
+      "ampLiveblogSwitch": false,
+      "ampAmazon": false,
+      "prebidAdYouLike": true,
+      "mostViewedFronts": true,
+      "optOutAdvertising": true,
+      "abSignInGateMainControl": true,
+      "googleSearch": true,
+      "abOptOutFrequencyCap": true,
+      "brazeSwitch": true,
+      "prebidKargo": true,
+      "consentManagement": true,
+      "idProfileNavigation": true,
+      "confiantAdVerification": true,
+      "discussionAllowAnonymousRecommendsSwitch": false,
+      "dcrCrosswords": true,
+      "absoluteServerTimes": false,
+      "permutive": true,
+      "comscore": true,
+      "ampPrebidCriteo": false,
+      "prebidTheTradeDesk": true,
+      "loopVideoTest": false,
+      "newsletterOnwards": false,
+      "youtubeIma": true,
+      "webFonts": true,
+      "liveBlogTopSponsorship": true,
+      "abAdBlockAsk": false,
+      "ophan": true,
+      "crosswordSvgThumbnails": true,
+      "prebidTriplelift": true,
+      "prebidPubmatic": true,
+      "serverShareCounts": false,
+      "autoRefresh": true,
+      "enhanceTweets": true,
+      "prebidIndexExchange": true,
+      "prebidOpenx": true,
+      "prebidHeaderBidding": true,
+      "idCookieRefresh": true,
+      "discussionPageSize": true,
+      "smartAppBanner": false,
+      "historyTags": true,
+      "brazeContentCards": true,
+      "remoteBanner": true,
+      "emailSignupRecaptcha": true,
+      "prebidSmart": true,
+      "shouldLoadGoogletag": true,
+      "inizio": true,
+      "europeBetaFront": true
+    },
+    "abTests": {},
+    "googletagUrl": "//securepubads.g.doubleclick.net/tag/js/gpt.js",
+    "stage": "PROD",
+    "frontendAssetsFullURL": "https://assets.guim.co.uk/",
+    "ampIframeUrl": "https://assets.guim.co.uk/data/vendor/2533d5cb94302889e6a8f1b24b5329e7/amp-iframe.html",
+    "tones": "Blogposts",
+    "facebookIaAdUnitRoot": "facebook-instant-articles",
+    "avatarApiUrl": "https://avatar.theguardian.com",
+    "isSplash": false,
+    "isColumn": false,
+    "membershipUrl": "https://membership.theguardian.com",
+    "headline": "Responsive design at the Guardian: an introduction",
+    "isImmersive": false,
+    "author": "Matt Andrews",
+    "ipsosTag": "guardian",
+    "isProd": true,
+    "series": "Engineering blog",
+    "toneIds": "tone/blog",
+    "membershipAccess": "",
+    "allowUserGeneratedContent": false,
+    "commissioningDesks": "",
+    "webPublicationDate": 1350572040000,
+    "forecastsapiurl": "/weatherapi/forecast",
+    "supportUrl": "https://support.theguardian.com",
+    "isNumberedList": false,
+    "commercialBundleUrl": "https://assets.guim.co.uk/commercial/47e59a6f2531251d895a/graun.standalone.commercial.js",
+    "idOAuthUrl": "https://oauth.theguardian.com",
+    "webTitle": "Responsive design at the Guardian: an introduction",
+    "isPhotoEssay": false,
+    "idWebAppUrl": "https://oauth.theguardian.com",
+    "a9PublisherId": "3722",
+    "isFront": false,
+    "inBodyInternalLinkCount": 0,
+    "googleSearchUrl": "//www.google.co.uk/cse/cse.js",
+    "inBodyExternalLinkCount": 15,
+    "showRelatedContent": true,
+    "lightboxImages": {
+      "id": "help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+      "headline": "Responsive design at the Guardian: an introduction",
+      "shouldHideAdverts": false,
+      "standfirst": "An overview of what responsive design is and how we're planning to make use of it at the Guardian",
+      "images": []
+    },
+    "googleSearchId": "007466294097402385199:m2ealvuxh1i",
+    "shouldHideReaderRevenue": false,
+    "idUrl": "https://profile.theguardian.com",
+    "hasSurveyAd": false,
+    "omnitureAmpAccount": "guardiangu-thirdpartyapps",
+    "dfpAdUnitRoot": "theguardian.com",
+    "host": "https://www.theguardian.com",
+    "blogIds": "",
+    "sectionName": "Info",
+    "hasMultipleVideosInPage": false,
+    "hasShowcaseMainElement": false,
+    "googleRecaptchaSiteKey": "6LdzlmsdAAAAALFH63cBVagSFPuuHXQ9OfpIDdMc",
+    "fbAppId": "180444840287",
+    "isContent": true,
+    "shortUrlId": "/p/3b86a",
+    "dfpAccountId": "59666047",
+    "plistaPublicApiKey": "462925f4f131001fd974bebe",
+    "wordCount": 791,
+    "hasLiveBlogTopAd": false,
+    "dcrSentryDsn": "https://1937ab71c8804b2b8438178dfdd6468f@sentry.io/1377847",
+    "cardStyle": "news",
+    "adUnit": "/59666047/theguardian.com/info/article/ng",
+    "discussionApiUrl": "https://discussion.theguardian.com/discussion-api",
+    "isSensitive": false,
+    "ophanEmbedJsUrl": "//j.ophan.co.uk/ophan.embed",
+    "edition": "UK",
+    "brazeApiKey": "7f28c639-8bda-48ff-a3f6-24345abfc07c",
+    "blogs": "",
+    "discussionApiClientHeader": "nextgen",
+    "section": "info",
+    "userAttributesApiUrl": "https://members-data-api.theguardian.com/user-attributes",
+    "videoDuration": 0,
+    "dfpHost": "pubads.g.doubleclick.net",
+    "weatherapiurl": "/weatherapi/city",
+    "sentryPublicApiKey": "344003a8d11c41d8800fbad8383fdc50",
+    "shortUrl": "https://www.theguardian.com/p/3b86a",
+    "thumbnail": false,
+    "pillar": "News",
+    "pageId": "help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+    "references": [],
+    "beaconUrl": "//phar.gu-web.net",
+    "commentable": true,
+    "discussionD2Uid": "zHoBy6HNKsk",
+    "ophanJsUrl": "//j.ophan.co.uk/ophan.ng",
+    "contributorBio": "",
+    "keywordIds": "help/help",
+    "contentType": "Article",
+    "isDev": false,
+    "isHosted": false,
+    "isAdFree": false,
+    "stripePublicToken": "pk_live_2O6zPMHXNs2AGea4bAmq5R7Z",
+    "omnitureAccount": "guardiangu-network",
+    "locationapiurl": "/weatherapi/locations?query=",
+    "authorIds": "profile/matt-andrews",
+    "isPaidContent": false,
+    "hasYouTubeAtom": false,
+    "externalEmbedHost": "https://embed.theguardian.com",
+    "thirdPartyAppsAccount": "guardiangu-thirdpartyapps",
+    "ajaxUrl": "https://api.nextgen.guardianapps.co.uk",
+    "byline": "Matt Andrews",
+    "keywords": "Help",
+    "contentId": "help/developer-blog/2012/oct/18/responsive-design-guardian-introduction",
+    "nonKeywordTagIds": "info/series/engineering-blog,tone/blog,type/article,profile/matt-andrews",
+    "mobileAppsAdUnitRoot": "beta-guardian-app",
+    "hasPageSkin": false,
+    "requiresMembershipAccess": false,
+    "seriesTags": "Engineering blog",
+    "revisionNumber": "DEV",
+    "seriesId": "info/series/engineering-blog",
+    "optimizeEpicUrl": "https://support.theguardian.com/epic/control/index.html",
+    "assetsPath": "https://assets.guim.co.uk/",
+    "mmaUrl": "https://manage.theguardian.com",
+    "isLive": false,
+    "richLink": "",
+    "campaigns": [],
+    "isLiveBlog": false,
+    "pageCode": "1816840",
+    "avatarImagesUrl": "https://avatar.guim.co.uk",
+    "publication": "theguardian.com",
+    "sentryHost": "app.getsentry.com/35463",
+    "buildNumber": "DEV",
+    "userBenefitsApiUrl": "https://user-benefits.guardianapis.com/benefits/me",
+    "sharedAdTargeting": {
+      "se": [
+        "engineering-blog"
+      ],
+      "ct": "article",
+      "su": [
+        "0"
+      ],
+      "edition": "uk",
+      "tn": [
+        "blog"
+      ],
+      "p": "ng",
+      "k": [
+        "help"
+      ],
+      "sh": "https://www.theguardian.com/p/3b86a",
+      "co": [
+        "matt-andrews"
+      ],
+      "url": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+    },
+    "onwardWebSocket": "ws://api.nextgen.guardianapps.co.uk/recently-published",
+    "productionOffice": "Uk",
+    "shouldHideAdverts": false,
+    "idApiUrl": "https://idapi.theguardian.com",
+    "pbIndexSites": [
+      {
+        "bp": "D",
+        "id": 208247
+      },
+      {
+        "bp": "M",
+        "id": 213519
+      },
+      {
+        "bp": "T",
+        "id": 215454
+      }
+    ],
+    "googletagJsUrl": "//securepubads.g.doubleclick.net/tag/js/gpt.js",
+    "calloutsUrl": "https://callouts.guardianapis.com/formstack-campaign/submit",
+    "isPreview": false
+  },
+  "guardianBaseURL": "https://www.theguardian.com",
+  "contentType": "Article",
+  "hasRelated": true,
+  "hasStoryPackage": false,
+  "beaconURL": "//phar.gu-web.net",
+  "isCommentable": true,
+  "commercialProperties": {
+    "US": {
+      "adTargeting": [
+        {
+          "name": "url",
+          "value": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+        },
+        {
+          "name": "su",
+          "value": [
+            "0"
+          ]
+        },
+        {
+          "name": "k",
+          "value": [
+            "help"
+          ]
+        },
+        {
+          "name": "edition",
+          "value": "us"
+        },
+        {
+          "name": "ct",
+          "value": "article"
+        },
+        {
+          "name": "sh",
+          "value": "https://www.theguardian.com/p/3b86a"
+        },
+        {
+          "name": "tn",
+          "value": [
+            "blog"
+          ]
+        },
+        {
+          "name": "se",
+          "value": [
+            "engineering-blog"
+          ]
+        },
+        {
+          "name": "p",
+          "value": "ng"
+        },
+        {
+          "name": "co",
+          "value": [
+            "matt-andrews"
+          ]
+        }
+      ]
+    },
+    "AU": {
+      "adTargeting": [
+        {
+          "name": "url",
+          "value": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+        },
+        {
+          "name": "su",
+          "value": [
+            "0"
+          ]
+        },
+        {
+          "name": "k",
+          "value": [
+            "help"
+          ]
+        },
+        {
+          "name": "edition",
+          "value": "au"
+        },
+        {
+          "name": "ct",
+          "value": "article"
+        },
+        {
+          "name": "sh",
+          "value": "https://www.theguardian.com/p/3b86a"
+        },
+        {
+          "name": "tn",
+          "value": [
+            "blog"
+          ]
+        },
+        {
+          "name": "se",
+          "value": [
+            "engineering-blog"
+          ]
+        },
+        {
+          "name": "p",
+          "value": "ng"
+        },
+        {
+          "name": "co",
+          "value": [
+            "matt-andrews"
+          ]
+        }
+      ]
+    },
+    "UK": {
+      "adTargeting": [
+        {
+          "name": "url",
+          "value": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+        },
+        {
+          "name": "su",
+          "value": [
+            "0"
+          ]
+        },
+        {
+          "name": "k",
+          "value": [
+            "help"
+          ]
+        },
+        {
+          "name": "edition",
+          "value": "uk"
+        },
+        {
+          "name": "ct",
+          "value": "article"
+        },
+        {
+          "name": "sh",
+          "value": "https://www.theguardian.com/p/3b86a"
+        },
+        {
+          "name": "tn",
+          "value": [
+            "blog"
+          ]
+        },
+        {
+          "name": "se",
+          "value": [
+            "engineering-blog"
+          ]
+        },
+        {
+          "name": "p",
+          "value": "ng"
+        },
+        {
+          "name": "co",
+          "value": [
+            "matt-andrews"
+          ]
+        }
+      ]
+    },
+    "INT": {
+      "adTargeting": [
+        {
+          "name": "url",
+          "value": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+        },
+        {
+          "name": "su",
+          "value": [
+            "0"
+          ]
+        },
+        {
+          "name": "k",
+          "value": [
+            "help"
+          ]
+        },
+        {
+          "name": "ct",
+          "value": "article"
+        },
+        {
+          "name": "sh",
+          "value": "https://www.theguardian.com/p/3b86a"
+        },
+        {
+          "name": "tn",
+          "value": [
+            "blog"
+          ]
+        },
+        {
+          "name": "edition",
+          "value": "int"
+        },
+        {
+          "name": "se",
+          "value": [
+            "engineering-blog"
+          ]
+        },
+        {
+          "name": "p",
+          "value": "ng"
+        },
+        {
+          "name": "co",
+          "value": [
+            "matt-andrews"
+          ]
+        }
+      ]
+    },
+    "EUR": {
+      "adTargeting": [
+        {
+          "name": "url",
+          "value": "/help/developer-blog/2012/oct/18/responsive-design-guardian-introduction"
+        },
+        {
+          "name": "su",
+          "value": [
+            "0"
+          ]
+        },
+        {
+          "name": "k",
+          "value": [
+            "help"
+          ]
+        },
+        {
+          "name": "ct",
+          "value": "article"
+        },
+        {
+          "name": "sh",
+          "value": "https://www.theguardian.com/p/3b86a"
+        },
+        {
+          "name": "tn",
+          "value": [
+            "blog"
+          ]
+        },
+        {
+          "name": "edition",
+          "value": "eur"
+        },
+        {
+          "name": "se",
+          "value": [
+            "engineering-blog"
+          ]
+        },
+        {
+          "name": "p",
+          "value": "ng"
+        },
+        {
+          "name": "co",
+          "value": [
+            "matt-andrews"
+          ]
+        }
+      ]
+    }
+  },
+  "pageType": {
+    "hasShowcaseMainElement": false,
+    "isFront": false,
+    "isLiveblog": false,
+    "isMinuteArticle": false,
+    "isPaidContent": false,
+    "isPreview": false,
+    "isSensitive": false
+  },
+  "trailText": "<p>An overview of what responsive design is and how we're planning to make use of it at the Guardian</p>",
+  "nav": {
+    "currentUrl": "/info",
+    "pillars": [
+      {
+        "title": "News",
+        "url": "/",
+        "longTitle": "Headlines",
+        "iconName": "home",
+        "children": [
+          {
+            "title": "UK",
+            "url": "/uk-news",
+            "longTitle": "UK news",
+            "children": [
+              {
+                "title": "UK politics",
+                "url": "/politics"
+              },
+              {
+                "title": "Education",
+                "url": "/education",
+                "children": [
+                  {
+                    "title": "Schools",
+                    "url": "/education/schools"
+                  },
+                  {
+                    "title": "Teachers",
+                    "url": "/teacher-network"
+                  },
+                  {
+                    "title": "Universities",
+                    "url": "/education/universities"
+                  },
+                  {
+                    "title": "Students",
+                    "url": "/education/students"
+                  }
+                ]
+              },
+              {
+                "title": "Media",
+                "url": "/media"
+              },
+              {
+                "title": "Society",
+                "url": "/society"
+              },
+              {
+                "title": "Law",
+                "url": "/law"
+              },
+              {
+                "title": "Scotland",
+                "url": "/uk/scotland"
+              },
+              {
+                "title": "Wales",
+                "url": "/uk/wales"
+              },
+              {
+                "title": "Northern Ireland",
+                "url": "/uk/northernireland"
+              }
+            ]
+          },
+          {
+            "title": "US politics",
+            "url": "/us-news/us-politics"
+          },
+          {
+            "title": "World",
+            "url": "/world",
+            "longTitle": "World news",
+            "children": [
+              {
+                "title": "Europe",
+                "url": "/world/europe-news"
+              },
+              {
+                "title": "US",
+                "url": "/us-news",
+                "longTitle": "US news"
+              },
+              {
+                "title": "Americas",
+                "url": "/world/americas"
+              },
+              {
+                "title": "Asia",
+                "url": "/world/asia"
+              },
+              {
+                "title": "Australia",
+                "url": "/australia-news",
+                "longTitle": "Australia news"
+              },
+              {
+                "title": "Middle East",
+                "url": "/world/middleeast"
+              },
+              {
+                "title": "Africa",
+                "url": "/world/africa"
+              },
+              {
+                "title": "Inequality",
+                "url": "/inequality"
+              },
+              {
+                "title": "Global development",
+                "url": "/global-development"
+              }
+            ]
+          },
+          {
+            "title": "Climate crisis",
+            "url": "/environment/climate-crisis"
+          },
+          {
+            "title": "Middle East",
+            "url": "/world/middleeast"
+          },
+          {
+            "title": "Ukraine",
+            "url": "/world/ukraine"
+          },
+          {
+            "title": "Football",
+            "url": "/football",
+            "children": [
+              {
+                "title": "Live scores",
+                "url": "/football/live",
+                "longTitle": "football/live"
+              },
+              {
+                "title": "Tables",
+                "url": "/football/tables",
+                "longTitle": "football/tables"
+              },
+              {
+                "title": "Fixtures",
+                "url": "/football/fixtures",
+                "longTitle": "football/fixtures"
+              },
+              {
+                "title": "Results",
+                "url": "/football/results",
+                "longTitle": "football/results"
+              },
+              {
+                "title": "Competitions",
+                "url": "/football/competitions",
+                "longTitle": "football/competitions"
+              },
+              {
+                "title": "Clubs",
+                "url": "/football/teams",
+                "longTitle": "football/teams"
+              }
+            ]
+          },
+          {
+            "title": "Newsletters",
+            "url": "/email-newsletters"
+          },
+          {
+            "title": "Business",
+            "url": "/business",
+            "children": [
+              {
+                "title": "Economics",
+                "url": "/business/economics"
+              },
+              {
+                "title": "Banking",
+                "url": "/business/banking"
+              },
+              {
+                "title": "Money",
+                "url": "/money",
+                "children": [
+                  {
+                    "title": "Property",
+                    "url": "/money/property"
+                  },
+                  {
+                    "title": "Pensions",
+                    "url": "/money/pensions"
+                  },
+                  {
+                    "title": "Savings",
+                    "url": "/money/savings"
+                  },
+                  {
+                    "title": "Borrowing",
+                    "url": "/money/debt"
+                  },
+                  {
+                    "title": "Careers",
+                    "url": "/money/work-and-careers"
+                  }
+                ]
+              },
+              {
+                "title": "Markets",
+                "url": "/business/stock-markets"
+              },
+              {
+                "title": "Project Syndicate",
+                "url": "/business/series/project-syndicate-economists"
+              },
+              {
+                "title": "B2B",
+                "url": "/business-to-business"
+              },
+              {
+                "title": "Retail",
+                "url": "/business/retail"
+              }
+            ]
+          },
+          {
+            "title": "Environment",
+            "url": "/environment",
+            "children": [
+              {
+                "title": "Climate crisis",
+                "url": "/environment/climate-crisis"
+              },
+              {
+                "title": "Wildlife",
+                "url": "/environment/wildlife"
+              },
+              {
+                "title": "Energy",
+                "url": "/environment/energy"
+              },
+              {
+                "title": "Pollution",
+                "url": "/environment/pollution"
+              }
+            ]
+          },
+          {
+            "title": "UK politics",
+            "url": "/politics"
+          },
+          {
+            "title": "Society",
+            "url": "/society"
+          },
+          {
+            "title": "Science",
+            "url": "/science"
+          },
+          {
+            "title": "Tech",
+            "url": "/technology"
+          },
+          {
+            "title": "Global development",
+            "url": "/global-development"
+          },
+          {
+            "title": "Obituaries",
+            "url": "/obituaries"
+          }
+        ]
+      },
+      {
+        "title": "Opinion",
+        "url": "/commentisfree",
+        "longTitle": "Opinion home",
+        "iconName": "home",
+        "children": [
+          {
+            "title": "The Guardian view",
+            "url": "/profile/editorial"
+          },
+          {
+            "title": "Columnists",
+            "url": "/index/contributors"
+          },
+          {
+            "title": "Cartoons",
+            "url": "/tone/cartoons"
+          },
+          {
+            "title": "Opinion videos",
+            "url": "/type/video+tone/comment"
+          },
+          {
+            "title": "Letters",
+            "url": "/tone/letters"
+          }
+        ]
+      },
+      {
+        "title": "Sport",
+        "url": "/sport",
+        "longTitle": "Sport home",
+        "iconName": "home",
+        "children": [
+          {
+            "title": "Football",
+            "url": "/football",
+            "children": [
+              {
+                "title": "Live scores",
+                "url": "/football/live",
+                "longTitle": "football/live"
+              },
+              {
+                "title": "Tables",
+                "url": "/football/tables",
+                "longTitle": "football/tables"
+              },
+              {
+                "title": "Fixtures",
+                "url": "/football/fixtures",
+                "longTitle": "football/fixtures"
+              },
+              {
+                "title": "Results",
+                "url": "/football/results",
+                "longTitle": "football/results"
+              },
+              {
+                "title": "Competitions",
+                "url": "/football/competitions",
+                "longTitle": "football/competitions"
+              },
+              {
+                "title": "Clubs",
+                "url": "/football/teams",
+                "longTitle": "football/teams"
+              }
+            ]
+          },
+          {
+            "title": "Cricket",
+            "url": "/sport/cricket"
+          },
+          {
+            "title": "Rugby union",
+            "url": "/sport/rugby-union"
+          },
+          {
+            "title": "Tennis",
+            "url": "/sport/tennis"
+          },
+          {
+            "title": "Cycling",
+            "url": "/sport/cycling"
+          },
+          {
+            "title": "F1",
+            "url": "/sport/formulaone"
+          },
+          {
+            "title": "Golf",
+            "url": "/sport/golf"
+          },
+          {
+            "title": "Boxing",
+            "url": "/sport/boxing"
+          },
+          {
+            "title": "Rugby league",
+            "url": "/sport/rugbyleague"
+          },
+          {
+            "title": "Racing",
+            "url": "/sport/horse-racing"
+          },
+          {
+            "title": "US sports",
+            "url": "/sport/us-sport"
+          }
+        ]
+      },
+      {
+        "title": "Culture",
+        "url": "/culture",
+        "longTitle": "Culture home",
+        "iconName": "home",
+        "children": [
+          {
+            "title": "Film",
+            "url": "/film"
+          },
+          {
+            "title": "Music",
+            "url": "/music"
+          },
+          {
+            "title": "TV & radio",
+            "url": "/tv-and-radio"
+          },
+          {
+            "title": "Books",
+            "url": "/books"
+          },
+          {
+            "title": "Art & design",
+            "url": "/artanddesign"
+          },
+          {
+            "title": "Stage",
+            "url": "/stage"
+          },
+          {
+            "title": "Games",
+            "url": "/games"
+          },
+          {
+            "title": "Classical",
+            "url": "/music/classicalmusicandopera"
+          }
+        ]
+      },
+      {
+        "title": "Lifestyle",
+        "url": "/lifeandstyle",
+        "longTitle": "Lifestyle home",
+        "iconName": "home",
+        "children": [
+          {
+            "title": "The Filter",
+            "url": "/uk/thefilter"
+          },
+          {
+            "title": "Fashion",
+            "url": "/fashion"
+          },
+          {
+            "title": "Food",
+            "url": "/food"
+          },
+          {
+            "title": "Recipes",
+            "url": "/tone/recipes"
+          },
+          {
+            "title": "Travel",
+            "url": "/travel",
+            "children": [
+              {
+                "title": "UK",
+                "url": "/travel/uk"
+              },
+              {
+                "title": "Europe",
+                "url": "/travel/europe"
+              },
+              {
+                "title": "US",
+                "url": "/travel/usa"
+              }
+            ]
+          },
+          {
+            "title": "Health & fitness",
+            "url": "/lifeandstyle/health-and-wellbeing"
+          },
+          {
+            "title": "Women",
+            "url": "/lifeandstyle/women"
+          },
+          {
+            "title": "Men",
+            "url": "/lifeandstyle/men"
+          },
+          {
+            "title": "Love & sex",
+            "url": "/lifeandstyle/love-and-sex"
+          },
+          {
+            "title": "Beauty",
+            "url": "/fashion/beauty"
+          },
+          {
+            "title": "Home & garden",
+            "url": "/lifeandstyle/home-and-garden"
+          },
+          {
+            "title": "Money",
+            "url": "/money",
+            "children": [
+              {
+                "title": "Property",
+                "url": "/money/property"
+              },
+              {
+                "title": "Pensions",
+                "url": "/money/pensions"
+              },
+              {
+                "title": "Savings",
+                "url": "/money/savings"
+              },
+              {
+                "title": "Borrowing",
+                "url": "/money/debt"
+              },
+              {
+                "title": "Careers",
+                "url": "/money/work-and-careers"
+              }
+            ]
+          },
+          {
+            "title": "Cars",
+            "url": "/technology/motoring"
+          }
+        ]
+      }
+    ],
+    "otherLinks": [
+      {
+        "title": "The Guardian app",
+        "url": "https://app.adjust.com/16xt6hai"
+      },
+      {
+        "title": "Video",
+        "url": "/video"
+      },
+      {
+        "title": "Podcasts",
+        "url": "/podcasts"
+      },
+      {
+        "title": "Pictures",
+        "url": "/inpictures"
+      },
+      {
+        "title": "Newsletters",
+        "url": "/email-newsletters"
+      },
+      {
+        "title": "Today's paper",
+        "url": "/theguardian",
+        "children": [
+          {
+            "title": "Obituaries",
+            "url": "/obituaries"
+          },
+          {
+            "title": "G2",
+            "url": "/theguardian/g2"
+          },
+          {
+            "title": "Journal",
+            "url": "/theguardian/journal"
+          },
+          {
+            "title": "Saturday",
+            "url": "/theguardian/saturday"
+          }
+        ]
+      },
+      {
+        "title": "Inside the Guardian",
+        "url": "https://www.theguardian.com/insidetheguardian"
+      },
+      {
+        "title": "The Observer",
+        "url": "/observer",
+        "children": [
+          {
+            "title": "Comment",
+            "url": "/theobserver/news/comment"
+          },
+          {
+            "title": "The New Review",
+            "url": "/theobserver/new-review"
+          },
+          {
+            "title": "Observer Magazine",
+            "url": "/theobserver/magazine"
+          },
+          {
+            "title": "Observer Food Monthly",
+            "url": "/theobserver/foodmonthly"
+          }
+        ]
+      },
+      {
+        "title": "Guardian Weekly",
+        "url": "https://www.theguardian.com/weekly?INTCMP=gdnwb_mawns_editorial_gweekly_GW_TopNav_UK"
+      },
+      {
+        "title": "Crosswords",
+        "url": "/crosswords",
+        "children": [
+          {
+            "title": "Blog",
+            "url": "/crosswords/crossword-blog"
+          },
+          {
+            "title": "Quick",
+            "url": "/crosswords/series/quick"
+          },
+          {
+            "title": "Speedy",
+            "url": "/crosswords/series/speedy"
+          },
+          {
+            "title": "Quick cryptic",
+            "url": "/crosswords/series/quick-cryptic"
+          },
+          {
+            "title": "Everyman",
+            "url": "/crosswords/series/everyman"
+          },
+          {
+            "title": "Quiptic",
+            "url": "/crosswords/series/quiptic"
+          },
+          {
+            "title": "Cryptic",
+            "url": "/crosswords/series/cryptic"
+          },
+          {
+            "title": "Prize",
+            "url": "/crosswords/series/prize"
+          },
+          {
+            "title": "Azed",
+            "url": "/crosswords/series/azed"
+          },
+          {
+            "title": "Genius",
+            "url": "/crosswords/series/genius"
+          },
+          {
+            "title": "Weekend",
+            "url": "/crosswords/series/weekend-crossword"
+          },
+          {
+            "title": "Special",
+            "url": "/crosswords/series/special"
+          }
+        ]
+      },
+      {
+        "title": "Wordiply",
+        "url": "https://www.wordiply.com"
+      },
+      {
+        "title": "Corrections",
+        "url": "/theguardian/series/corrections-and-clarifications"
+      }
+    ],
+    "brandExtensions": [
+      {
+        "title": "Search jobs",
+        "url": "https://jobs.theguardian.com"
+      },
+      {
+        "title": "Hire with Guardian Jobs",
+        "url": "https://recruiters.theguardian.com/?utm_source=gdnwb&utm_medium=navbar&utm_campaign=Guardian_Navbar_Recruiters&CMP_TU=trdmkt&CMP_BUNIT=jobs"
+      },
+      {
+        "title": "Holidays",
+        "url": "https://holidays.theguardian.com?INTCMP=holidays_uk_web_newheader"
+      },
+      {
+        "title": "Live events",
+        "url": "https://www.theguardian.com/guardian-live-events?INTCMP=live_uk_header_dropdown"
+      },
+      {
+        "title": "About Us",
+        "url": "/about"
+      },
+      {
+        "title": "Digital Archive",
+        "url": "https://theguardian.newspapers.com"
+      },
+      {
+        "title": "Guardian Print Shop",
+        "url": "/artanddesign/series/gnm-print-sales"
+      },
+      {
+        "title": "Patrons",
+        "url": "https://patrons.theguardian.com/?INTCMP=header_patrons"
+      },
+      {
+        "title": "Guardian Licensing",
+        "url": "https://licensing.theguardian.com/"
+      }
+    ],
+    "readerRevenueLinks": {
+      "header": {
+        "contribute": "https://support.theguardian.com/contribute?INTCMP=header_support_contribute&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_contribute%22%7D",
+        "subscribe": "https://support.theguardian.com/subscribe?INTCMP=header_support_subscribe&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_subscribe%22%7D",
+        "support": "https://support.theguardian.com?INTCMP=header_support&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support%22%7D",
+        "supporter": "https://support.theguardian.com/subscribe?INTCMP=header_supporter_cta&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_supporter_cta%22%7D"
+      },
+      "footer": {
+        "contribute": "https://support.theguardian.com/contribute?INTCMP=footer_support_contribute&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support_contribute%22%7D",
+        "subscribe": "https://support.theguardian.com/subscribe?INTCMP=footer_support_subscribe&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support_subscribe%22%7D",
+        "support": "https://support.theguardian.com?INTCMP=footer_support&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support%22%7D",
+        "supporter": "https://support.theguardian.com/subscribe?INTCMP=footer_supporter_cta&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_supporter_cta%22%7D"
+      },
+      "sideMenu": {
+        "contribute": "https://support.theguardian.com/contribute?INTCMP=side_menu_support_contribute&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_contribute%22%7D",
+        "subscribe": "https://support.theguardian.com/subscribe?INTCMP=side_menu_support_subscribe&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support_subscribe%22%7D",
+        "support": "https://support.theguardian.com?INTCMP=side_menu_support&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22side_menu_support%22%7D",
+        "supporter": "https://support.theguardian.com/subscribe?INTCMP=mobilenav_print_cta&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22mobilenav_print_cta%22%7D"
+      },
+      "ampHeader": {
+        "contribute": "https://support.theguardian.com/contribute?INTCMP=header_support_contribute&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_contribute%22%7D",
+        "subscribe": "https://support.theguardian.com/subscribe?INTCMP=header_support_subscribe&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_support_subscribe%22%7D",
+        "support": "https://support.theguardian.com?INTCMP=amp_header_support&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22amp_header_support%22%7D",
+        "supporter": "https://support.theguardian.com/subscribe?INTCMP=header_supporter_cta&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_HEADER%22,%22componentId%22:%22header_supporter_cta%22%7D"
+      },
+      "ampFooter": {
+        "contribute": "https://support.theguardian.com/contribute?INTCMP=amp_footer_support_contribute&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22amp_footer_support_contribute%22%7D",
+        "subscribe": "https://support.theguardian.com/subscribe?INTCMP=amp_footer_support_subscribe&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22amp_footer_support_subscribe%22%7D",
+        "support": "https://support.theguardian.com?INTCMP=footer_support&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22footer_support%22%7D",
+        "supporter": "https://support.theguardian.com/subscribe?INTCMP=amp_footer_supporter_cta&acquisitionData=%7B%22source%22:%22GUARDIAN_WEB%22,%22componentType%22:%22ACQUISITIONS_FOOTER%22,%22componentId%22:%22amp_footer_supporter_cta%22%7D"
+      }
+    }
+  },
+  "showBottomSocialButtons": true,
+  "pageFooter": {
+    "footerLinks": [
+      [
+        {
+          "text": "About us",
+          "url": "/about",
+          "dataLinkName": "uk : footer : about us",
+          "extraClasses": ""
+        },
+        {
+          "text": "Help",
+          "url": "https://manage.theguardian.com/help-centre",
+          "dataLinkName": "uk : footer : tech feedback",
+          "extraClasses": "js-tech-feedback-report"
+        },
+        {
+          "text": "Complaints & corrections",
+          "url": "/info/complaints-and-corrections",
+          "dataLinkName": "complaints",
+          "extraClasses": ""
+        },
+        {
+          "text": "SecureDrop",
+          "url": "https://www.theguardian.com/securedrop",
+          "dataLinkName": "securedrop",
+          "extraClasses": ""
+        },
+        {
+          "text": "Work for us",
+          "url": "https://workforus.theguardian.com",
+          "dataLinkName": "uk : footer : work for us",
+          "extraClasses": ""
+        },
+        {
+          "text": "Privacy policy",
+          "url": "/info/privacy",
+          "dataLinkName": "privacy",
+          "extraClasses": ""
+        },
+        {
+          "text": "Cookie policy",
+          "url": "/info/cookies",
+          "dataLinkName": "cookie",
+          "extraClasses": ""
+        },
+        {
+          "text": "Terms & conditions",
+          "url": "/help/terms-of-service",
+          "dataLinkName": "terms",
+          "extraClasses": ""
+        },
+        {
+          "text": "Contact us",
+          "url": "/help/contact-us",
+          "dataLinkName": "uk : footer : contact us",
+          "extraClasses": ""
+        }
+      ],
+      [
+        {
+          "text": "All topics",
+          "url": "/index/subjects/a",
+          "dataLinkName": "uk : footer : all topics",
+          "extraClasses": ""
+        },
+        {
+          "text": "All writers",
+          "url": "/index/contributors",
+          "dataLinkName": "uk : footer : all contributors",
+          "extraClasses": ""
+        },
+        {
+          "text": "Modern Slavery Act",
+          "url": "https://uploads.guim.co.uk/2024/09/04/Modern_Slavery_Statement_2024_.pdf",
+          "dataLinkName": "uk : footer : modern slavery act statement",
+          "extraClasses": ""
+        },
+        {
+          "text": "Tax strategy",
+          "url": "https://uploads.guim.co.uk/2024/08/27/TAX_STRATEGY_FOR_THE_YEAR_ENDED_31_MARCH_2025.pdf",
+          "dataLinkName": "uk : footer : tax strategy",
+          "extraClasses": ""
+        },
+        {
+          "text": "Digital newspaper archive",
+          "url": "https://theguardian.newspapers.com",
+          "dataLinkName": "digital newspaper archive",
+          "extraClasses": ""
+        },
+        {
+          "text": "Facebook",
+          "url": "https://www.facebook.com/theguardian",
+          "dataLinkName": "uk : footer : facebook",
+          "extraClasses": ""
+        },
+        {
+          "text": "YouTube",
+          "url": "https://www.youtube.com/user/TheGuardian",
+          "dataLinkName": "uk : footer : youtube",
+          "extraClasses": ""
+        },
+        {
+          "text": "Instagram",
+          "url": "https://www.instagram.com/guardian",
+          "dataLinkName": "uk : footer : instagram",
+          "extraClasses": ""
+        },
+        {
+          "text": "LinkedIn",
+          "url": "https://www.linkedin.com/company/theguardian",
+          "dataLinkName": "uk : footer : linkedin",
+          "extraClasses": ""
+        },
+        {
+          "text": "Newsletters",
+          "url": "/email-newsletters?INTCMP=DOTCOM_FOOTER_NEWSLETTER_UK",
+          "dataLinkName": "uk : footer : newsletters",
+          "extraClasses": ""
+        }
+      ],
+      [
+        {
+          "text": "Advertise with us",
+          "url": "https://advertising.theguardian.com",
+          "dataLinkName": "uk : footer : advertise with us",
+          "extraClasses": ""
+        },
+        {
+          "text": "Guardian Labs",
+          "url": "/guardian-labs",
+          "dataLinkName": "uk : footer : guardian labs",
+          "extraClasses": ""
+        },
+        {
+          "text": "Search jobs",
+          "url": "https://jobs.theguardian.com",
+          "dataLinkName": "uk : footer : jobs",
+          "extraClasses": ""
+        },
+        {
+          "text": "Patrons",
+          "url": "https://patrons.theguardian.com?INTCMP=footer_patrons",
+          "dataLinkName": "uk : footer : patrons",
+          "extraClasses": ""
+        }
+      ]
+    ]
+  },
+  "publication": "theguardian.com",
+  "shouldHideReaderRevenue": false,
+  "slotMachineFlags": "",
+  "contributionsServiceUrl": "https://contributions.guardianapis.com",
+  "isSpecialReport": false,
+  "showTableOfContents": false,
+  "lang": "en",
+  "isRightToLeftLang": false
+}

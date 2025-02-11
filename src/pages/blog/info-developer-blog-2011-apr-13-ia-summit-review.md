@@ -1,0 +1,29 @@
+---
+layout: ../../layouts/blog.astro
+slug: 'info-developer-blog-2011-apr-13-ia-summit-review'
+headline: 'Cennydd Bowles predicts a rocky road ahead for UX at the Denver IA Summit'
+date: '2011-04-13'
+authors: [Martin Belam]
+standfirst: 'Three main themes emerged at the recent IA Summit in Denver: measuring the value of our work, getting our work done faster, and learning from other related disciplines. However, it was Cennydd Bowles'' closing plenary that made the longest lasting impression - predicting troubled times ahead for the IA and UX fields'
+image:
+  url: 'http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2011/4/11/1302525098365/post-it-notes.jpg'
+  alt: 'Post-it notes in use at the Information Architecture summit in Denver'
+  credit: 'Photograph: Matthew Solle/Flickr'
+tags: [Computing, Internet, Programming]
+---
+
+I've recently returned from Denver, where I was attending [the 12th Information Architecture Summit](http://2011.iasummit.org/). The conference was held over five days, and featured around 70 sessions exploring the disciplines of information architecture (IA) and user experience as part of building digital products.
+
+I thought that three key themes emerged from the sessions. One was about measurement. There seems a growing feeling that when companies invest in IA and user experience design for their websites and mobile products, they are increasingly wanting to see rather more concrete evidence of results. Richard Dalton gave [a talk specifically about measuring UX](http://www.slideshare.net/mauvyrusset/a-practical-guide-to-measuring-user-experience), and Lynne Polischuik and Julie Strothman looked at [how web analytics fitted into an IA's world](http://www.slideshare.net/strottrot/numbers-are-our-friends-7512000).
+
+The second key theme for me was a reappraisal of the "deliverables" that IAs produce. Jeff Gothelf talked about "[Lean UX](http://www.slideshare.net/jgothelf/lean-ux-getting-out-of-the-deliverables-business)", and Ann McMeekin Carrier ran a workshop on "[Creating an Agile UX Manifesto](http://www.slideshare.net/annmcmeekin/creating-an-agile-ux-manifesto-at-ia-summit-2011-7549388)". People in the IA community want to help businesses to help their customers and users, and they seem to be wanting to achieve that faster and faster. There was a strong feeling of trying to do "just enough" to get projects moved on, rather than dwell on the production of beautiful documents that ultimately show how a problem _might_ be sold, rather than actually _getting on_ with solving the problem.
+
+The third theme that I thought ran through the event was an outward looking focus on learning from related disciplines. Stephen P Anderson talked about [how the brain works to help us create stories and narrative](http://www.slideshare.net/stephenpa/the-stories-we-construct), and Koen Claes explained how ["user experience" only really exists in our memories](http://www.slideshare.net/koenatclaes/on-why-we-should-not-focus-on-ux). Leanna Gingras spoke about how she had "[upped her game](http://www.slideshare.net/leanna.gingras/upping-your-game-five-things-ias-need-to-talk-about-more-7492713)" as a new entrant to the profession by picking up skills in areas like psychology and business management.
+
+There was a strong British and British-based contingent on the conference programme. I appeared as part of a panel talking about [how to form local UX community groups](http://youtheuser.com/2011/03/07/ux-communities-starting-from-the-beginning/) alongside Matthew Solle, who I help to run [London IA](http://london-ia.ning.com/). Johanna Kollman explained why "[We love change? Change is scary!](http://www.slideshare.net/johannakollmann/we-love-change-change-is-scary)" using examples from her own career, and the wonderful story-telling device of explaining [how Sweden switched from driving on the left to driving on the right](http://www.volvoclub.org.uk/history/driving_on_right.shtml). Mike Atherton gave a densely-packed talk about [the domain-driven design the BBC has applied to areas of BBC Online](http://www.slideshare.net/reduxd/beyond-the-polar-bear) like the Wildlife Finder, programme pages, and BBC Food site. For me, his talk was one of the highlights of the event.
+
+The closing keynote was given by Clearleft's [Cennydd Bowles](http://www.cennydd.co.uk/), the first time in the 12-year history of the IA Summit that anyone from outside of the US has been invited to give one of the set-piece opening or closing talks. His talk, "[The fall and rise of user experience](http://www.cennydd.co.uk/2011/fall-and-rise-of-ux/)", was rousing and challenging in equal measure. His key point was that having promised that excellent design and user experience would be a key competitive differentiator for digital businesses, there simply weren't enough experience practitioners to go round. Cennydd feels therefore, that as a profession we are under-delivering on our promises, and risk disillusioning clients.
+
+He made a passionate plea for us as an industry to stop arguing among ourselves about job titles and exactly who does what bit of digital production, and instead focus on delivering "fewer, better" products, that are as much about good design, ethics and sustainability as they are about increasing the bottom line of whichever company you happen to be working for at the time. As Whitney Hess, one of the influential figures in the IA community [observed on Twitter](http://twitter.com/#!/whitneyhess/status/54653592245776384): "Cennydd is saying some stuff that's making me uncomfortable, but I know I need to hear it."
+
+• _You can find [a collection of over 70 presentation slides, reading lists, activity sheets, blog posts and other resources from the 2011 IA Summit](http://www.currybet.net/cbet_blog/2011/04/ia-summit-slides.php) on Martin Belam's personal blog._
