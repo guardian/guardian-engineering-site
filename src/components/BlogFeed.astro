@@ -37,6 +37,9 @@ const queryParams = new URLSearchParams({
 });
 
 const contentResultSchema = object({
+  config: object({
+    thumbnail: string(),
+  }),
   mainMediaElements: array(
     object({
       data: object({
@@ -81,6 +84,9 @@ const posts = await fetch(
 
         const media = article.mainMediaElements[0];
 
+        const thumbnail = article.config.thumbnail;
+        const defaultWidth = 500;
+
         const { src, width } =
           media?.imageSources
             .find((source) => source.weighting === "inline")
@@ -89,8 +95,8 @@ const posts = await fetch(
             .find((src) => src.width > 600) ?? {};
 
         const image = {
-          src,
-          width,
+          src: src ?? thumbnail,
+          width: width ?? defaultWidth,
           alt: media?.data.alt,
         };
 
