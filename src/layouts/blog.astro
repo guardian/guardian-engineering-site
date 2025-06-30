@@ -90,7 +90,7 @@ const formatDate = (dateString) => {
 
     ← {
       nextIndex && (
-        <a href={"/blog" + `/${allPosts[nextIndex].frontmatter.slug}/`}>
+        <a href={"/blog" + `/${allPosts[nextIndex].frontmatter.slug}`}>
           {allPosts[nextIndex].frontmatter.headline}
         </a>
       )
@@ -98,7 +98,7 @@ const formatDate = (dateString) => {
 
     → {
       previousIndex !== undefined && (
-        <a href={"/blog" + `/${allPosts[previousIndex].frontmatter.slug}/`}>
+        <a href={"/blog" + `/${allPosts[previousIndex].frontmatter.slug}`}>
           {allPosts[previousIndex].frontmatter.headline}
         </a>
       )
