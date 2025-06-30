@@ -78,7 +78,7 @@ for (const article of articles) {
     if (dcrArticle) {
         const filename = 'dcr-' + article.id.replaceAll('/', '➡️') + '.json'; 
         console.log("writing: " + filename);
-        //FIXME Json beautify
+        /* We could add a Json beautify */
         await Bun.write("data/" + filename, JSON.stringify(dcrArticle));
     }
 }

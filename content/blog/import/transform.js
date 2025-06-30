@@ -484,9 +484,6 @@ function createAuthorArray(byline) {
     return ('Jorge Azevedo, Scott Painter');
   else
     return processedText;
-  /* Split by commas to get individual names */
-  //return processedText.split(", ").map(name => name.trim());
-
 }
 
 async function processJsonFiles() {
@@ -518,8 +515,6 @@ async function processJsonFiles() {
         const content = await readFile(filePath, 'utf8');
         const jsonData = JSON.parse(content);
 
-        //console.log(`Processed: ${file}`);
-
         /* Transform the data */
 
         const slug = createSlug(file);
@@ -530,6 +525,7 @@ async function processJsonFiles() {
         const pubDate = createDate(jsonData.webPublicationDate);
         const image = mainImage(jsonData.mainMediaElements);
 
+        /* This can be useful to improve DX by displaying a link to the original article */
         //const debug = { canonical: jsonData.canonicalUrl};
 
         const tags = transformTags(jsonData.tags, headline, standfirst).sort();
