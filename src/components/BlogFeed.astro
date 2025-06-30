@@ -1,5 +1,4 @@
 ---
-
 import { timeAgo } from "@guardian/libs";
 
 const allPosts = Object.values(
@@ -11,13 +10,15 @@ const sortedPosts = allPosts.sort((a, b) => {
 });
 
 /* the tiniest blank white image */
-const defaultThumbnail = "data:image/gif;base64,R0lGODlhAQABAIAAAP7//wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
-
+const defaultThumbnail =
+  "data:image/gif;base64,R0lGODlhAQABAIAAAP7//wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
 
 const thumbnail = (originalUrl) => {
-  return originalUrl.replace('media.guim.co.uk', 'i.guim.co.uk/img/media') + '?width=512&dpr=1&s=none';
-}
-
+  return (
+    originalUrl.replace("media.guim.co.uk", "i.guim.co.uk/img/media") +
+    "?width=512&dpr=1&s=none"
+  );
+};
 ---
 
 <h3>Latest Engineering blog posts</h3>
@@ -26,18 +27,25 @@ const thumbnail = (originalUrl) => {
     sortedPosts.map((post) => (
       <li>
         <a href={post.url}>
-          
           <figure>
             <img
-              src={post.frontmatter.image ? thumbnail(post.frontmatter.image.url) : defaultThumbnail}
-              alt={post.frontmatter.image ? post.frontmatter.image.alt : 'white background'}
+              src={
+                post.frontmatter.image
+                  ? thumbnail(post.frontmatter.image.url)
+                  : defaultThumbnail
+              }
+              alt={
+                post.frontmatter.image
+                  ? post.frontmatter.image.alt
+                  : "white background"
+              }
               loading="lazy"
               decoding="async"
             />
           </figure>
 
           <h4>{post.frontmatter.headline}</h4>
-          <h5 class="byline">{post.frontmatter.authors.join(', ')}</h5>
+          <h5 class="byline">{post.frontmatter.authors.join(", ")}</h5>
           <h5>{timeAgo(post.frontmatter.date)}</h5>
         </a>
       </li>

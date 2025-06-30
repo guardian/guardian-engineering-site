@@ -2,14 +2,17 @@
 import Base from "../../../layouts/blog/Base.astro";
 import PostList from "../../../components/blog/PostList.astro";
 
-
 export async function getStaticPaths() {
-  const allPosts = Object.values(import.meta.glob('../*.md', { eager: true }));
+  const allPosts = Object.values(import.meta.glob("../*.md", { eager: true }));
 
-  const uniqueTags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+  const uniqueTags = [
+    ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
+  ];
 
   return uniqueTags.map((tag) => {
-    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.tags.includes(tag));
+    const filteredPosts = allPosts.filter((post: any) =>
+      post.frontmatter.tags.includes(tag),
+    );
 
     const sortedFilteredPosts = filteredPosts.sort((a, b) => {
       return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
@@ -27,14 +30,7 @@ const { posts } = Astro.props;
 ---
 
 <Base pageTitle={tag}>
-  
   <main class="container">
-
-     <PostList 
-      posts={posts} 
-      title={`Posts tagged with ${tag}:`}
-    />
-
- </main>
-
+    <PostList posts={posts} title={`Posts tagged with ${tag}:`} />
+  </main>
 </Base>

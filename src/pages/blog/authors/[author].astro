@@ -3,20 +3,23 @@ import Base from "../../../layouts/blog/Base.astro";
 import PostList from "../../../components/blog/PostList.astro";
 
 export async function getStaticPaths() {
-  const allPosts = Object.values(import.meta.glob('../*.md', { eager: true }));
+  const allPosts = Object.values(import.meta.glob("../*.md", { eager: true }));
 
-  const uniqueAuthors = [...new Set(allPosts.map((post: any) => post.frontmatter.authors).flat())];
+  const uniqueAuthors = [
+    ...new Set(allPosts.map((post: any) => post.frontmatter.authors).flat()),
+  ];
 
   return uniqueAuthors.map((ua) => {
-    
-    const filteredPosts = allPosts.filter((post: any) => post.frontmatter.authors.includes(ua));
+    const filteredPosts = allPosts.filter((post: any) =>
+      post.frontmatter.authors.includes(ua),
+    );
 
     const sortedPosts = filteredPosts.sort((a, b) => {
       return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
     });
-    
-     /* Create a URL-friendly version of the name (replace spaces with hyphens)*/
-    const author = ua.toLowerCase().replace(/\s+/g, '-');
+
+    /* Create a URL-friendly version of the name (replace spaces with hyphens)*/
+    const author = ua.toLowerCase().replace(/\s+/g, "-");
 
     return {
       params: { author },
@@ -30,14 +33,7 @@ const { posts } = Astro.props;
 ---
 
 <Base pageTitle={author}>
-  
   <main class="container">
-
-     <PostList 
-      posts={posts} 
-      title={`Posts authored by ${author}:`}
-    />
-
+    <PostList posts={posts} title={`Posts authored by ${author}:`} />
   </main>
-
 </Base>
