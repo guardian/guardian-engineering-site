@@ -1,0 +1,2 @@
+# Ignore all markdown files in src/pages/blog directory
+src/pages/blog/*.md

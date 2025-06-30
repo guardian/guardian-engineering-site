@@ -1,0 +1,32 @@
+---
+const { pageTitle } = Astro.props;
+import Header from "../../components/blog/Header.astro";
+import Footer from "../../components/blog/Footer.astro";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
+    />
+
+    <meta name="description" content="" />
+    <title>The guardian engineering blog - {pageTitle}</title>
+  </head>
+
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,110 @@
+---
+import AuthorsToLinks from "./AuthorsToLinks.astro";
+
+export interface Props {
+  posts: any[];
+  title?: string;
+  showAuthors?: boolean;
+  showDescription?: boolean;
+}
+
+const {
+  posts,
+  title = "Posts",
+  showAuthors = true,
+  showDescription = true,
+} = Astro.props;
+
+const formatDate = (dateString) => {
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
+
+  return new Intl.DateTimeFormat("en-GB", options).format(new Date(dateString));
+};
+
+const imgSrc = (originalUrl) => {
+  return (
+    originalUrl.replace("media.guim.co.uk", "i.guim.co.uk/img/media") +
+    "?width=600&dpr=2&s=none"
+  );
+};
+---
+
+<div class="post-list">
+  {title && <p>{title}</p>}
+
+  <hr />
+
+  {
+    posts.map((post) => (
+      <>
+        <div class="grid">
+          <div>
+            <p>{formatDate(post.frontmatter.date)}</p>
+            <h5>
+              <a href={post.url}>{post.frontmatter.headline}</a>
+            </h5>
+            {showAuthors && (
+              <>
+                <small>
+                  {" "}
+                  <AuthorsToLinks authors={post.frontmatter.authors} />{" "}
+                </small>{" "}
+                <br /> <br />
+              </>
+            )}
+            {showDescription && (
+              <>
+                <p>
+                  <small>{post.frontmatter.standfirst}</small>
+                </p>
+              </>
+            )}
+            <p />
+            <p>
+              <small>
+                {post.frontmatter.tags.map((tag: string) => (
+                  <>
+                    <a href={`/blog/tags/${tag}`}>{tag}</a>
+                    <span>&nbsp;</span>
+                  </>
+                ))}
+              </small>
+            </p>
+          </div>
+          <div>
+            {post.frontmatter.image && (
+              <figure style="text-align:left; margin-top:0; overflow:hidden;">
+                <a href={post.url}>
+                  <img
+                    alt={post.frontmatter.image.alt}
+                    src={imgSrc(post.frontmatter.image.url)}
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </a>
+              </figure>
+            )}
+          </div>
+        </div>
+        <hr />
+      </>
+    ))
+  }
+</div>
+
+<style>
+  h5 a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  h5 a:is(:hover, :focus, :active) {
+    text-decoration: revert;
+    color: unset;
+  }
+</style>

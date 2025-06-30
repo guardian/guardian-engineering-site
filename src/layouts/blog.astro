@@ -1,0 +1,218 @@
+---
+import Base from "./blog/Base.astro";
+import AuthorsToLinks from "../components/blog/AuthorsToLinks.astro";
+
+const { frontmatter, prevPost, nextPost } = Astro.props;
+
+const edit = Astro.props.edit ?? Astro.props.content?.edit ?? null;
+const { pathname = "/" } = new URL(Astro.request.url);
+
+const sortByDate = (a, b) => {
+  return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+};
+
+const allPosts = Object.values(
+  import.meta.glob("../pages/blog/*.md", { eager: true }),
+).sort(sortByDate);
+
+const postIndex = allPosts.findIndex(
+  (post) => post.frontmatter.slug === frontmatter.slug,
+);
+
+const nextIndex = postIndex === allPosts.length - 1 ? undefined : postIndex + 1;
+const previousIndex = postIndex === 0 ? undefined : postIndex - 1;
+
+const formatDate = (dateString) => {
+  const options = {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  };
+
+  return new Intl.DateTimeFormat("en-GB", options).format(new Date(dateString));
+};
+---
+
+<Base pageTitle={frontmatter.headline}>
+  <main class="container">
+    <hgroup>
+      <h1>{frontmatter.headline}</h1>
+      <p>{frontmatter.standfirst}</p>
+    </hgroup>
+
+    <AuthorsToLinks authors={frontmatter.authors} />
+    <p>Published on {formatDate(frontmatter.date)}</p>
+
+    <div>
+      {
+        frontmatter.tags.map((tag: string) => (
+          <>
+            <a href={`/blog/tags/${tag}`}>{tag} </a>
+            <span>&nbsp;</span>
+          </>
+        ))
+      }
+    </div>
+
+    <hgroup>
+      <hr />
+    </hgroup>
+
+    {
+      frontmatter.image && (
+        <figure data-media-id="4adba267ca620af5d01c92be270b7dd8c60d05a0">
+          <img
+            src={frontmatter.image.url}
+            alt={frontmatter.image.alt}
+            width="1000"
+            height="600"
+            loading="lazy"
+            decoding="async"
+          />
+          <figcaption>
+            {frontmatter.image.alt}
+            <i>{frontmatter.image.credit}</i>
+          </figcaption>
+        </figure>
+      )
+    }
+
+    <hgroup>
+      <hr />
+    </hgroup>
+
+    <article>
+      <slot />
+    </article>
+
+    <p>Continue reading</p>
+
+    ← {
+      nextIndex && (
+        <a href={"/blog" + `/${allPosts[nextIndex].frontmatter.slug}/`}>
+          {allPosts[nextIndex].frontmatter.headline}
+        </a>
+      )
+    }
+
+    → {
+      previousIndex !== undefined && (
+        <a href={"/blog" + `/${allPosts[previousIndex].frontmatter.slug}/`}>
+          {allPosts[previousIndex].frontmatter.headline}
+        </a>
+      )
+    }
+  </main>
+</Base>
+
+<style lang="css" is:global>
+  body {
+    font-family: "GuardianTextSans";
+  }
+
+  span.title {
+    font-family: "GH Guardian Headline";
+    font-size: 32px;
+    font-weight: 900;
+  }
+
+  blockquote.pullstring {
+    position: relative;
+    padding-left: 25px; /* Space for the SVG */
+    font-style: italic;
+    font-weight: 500;
+    border-left: none;
+    border-inline-start: none;
+  }
+
+  blockquote.pullstring::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.15em; /* Adjust vertical alignment */
+    width: 22px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 14' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.255 0h4.75c-.572 4.53-1.077 8.972-1.297 13.941H0C.792 9.104 2.44 4.53 5.255 0Zm11.061 0H21c-.506 4.53-1.077 8.972-1.297 13.941h-8.686c.902-4.837 2.485-9.411 5.3-13.941Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  figure {
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  figure img:not(.headline) {
+    width: 85%;
+  }
+
+  figure.supporting {
+    float: left;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    max-width: 300px;
+  }
+
+  figure figcaption {
+    border-left: none;
+    border-inline-start: none;
+    max-width: 85%;
+  }
+
+  figure figcaption::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 13px;
+    margin-right: 8px; /* Small gap between icon and text */
+    vertical-align: baseline;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 13' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 3.5v8l-1.5 1.5h-15l-1.5-1.5v-8l1.5-1.5h3.5l2-2h4l2 2h3.5l1.5 1.5zm-9 7.5c1.9 0 3.5-1.6 3.5-3.5s-1.6-3.5-3.5-3.5-3.5 1.6-3.5 3.5 1.6 3.5 3.5 3.5z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  figure figcaption i {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: smaller;
+  }
+
+  figure.supporting figcaption span.caption {
+    font-size: smaller;
+  }
+
+  iframe.video {
+    width: 85%;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+
+  .color-line {
+    display: flex;
+    width: 100%;
+    height: 4px;
+  }
+
+  .color-segment {
+    flex: 1;
+    height: 100%;
+  }
+
+  .segment-1 {
+    background-color: #c13b2a;
+  }
+  .segment-2 {
+    background-color: #e47e38;
+  }
+  .segment-3 {
+    background-color: #3980c5;
+  }
+  .segment-4 {
+    background-color: #a88b69;
+  }
+  .segment-5 {
+    background-color: #b84c93;
+  }
+</style>

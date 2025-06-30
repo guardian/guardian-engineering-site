@@ -1,7 +1,7 @@
 ---
 layout: ../layouts/page.astro
-title: "Events & Talks"
-edit: "events.md"
+title: 'Events & Talks'
+edit: 'events.md'
 ---
 
 Here's a list of events and talks:
