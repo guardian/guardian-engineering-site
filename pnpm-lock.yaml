@@ -34,6 +34,9 @@ dependencies:
   astro:
     specifier: 4.16.18
     version: 4.16.18(sass@1.57.1)(typescript@5.3.3)
+  astro-pagefind:
+    specifier: ^1.8.3
+    version: 1.8.3(astro@4.16.18)
   husky:
     specifier: 8.0.3
     version: 8.0.3
@@ -1266,6 +1269,54 @@ packages:
     resolution: {integrity: sha512-70wQhgYmndg4GCPxPPxPGevRKqTIJ2Nh4OkiMWmDAVYsTQ+Ta7Sq+rPevXyXGdzr30/qZBnyOalCszoMxlyldQ==}
     dev: false
 
+  /@pagefind/darwin-arm64@1.3.0:
+    resolution: {integrity: sha512-365BEGl6ChOsauRjyVpBjXybflXAOvoMROw3TucAROHIcdBvXk9/2AmEvGFU0r75+vdQI4LJdJdpH4Y6Yqaj4A==}
+    cpu: [arm64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@pagefind/darwin-x64@1.3.0:
+    resolution: {integrity: sha512-zlGHA23uuXmS8z3XxEGmbHpWDxXfPZ47QS06tGUq0HDcZjXjXHeLG+cboOy828QIV5FXsm9MjfkP5e4ZNbOkow==}
+    cpu: [x64]
+    os: [darwin]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@pagefind/default-ui@1.3.0:
+    resolution: {integrity: sha512-CGKT9ccd3+oRK6STXGgfH+m0DbOKayX6QGlq38TfE1ZfUcPc5+ulTuzDbZUnMo+bubsEOIypm4Pl2iEyzZ1cNg==}
+    dev: false
+
+  /@pagefind/linux-arm64@1.3.0:
+    resolution: {integrity: sha512-8lsxNAiBRUk72JvetSBXs4WRpYrQrVJXjlRRnOL6UCdBN9Nlsz0t7hWstRk36+JqHpGWOKYiuHLzGYqYAqoOnQ==}
+    cpu: [arm64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@pagefind/linux-x64@1.3.0:
+    resolution: {integrity: sha512-hAvqdPJv7A20Ucb6FQGE6jhjqy+vZ6pf+s2tFMNtMBG+fzcdc91uTw7aP/1Vo5plD0dAOHwdxfkyw0ugal4kcQ==}
+    cpu: [x64]
+    os: [linux]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@pagefind/windows-x64@1.3.0:
+    resolution: {integrity: sha512-BR1bIRWOMqkf8IoU576YDhij1Wd/Zf2kX/kCI0b2qzCKC8wcc2GQJaaRMCpzvCCrmliO4vtJ6RITp/AnoYUUmQ==}
+    cpu: [x64]
+    os: [win32]
+    requiresBuild: true
+    dev: false
+    optional: true
+
+  /@polka/url@1.0.0-next.29:
+    resolution: {integrity: sha512-wwQAWhWSuHaag8c4q/KN/vCoeOJYshAIvMQwD4GpSb3OiZklFfvAgmj0VCBBImRpuF/aFgIRzllXlVX93Jevww==}
+    dev: false
+
   /@rollup/pluginutils@5.1.4:
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
     engines: {node: '>=14.0.0'}
@@ -1699,6 +1750,17 @@ packages:
 
   /array-iterate@2.0.1:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
+    dev: false
+
+  /astro-pagefind@1.8.3(astro@4.16.18):
+    resolution: {integrity: sha512-Nfo1TdlEHdkXTiI0KpimLqX6awK3qWTil7IOJvk5Q8x+0VBTpIEp9QvGgoAxXDe3upAHLVsg4y7U1uUPm7GC9w==}
+    peerDependencies:
+      astro: ^2.0.4 || ^3 || ^4 || ^5
+    dependencies:
+      '@pagefind/default-ui': 1.3.0
+      astro: 4.16.18(sass@1.57.1)(typescript@5.3.3)
+      pagefind: 1.3.0
+      sirv: 3.0.1
     dev: false
 
   /astro@4.16.18(sass@1.57.1)(typescript@5.3.3):
@@ -3286,6 +3348,17 @@ packages:
     engines: {node: '>=6'}
     dev: false
 
+  /pagefind@1.3.0:
+    resolution: {integrity: sha512-8KPLGT5g9s+olKMRTU9LFekLizkVIu9tes90O1/aigJ0T5LmyPqTzGJrETnSw3meSYg58YH7JTzhTTW/3z6VAw==}
+    hasBin: true
+    optionalDependencies:
+      '@pagefind/darwin-arm64': 1.3.0
+      '@pagefind/darwin-x64': 1.3.0
+      '@pagefind/linux-arm64': 1.3.0
+      '@pagefind/linux-x64': 1.3.0
+      '@pagefind/windows-x64': 1.3.0
+    dev: false
+
   /parent-module@1.0.1:
     resolution: {integrity: sha512-GQ2EWRpQV8/o+Aw8YqtfZZPfNRWZYkbidE9k5rpl/hC3vtHHBfGm2Ifi6qWV+coDGkrUKZAxE3Lot5kcsRlh+g==}
     engines: {node: '>=6'}
@@ -3762,6 +3835,15 @@ packages:
     dev: false
     optional: true
 
+  /sirv@3.0.1:
+    resolution: {integrity: sha512-FoqMu0NCGBLCcAkS1qA+XJIQTR6/JHfQXl+uGteNCQ76T91DMUjPa9xfmeqMY3z80nLSg9yQmNjK0Px6RWsH/A==}
+    engines: {node: '>=18'}
+    dependencies:
+      '@polka/url': 1.0.0-next.29
+      mrmime: 2.0.0
+      totalist: 3.0.1
+    dev: false
+
   /sisteransi@1.0.5:
     resolution: {integrity: sha512-bLGGlR1QxBcynn2d5YmDX4MGjlZvy2MRBDRNHLJ8VI6l6+9FUiyTFNJ0IveOSP0bcXgVDPRcfGqA0pjaqUpfVg==}
     dev: false
@@ -3920,6 +4002,11 @@ packages:
     engines: {node: '>=8.0'}
     dependencies:
       is-number: 7.0.0
+    dev: false
+
+  /totalist@3.0.1:
+    resolution: {integrity: sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==}
+    engines: {node: '>=6'}
     dev: false
 
   /trim-lines@3.0.1:

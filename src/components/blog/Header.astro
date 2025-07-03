@@ -1,5 +1,5 @@
 ---
-
+import Search from "astro-pagefind/components/Search";
 ---
 
 <header class="container">
@@ -25,4 +25,12 @@
     <div class="color-segment segment-4"></div>
     <div class="color-segment segment-5"></div>
   </div>
+
+  <br />
+
+  <Search
+    id="search"
+    className="pagefind-ui"
+    uiOptions={{ showImages: false, showEmptyFilters: false }}
+  />
 </header>
