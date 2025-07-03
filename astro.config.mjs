@@ -1,5 +1,6 @@
 import react from "@astrojs/react";
 import svelte from "@astrojs/svelte";
+import pagefind from "astro-pagefind";
 
 import { defineConfig } from "astro/config";
 // Full Astro Configuration API Documentation:
@@ -12,7 +13,7 @@ import { defineConfig } from "astro/config";
 
 // @ts-check
 export default defineConfig({
-  integrations: [react(), svelte()],
+  integrations: [react(), svelte(), pagefind()],
   build: {
     site: "https://theguardian.engineering/",
     format: "file",
