@@ -35,7 +35,7 @@ const formatDate = (dateString) => {
 ---
 
 <Base pageTitle={frontmatter.headline}>
-  <main class="container">
+  <main class="container" data-pagefind-body>
     <hgroup>
       <h1>{frontmatter.headline}</h1>
       <p>{frontmatter.standfirst}</p>
@@ -48,7 +48,10 @@ const formatDate = (dateString) => {
       {
         frontmatter.tags.map((tag: string) => (
           <>
-            <a href={`/blog/tags/${tag}`}>{tag} </a>
+            <a href={`/blog/tags/${tag}`}>
+              {" "}
+              <span data-pagefind-filter="tag"> {tag} </span>{" "}
+            </a>
             <span>&nbsp;</span>
           </>
         ))

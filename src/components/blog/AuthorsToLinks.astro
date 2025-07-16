@@ -19,7 +19,9 @@ const validNames = authors.filter((name) => name && name.trim());
 {
   validNames.map((name, index) => (
     <>
-      <a href={`${basePath}${createSlug(name)}`}>{name}</a>
+      <a href={`${basePath}${createSlug(name)}`}>
+        <span data-pagefind-filter="author">{name}</span>
+      </a>
       {index < validNames.length - 1 && <>, </>}
     </>
   ))
