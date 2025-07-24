@@ -12,7 +12,7 @@ const sortByDate = (a, b) => {
 };
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.md", { eager: true }),
+  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true }),
 ).sort(sortByDate);
 
 const postIndex = allPosts.findIndex(
@@ -148,7 +148,9 @@ const formatDate = (dateString) => {
   }
 
   figure img:not(.headline) {
-    width: 85%;
+    width: auto;
+    max-width: 85%;
+    max-height: 75dvh;
   }
 
   figure.supporting {

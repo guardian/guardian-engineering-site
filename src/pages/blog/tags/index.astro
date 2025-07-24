@@ -1,6 +1,8 @@
 ---
 import Base from "../../../layouts/blog/Base.astro";
-const allPosts = Object.values(import.meta.glob("../*.md", { eager: true }));
+const allPosts = Object.values(
+  import.meta.glob("../*.{md,mdx}", { eager: true }),
+);
 const tags = [
   ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
 ];

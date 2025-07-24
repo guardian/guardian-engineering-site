@@ -19,3 +19,6 @@ yarn-error.log*
 
 # Work in progress
 wip/
+
+# astro
+.astro

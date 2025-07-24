@@ -1,5 +1,6 @@
 import react from "@astrojs/react";
 import svelte from "@astrojs/svelte";
+import mdx from "@astrojs/mdx";
 import pagefind from "astro-pagefind";
 
 import { defineConfig } from "astro/config";
@@ -13,7 +14,7 @@ import { defineConfig } from "astro/config";
 
 // @ts-check
 export default defineConfig({
-  integrations: [react(), svelte(), pagefind()],
+  integrations: [react(), svelte(), mdx(), pagefind()],
   build: {
     site: "https://theguardian.engineering/",
     format: "file",
