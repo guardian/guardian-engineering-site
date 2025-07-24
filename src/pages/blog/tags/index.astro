@@ -1,13 +1,13 @@
 ---
 import Base from "../../../layouts/blog/Base.astro";
 const allPosts = Object.values(
-  import.meta.glob("../*.{md,mdx}", { eager: true })
+  import.meta.glob("../*.{md,mdx}", { eager: true }),
 );
 const tags = [
   ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
 ];
 const sortedTags = Array.from(tags).sort((a, b) =>
-  a.localeCompare(b, "en", { sensitivity: "base" })
+  a.localeCompare(b, "en", { sensitivity: "base" }),
 );
 ---
 

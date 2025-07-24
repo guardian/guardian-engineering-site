@@ -2,7 +2,7 @@
 import Base from "../../../layouts/blog/Base.astro";
 
 const allPosts = Object.values(
-  import.meta.glob("../*.{md,mdx}", { eager: true })
+  import.meta.glob("../*.{md,mdx}", { eager: true }),
 );
 const uniqueAuthors = [
   ...new Set(allPosts.map((post: any) => post.frontmatter.authors).flat()),

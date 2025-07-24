@@ -12,11 +12,11 @@ const sortByDate = (a, b) => {
 };
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true })
+  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true }),
 ).sort(sortByDate);
 
 const postIndex = allPosts.findIndex(
-  (post) => post.frontmatter.slug === frontmatter.slug
+  (post) => post.frontmatter.slug === frontmatter.slug,
 );
 
 const nextIndex = postIndex === allPosts.length - 1 ? undefined : postIndex + 1;

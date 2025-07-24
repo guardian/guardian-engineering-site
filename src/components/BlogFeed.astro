@@ -2,7 +2,7 @@
 import { timeAgo } from "@guardian/libs";
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true })
+  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true }),
 );
 
 const sortedPosts = allPosts

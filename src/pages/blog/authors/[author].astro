@@ -4,7 +4,7 @@ import PostList from "../../../components/blog/PostList.astro";
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
-    import.meta.glob("../*.{md,mdx}", { eager: true })
+    import.meta.glob("../*.{md,mdx}", { eager: true }),
   );
 
   const uniqueAuthors = [
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
 
   return uniqueAuthors.map((ua) => {
     const filteredPosts = allPosts.filter((post: any) =>
-      post.frontmatter.authors.includes(ua)
+      post.frontmatter.authors.includes(ua),
     );
 
     const sortedPosts = filteredPosts.sort((a, b) => {
