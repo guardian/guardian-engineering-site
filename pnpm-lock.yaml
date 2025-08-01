@@ -7,6 +7,9 @@ dependencies:
   '@astrojs/react':
     specifier: 3.4.0
     version: 3.4.0(@types/react-dom@18.2.25)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(vite@5.4.19)
+  '@astrojs/rss':
+    specifier: ^4.0.12
+    version: 4.0.12
   '@astrojs/svelte':
     specifier: 5.4.0
     version: 5.4.0(astro@4.16.18)(svelte@4.2.19)(typescript@5.3.3)(vite@5.4.19)
@@ -171,6 +174,13 @@ packages:
     transitivePeerDependencies:
       - supports-color
       - vite
+    dev: false
+
+  /@astrojs/rss@4.0.12:
+    resolution: {integrity: sha512-O5yyxHuDVb6DQ6VLOrbUVFSm+NpObulPxjs6XT9q3tC+RoKbN4HXMZLpv0LvXd1qdAjzVgJ1NFD+zKHJNDXikw==}
+    dependencies:
+      fast-xml-parser: 5.2.5
+      kleur: 4.1.5
     dev: false
 
   /@astrojs/svelte@5.4.0(astro@4.16.18)(svelte@4.2.19)(typescript@5.3.3)(vite@5.4.19):
@@ -2469,6 +2479,13 @@ packages:
       micromatch: 4.0.8
     dev: false
 
+  /fast-xml-parser@5.2.5:
+    resolution: {integrity: sha512-pfX9uG9Ki0yekDHx2SiuRIyFdyAr1kMIMitPvb0YBo8SUfKvia7w7FIyd/l6av85pFYRhZscS75MwMnbvY+hcQ==}
+    hasBin: true
+    dependencies:
+      strnum: 2.1.1
+    dev: false
+
   /fastq@1.17.1:
     resolution: {integrity: sha512-sRVD3lWVIXWg6By68ZN7vho9a1pQcN/WBFaAAsDDFzlJjvoGx0P8z7V1t72grFJfJhu3YPZBuu25f7Kaw2jN1w==}
     dependencies:
@@ -4381,6 +4398,10 @@ packages:
   /strip-bom@3.0.0:
     resolution: {integrity: sha512-vavAMRXOgBVNF6nyEEmL3DBK19iRpDcoIwW+swQ+CbGiu7lju6t+JklA1MHweoWtadgt4ISVUsXLyDq34ddcwA==}
     engines: {node: '>=4'}
+    dev: false
+
+  /strnum@2.1.1:
+    resolution: {integrity: sha512-7ZvoFTiCnGxBtDqJ//Cu6fWtZtc7Y3x+QOirG15wztbdngGSkht27o2pyGWrVy0b4WAy3jbKmnoK6g5VlVNUUw==}
     dev: false
 
   /style-to-js@1.1.17:

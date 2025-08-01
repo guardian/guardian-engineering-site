@@ -3,7 +3,7 @@ import Base from "../layouts/blog/Base.astro";
 import PostList from "../components/blog/PostList.astro";
 
 const allPosts = Object.values(
-  import.meta.glob("./blog/*.{md,mdx}", { eager: true })
+  import.meta.glob("./blog/*.{md,mdx}", { eager: true }),
 );
 
 const sortedPosts = allPosts.sort((a, b) => {
