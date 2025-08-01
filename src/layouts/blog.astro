@@ -12,11 +12,11 @@ const sortByDate = (a, b) => {
 };
 
 const allPosts = Object.values(
-  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true }),
+  import.meta.glob("../pages/blog/*.{md,mdx}", { eager: true })
 ).sort(sortByDate);
 
 const postIndex = allPosts.findIndex(
-  (post) => post.frontmatter.slug === frontmatter.slug,
+  (post) => post.frontmatter.slug === frontmatter.slug
 );
 
 const nextIndex = postIndex === allPosts.length - 1 ? undefined : postIndex + 1;
@@ -34,7 +34,7 @@ const formatDate = (dateString) => {
 };
 ---
 
-<Base pageTitle={frontmatter.headline}>
+<Base pageTitle={frontmatter.headline} pageDescription={frontmatter.standfirst}>
   <main class="container" data-pagefind-body>
     <hgroup>
       <h1>{frontmatter.headline}</h1>
