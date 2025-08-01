@@ -36,7 +36,7 @@
     "typescript": "5.9.2",
     "vite": "7.0.6"
   },
-  "packageManager": "pnpm@8.5.0+sha256.b013403809dc950d169f16423b74e9b6c749f6934adb067abe90e9a16b89935f",
+  "packageManager": "pnpm@10.14.0+sha256.297534e65d5842450539c1e8022c8831ab5e1fe2eb74664787a815519542d620",
   "prettier": {
     "overrides": [
       {
