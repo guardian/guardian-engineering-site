@@ -34,5 +34,6 @@ export function GET(context) {
     })),
     // (optional) inject custom xml
     customData: `<language>en-gb</language>`,
+    trailingSlash: false, // Ensure no trailing slash in the URL
   });
 }
