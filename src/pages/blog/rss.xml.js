@@ -5,9 +5,11 @@ export function GET(context) {
     import.meta.glob("./*.{md,mdx}", { eager: true }),
   );
 
-  const sortedPosts = allPosts.sort((a, b) => {
-    return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
-  });
+  const sortedPosts = allPosts
+    .sort((a, b) => {
+      return new Date(b.frontmatter.date) - new Date(a.frontmatter.date);
+    })
+    .slice(0, 15); // Limit to the 15 most recent posts
 
   return rss({
     // `<title>` field in output xml
