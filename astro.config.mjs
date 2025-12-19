@@ -14,9 +14,9 @@ import { defineConfig } from "astro/config";
 
 // @ts-check
 export default defineConfig({
+  site: "https://theguardian.engineering/",
   integrations: [react(), svelte(), mdx(), pagefind()],
   build: {
-    site: "https://theguardian.engineering/",
     format: "file",
   },
 });
