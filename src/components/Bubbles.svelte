@@ -72,7 +72,8 @@
               top: `${(bubble.y + offset) * 50}%`,
               rotation: `${bubble.rotation}deg`,
             })}
-          />
+          >
+          </div>
         {/each}
       {/each}
     </div>
