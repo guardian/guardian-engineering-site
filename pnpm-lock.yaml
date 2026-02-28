@@ -12,7 +12,7 @@ dependencies:
     version: 4.0.15
   '@astrojs/svelte':
     specifier: 7.2.5
-    version: 7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.51.5)(typescript@5.3.3)
+    version: 7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.53.5)(typescript@5.3.3)
   '@babel/core':
     specifier: 7.20.12
     version: 7.20.12
@@ -62,8 +62,8 @@ dependencies:
     specifier: 1.57.1
     version: 1.57.1
   svelte:
-    specifier: 5.51.5
-    version: 5.51.5
+    specifier: 5.53.5
+    version: 5.53.5
   typescript:
     specifier: 5.3.3
     version: 5.3.3
@@ -196,7 +196,7 @@ packages:
       piccolore: 0.1.3
     dev: false
 
-  /@astrojs/svelte@7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.51.5)(typescript@5.3.3):
+  /@astrojs/svelte@7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.53.5)(typescript@5.3.3):
     resolution: {integrity: sha512-Tl5aF/dYbzzd7sLpxMBX6pRz3yJ1B4pilt9G3GJbj0I0/doJHIEmerNQsnlxX0/InNKUhMXXN8wyyet9VhA+Zw==}
     engines: {node: 18.20.8 || ^20.3.0 || >=22.0.0}
     peerDependencies:
@@ -204,10 +204,10 @@ packages:
       svelte: ^5.1.16
       typescript: ^5.3.3
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.51.5)(vite@6.4.1)
+      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.53.5)(vite@6.4.1)
       astro: 5.17.3(sass@1.57.1)(typescript@5.3.3)
-      svelte: 5.51.5
-      svelte2tsx: 0.7.51(svelte@5.51.5)(typescript@5.3.3)
+      svelte: 5.53.5
+      svelte2tsx: 0.7.51(svelte@5.53.5)(typescript@5.3.3)
       typescript: 5.3.3
       vite: 6.4.1(sass@1.57.1)
     transitivePeerDependencies:
@@ -1728,7 +1728,7 @@ packages:
       acorn: 8.16.0
     dev: false
 
-  /@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.51.5)(vite@6.4.1):
+  /@sveltejs/vite-plugin-svelte-inspector@4.0.1(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.53.5)(vite@6.4.1):
     resolution: {integrity: sha512-J/Nmb2Q2y7mck2hyCX4ckVHcR5tu2J+MtBEQqpDrrgELZ2uvraQcK/ioCV61AqkdXFgriksOKIceDcQmqnGhVw==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22}
     peerDependencies:
@@ -1736,27 +1736,27 @@ packages:
       svelte: ^5.0.0
       vite: ^6.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.51.5)(vite@6.4.1)
+      '@sveltejs/vite-plugin-svelte': 5.1.1(svelte@5.53.5)(vite@6.4.1)
       debug: 4.4.3
-      svelte: 5.51.5
+      svelte: 5.53.5
       vite: 6.4.1(sass@1.57.1)
     transitivePeerDependencies:
       - supports-color
     dev: false
 
-  /@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.51.5)(vite@6.4.1):
+  /@sveltejs/vite-plugin-svelte@5.1.1(svelte@5.53.5)(vite@6.4.1):
     resolution: {integrity: sha512-Y1Cs7hhTc+a5E9Va/xwKlAJoariQyHY+5zBgCZg4PFWNYQ1nMN9sjK1zhw1gK69DuqVP++sht/1GZg1aRwmAXQ==}
     engines: {node: ^18.0.0 || ^20.0.0 || >=22}
     peerDependencies:
       svelte: ^5.0.0
       vite: ^6.0.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.51.5)(vite@6.4.1)
+      '@sveltejs/vite-plugin-svelte-inspector': 4.0.1(@sveltejs/vite-plugin-svelte@5.1.1)(svelte@5.53.5)(vite@6.4.1)
       debug: 4.4.3
       deepmerge: 4.3.1
       kleur: 4.1.5
       magic-string: 0.30.21
-      svelte: 5.51.5
+      svelte: 5.53.5
       vite: 6.4.1(sass@1.57.1)
       vitefu: 1.1.1(vite@6.4.1)
     transitivePeerDependencies:
@@ -1948,6 +1948,11 @@ packages:
 
   /argparse@2.0.1:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
+    dev: false
+
+  /aria-query@5.3.1:
+    resolution: {integrity: sha512-Z/ZeOgVl7bcSYZ/u/rh0fOpvEpq//LZmdbkXyc7syVzjPAhfOa9ebsdTSjEBDU4vs5nC98Kfduj1uFo0qyET3g==}
+    engines: {node: '>= 0.4'}
     dev: false
 
   /aria-query@5.3.2:
@@ -4393,7 +4398,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /svelte2tsx@0.7.51(svelte@5.51.5)(typescript@5.3.3):
+  /svelte2tsx@0.7.51(svelte@5.53.5)(typescript@5.3.3):
     resolution: {integrity: sha512-YbVMQi5LtQkVGOMdATTY8v3SMtkNjzYtrVDGaN3Bv+0LQ47tGXu/Oc8ryTkcYuEJWTZFJ8G2+2I8ORcQVGt9Ag==}
     peerDependencies:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
@@ -4401,12 +4406,12 @@ packages:
     dependencies:
       dedent-js: 1.0.1
       scule: 1.3.0
-      svelte: 5.51.5
+      svelte: 5.53.5
       typescript: 5.3.3
     dev: false
 
-  /svelte@5.51.5:
-    resolution: {integrity: sha512-/4tR5cLsWOgH3wnNRXnFoWaJlwPGbJanZPSKSD6nHM2y01dvXeEF4Nx7jevoZ+UpJpkIHh6mY2tqDncuI4GHng==}
+  /svelte@5.53.5:
+    resolution: {integrity: sha512-YkqERnF05g8KLdDZwZrF8/i1eSbj6Eoat8Jjr2IfruZz9StLuBqo8sfCSzjosNKd+ZrQ8DkKZDjpO5y3ht1Pow==}
     engines: {node: '>=18'}
     dependencies:
       '@jridgewell/remapping': 2.3.5
@@ -4415,7 +4420,7 @@ packages:
       '@types/estree': 1.0.8
       '@types/trusted-types': 2.0.7
       acorn: 8.16.0
-      aria-query: 5.3.2
+      aria-query: 5.3.1
       axobject-query: 4.1.0
       clsx: 2.1.1
       devalue: 5.6.3
