@@ -8,8 +8,8 @@ dependencies:
     specifier: 4.4.2
     version: 4.4.2(@types/react-dom@18.2.25)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(sass@1.57.1)
   '@astrojs/rss':
-    specifier: ^4.0.15
-    version: 4.0.15
+    specifier: ^4.0.16
+    version: 4.0.16
   '@astrojs/svelte':
     specifier: 7.2.5
     version: 7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.53.5)(typescript@5.3.3)
@@ -189,11 +189,12 @@ packages:
       - yaml
     dev: false
 
-  /@astrojs/rss@4.0.15:
-    resolution: {integrity: sha512-uXO/k6AhRkIDXmRoc6xQpoPZrimQNUmS43X4+60yunfuMNHtSRN5e/FiSi7NApcZqmugSMc5+cJi8ovqgO+qIg==}
+  /@astrojs/rss@4.0.16:
+    resolution: {integrity: sha512-sx++ezc+2WSu48032XGoqjrJ+bXwYyMtBx8pyuLeSlppn+fjioP8INC30sS8MEbKHCK7HfiwsEsnGyXoafxkww==}
     dependencies:
-      fast-xml-parser: 5.3.3
+      fast-xml-parser: 5.4.2
       piccolore: 0.1.3
+      zod: 4.3.6
     dev: false
 
   /@astrojs/svelte@7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.53.5)(typescript@5.3.3):
@@ -2636,10 +2637,15 @@ packages:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
     dev: false
 
-  /fast-xml-parser@5.3.3:
-    resolution: {integrity: sha512-2O3dkPAAC6JavuMm8+4+pgTk+5hoAs+CjZ+sWcQLkX9+/tHRuTkQh/Oaifr8qDmZ8iEHb771Ea6G8CdwkrgvYA==}
+  /fast-xml-builder@1.0.0:
+    resolution: {integrity: sha512-fpZuDogrAgnyt9oDDz+5DBz0zgPdPZz6D4IR7iESxRXElrlGTRkHJ9eEt+SACRJwT0FNFrt71DFQIUFBJfX/uQ==}
+    dev: false
+
+  /fast-xml-parser@5.4.2:
+    resolution: {integrity: sha512-pw/6pIl4k0CSpElPEJhDppLzaixDEuWui2CUQQBH/ECDf7+y6YwA4Gf7Tyb0Rfe4DIMuZipYj4AEL0nACKglvQ==}
     hasBin: true
     dependencies:
+      fast-xml-builder: 1.0.0
       strnum: 2.1.2
     dev: false
 
@@ -4867,6 +4873,10 @@ packages:
 
   /zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+    dev: false
+
+  /zod@4.3.6:
+    resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
     dev: false
 
   /zwitch@2.0.4:

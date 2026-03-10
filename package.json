@@ -15,7 +15,7 @@
   "dependencies": {
     "@astrojs/mdx": "4.3.13",
     "@astrojs/react": "4.4.2",
-    "@astrojs/rss": "^4.0.15",
+    "@astrojs/rss": "^4.0.16",
     "@astrojs/svelte": "7.2.5",
     "@babel/core": "7.20.12",
     "@emotion/babel-plugin": "11.11.0",
