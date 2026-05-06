@@ -4,7 +4,7 @@ slug: "day-in-the-life-stefano-le-pera"
 headline: "Day in the Life: Stefano Le Pera"
 date: "2026-05-06"
 authors: [Rasha Ardati]
-standfirst: "Welcome to our ‘Day in the Life’ blog series where we interview a colleague from the product and engineering department to reflect on their career and experiences at the Guardian. Stefano Le Pera’s route into software engineering began in Rome, not through a traditional computer science degree, but through curiosity, creativity and a love of making things happen on screen."
+standfirst: "Welcome to our ‘Day in the Life’ blog series where we interview a colleague from the product and engineering department to reflect on their career and experiences at the Guardian."
 image:
   url: "/images/blog/stefano-le-pera.jpg"
   alt: "A picture of Stefano"
@@ -65,3 +65,7 @@ I’ve really been enjoying both the people culture and the engineering culture.
 I’ve also felt comfortable contributing though I’ve only been here a few weeks. I’ve already started sharing ideas and drafting proposals, and people have been open to listening. 
 
 Looking ahead, I’d like to make a meaningful impact, not just through projects but also by helping improve processes and ways of working. If I can contribute to making things a little bit better for the team and the organisation, that would be a great outcome.
+
+_**Development of digital products is central to the Guardian. You could be building the products that showcase our progressive and independent journalism, crafting the tools that journalists use to write their stories, developing the services that allow those stories to be distributed across the globe, or safeguarding our financial future.**_
+
+_**If you’re interested in joining our product and engineering team, please visit the [Guardian News & Media careers page](https://workforus.theguardian.com/).**_
