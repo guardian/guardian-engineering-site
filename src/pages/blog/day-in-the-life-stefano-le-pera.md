@@ -9,7 +9,7 @@ image:
   url: "/images/blog/stefano-le-pera.jpg"
   alt: "A picture of Stefano"
   credit: "Photograph: Stefano Le Pera"
-tags: [DayInTheLife]
+tags: [Day in the Life]
 ---
 
 Stefano Le Pera’s route into software engineering began in Rome, not through a traditional computer science degree, but through curiosity, creativity and a love of making things happen on screen. After trying economics and realising it was not the right path, he found himself drawn to digital design, where he became “the more technical person” among a largely artistic crowd. Then came Flash. “I loved it,” he says. “You could write a small bit of code and immediately see something happen.” That instant visual feedback pulled him deeper into development, and before long he was working as a Flash developer in Rome.
