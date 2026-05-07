@@ -9,7 +9,7 @@ image:
   url: "/images/blog/simon-adcock.jpg"
   alt: "A picture of Simon"
   credit: "Photograph: Simon Adcock"
-tags: [DayInTheLife]
+tags: [Day in the Life]
 ---
 
 Simon Adcock’s fascination with computers began at home. His mother sensed the coming wave of technology and encouraged him to explore it through video games. Starting with an Atari and classics like Space Invaders, Simon was hooked. Soon he was experimenting with programming, though at first, it was a frustrating world of dry, complex books and few accessible courses.
