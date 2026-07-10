@@ -12,7 +12,8 @@ image:
 tags: []
 ---
 
-You may have heard [the Guardian has a new cooking app called Feast](https://www.theguardian.com/help/insideguardian/2024/apr/17/introducing-the-feast-app). With thousands of searchable recipes, cook mode, and lots of other lovely features, it’s been well received on both iOS and Android. You should definitely get it.
+You may have heard [the Guardian has a new cooking app called Feast](https://www.theguardian.com/info/2025/jan/02/feast-the-app-to-avoid-boring-cooking
+). With thousands of searchable recipes, cook mode, and lots of other lovely features, it’s been well received on both iOS and Android. You should definitely get it.
 
 No article on its own could possibly do justice to the work that’s gone into making Feast a reality (a big book _might_ be able to pull it off) but this is a look at a vital piece of the app – its data. There’s no recipe app without recipe data. At least, not one with any functionality worth writing home about.
 
