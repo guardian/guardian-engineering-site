@@ -17,7 +17,7 @@
     "@astrojs/react": "4.4.2",
     "@astrojs/rss": "^4.0.16",
     "@astrojs/svelte": "7.2.5",
-    "@babel/core": "7.20.12",
+    "@babel/core": "7.29.6",
     "@emotion/babel-plugin": "11.11.0",
     "@emotion/react": "11.11.4",
     "@guardian/libs": "16.1.4",
