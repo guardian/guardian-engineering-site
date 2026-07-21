@@ -8,8 +8,8 @@ dependencies:
     specifier: 4.4.2
     version: 4.4.2(@types/react-dom@18.2.25)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0)(sass@1.57.1)
   '@astrojs/rss':
-    specifier: ^4.0.16
-    version: 4.0.16
+    specifier: ^4.0.19
+    version: 4.0.19
   '@astrojs/svelte':
     specifier: 7.2.5
     version: 7.2.5(astro@5.17.3)(sass@1.57.1)(svelte@5.55.7)(typescript@5.3.3)
@@ -181,10 +181,10 @@ packages:
       - yaml
     dev: false
 
-  /@astrojs/rss@4.0.16:
-    resolution: {integrity: sha512-sx++ezc+2WSu48032XGoqjrJ+bXwYyMtBx8pyuLeSlppn+fjioP8INC30sS8MEbKHCK7HfiwsEsnGyXoafxkww==}
+  /@astrojs/rss@4.0.19:
+    resolution: {integrity: sha512-e+z5wYeYtffQdHQO8c2tkSd2JEBdAuRXJV4ZEU5IxkYeE6e39woDd7nw1PH1Kk2tEYNCYuKdylnnbhGmt61awA==}
     dependencies:
-      fast-xml-parser: 5.9.3
+      fast-xml-parser: 5.10.1
       piccolore: 0.1.3
       zod: 4.4.3
     dev: false
@@ -1342,8 +1342,8 @@ packages:
       - supports-color
     dev: false
 
-  /@nodable/entities@2.2.0:
-    resolution: {integrity: sha512-9uGyhaQavEUMC8AIddIjau4NsnsXhou+j5sBAGojCM1oxmQpVKTWR/9JxABD6UAv12vpIms55fPZKFQEhG6uBg==}
+  /@nodable/entities@3.0.0:
+    resolution: {integrity: sha512-8L9xFeTYKhm49xfIypoe2W5wV1m/3Z58kT+7kR9A8OyFxcPduI4VmxaUMQyKYrRjUoLLSXv6EKKID5Tvj9cUVw==}
     dev: false
 
   /@oslojs/encoding@1.1.0:
@@ -2638,23 +2638,23 @@ packages:
     resolution: {integrity: sha512-fjquC59cD7CyW6urNXK0FBufkZcoiGG80wTuPujX590cB5Ttln20E2UB4S/WARVqhXffZl2LNgS+gQdPIIim/g==}
     dev: false
 
-  /fast-xml-builder@1.2.1:
-    resolution: {integrity: sha512-tPb5TTWfgfVx5BNSi2xV0eLr89POeXXn0dXIsCJ9m1narrWxeIyx6je9d7Rce/3NyXLbvuQmLkxq+RuxMWejvw==}
+  /fast-xml-builder@1.3.0:
+    resolution: {integrity: sha512-F74cZEdCvuw9P41GAC3rod4X04jjWGM1JPEv/GWSqFTWLsdyMSBMBMlm9Hk3GLBgLBbdBNY8yee0pQh2RBVESQ==}
     dependencies:
       path-expression-matcher: 1.6.2
-      xml-naming: 0.1.0
+      xml-naming: 0.3.0
     dev: false
 
-  /fast-xml-parser@5.9.3:
-    resolution: {integrity: sha512-brCNCeScma/kqa54J4PIDriSSSLssRkuYaUCpvHJulGc3HGI/xxKUCTDcYkAdqJsyb//ydpbxecjC3hB9+tb/g==}
+  /fast-xml-parser@5.10.1:
+    resolution: {integrity: sha512-IEMIf7298kXuZSRFoGfMYrl7is8LpavODgbNz1cwIudv7KwVFnuU+UsMporfq6PD6aXSlawZlARiA3UywCTfMw==}
     hasBin: true
     dependencies:
-      '@nodable/entities': 2.2.0
-      fast-xml-builder: 1.2.1
-      is-unsafe: 1.0.1
+      '@nodable/entities': 3.0.0
+      fast-xml-builder: 1.3.0
+      is-unsafe: 2.0.0
       path-expression-matcher: 1.6.2
       strnum: 2.4.1
-      xml-naming: 0.1.0
+      xml-naming: 0.3.0
     dev: false
 
   /fdir@6.5.0(picomatch@4.0.5):
@@ -3036,8 +3036,8 @@ packages:
       '@types/estree': 1.0.9
     dev: false
 
-  /is-unsafe@1.0.1:
-    resolution: {integrity: sha512-CLK2+VdgERgD96EYm5lUQssZYlRg2tkZnbsxZoacmSiRxiFJ4Nk4SzjCl+Ur+v3kXIY9dTIdb3IH22y1mZ56LA==}
+  /is-unsafe@2.0.0:
+    resolution: {integrity: sha512-2LdV822R+wmI86unXA93WCFpL6g+av8ynWk0nrHyJqGop5VoocYsSLFgN8jrfalT6iGeLNM4KXuVSsULP53kEA==}
     dev: false
 
   /is-wsl@3.1.0:
@@ -4853,8 +4853,8 @@ packages:
       strip-ansi: 7.1.2
     dev: false
 
-  /xml-naming@0.1.0:
-    resolution: {integrity: sha512-k8KO9hrMyNk6tUWqUfkTEZbezRRpONVOzUTnc97VnCvyj6Tf9lyUR9EDAIeiVLv56jsMcoXEwjW8Kv5yPY52lw==}
+  /xml-naming@0.3.0:
+    resolution: {integrity: sha512-ghig2TBE/H11aOVgmahA3MhimvkBr6JIYknH/Dhdk10nXwdbIqBJsbfMxpvFPG8bAw77gN29aQWvKpmVoPlvPQ==}
     engines: {node: '>=16.0.0'}
     dev: false
 
