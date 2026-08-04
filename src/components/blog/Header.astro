@@ -1,5 +1,5 @@
 ---
-import Search from "astro-pagefind/components/Search";
+import Search from "astro-pagefind/components/Search.astro";
 ---
 
 <header class="container">
@@ -30,8 +30,7 @@ import Search from "astro-pagefind/components/Search";
   <br />
 
   <Search
-    id="search"
     className="pagefind-ui"
-    uiOptions={{ showImages: false, showEmptyFilters: false }}
+    searchboxOptions={{ showImages: false, showEmptyFilters: false }}
   />
 </header>
