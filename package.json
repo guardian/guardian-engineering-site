@@ -25,7 +25,7 @@
     "@types/marked": "4.0.8",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.25",
-    "astro": "7.1.6",
+    "astro": "7.2.8",
     "astro-pagefind": "^2.0.1",
     "husky": "8.0.3",
     "marked": "4.2.5",
