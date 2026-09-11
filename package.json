@@ -35,7 +35,7 @@
     "sass": "1.102.0",
     "svelte": "5.55.7",
     "typescript": "5.3.3",
-    "valibot": "0.30.0",
+    "valibot": "1.4.2",
     "vite": "8.2.0",
     "web-vitals": "3.5.0"
   },
