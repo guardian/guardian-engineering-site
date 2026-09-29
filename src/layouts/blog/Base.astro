@@ -20,6 +20,18 @@ import Footer from "../../components/blog/Footer.astro";
       href="https://assets.guim.co.uk/static/frontend/fonts/font-faces.css"
     />
 
+    <style is:global>
+      @media (min-width: 1024px) {
+        :root {
+          --pico-font-size: 18px;
+        }
+
+        .container {
+          max-width: 800px;
+        }
+      }
+    </style>
+
     <title>The Guardian Engineering Blog - {pageTitle}</title>
     <meta
       name="description"
