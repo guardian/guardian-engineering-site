@@ -34,37 +34,47 @@ const formatDate = (dateString) => {
 };
 ---
 
-<Base pageTitle={frontmatter.headline} pageDescription={frontmatter.standfirst}>
-  <main class="container" data-pagefind-body>
-    <hgroup>
+<Base
+  pageTitle={frontmatter.headline}
+  pageDescription={frontmatter.standfirst}
+  showSearch={false}
+>
+  <main class="container article-page" data-pagefind-body>
+    <header class="article-header">
       <h1>{frontmatter.headline}</h1>
-      <p>{frontmatter.standfirst}</p>
-    </hgroup>
+      <p class="standfirst">{frontmatter.standfirst}</p>
 
-    <AuthorsToLinks authors={frontmatter.authors} />
-    <p>Published on {formatDate(frontmatter.date)}</p>
+      <div class="article-meta">
+        <p class="article-byline">
+          <span>By </span>
+          <AuthorsToLinks authors={frontmatter.authors} />
+        </p>
+        <p class="article-date">
+          Published <time datetime={frontmatter.date}
+            >{formatDate(frontmatter.date)}</time
+          >
+        </p>
+      </div>
 
-    <div>
-      {
-        frontmatter.tags.map((tag: string) => (
-          <>
-            <a href={`/blog/tags/${tag}`}>
-              {" "}
-              <span data-pagefind-filter="tag"> {tag} </span>{" "}
-            </a>
-            <span>&nbsp;</span>
-          </>
-        ))
-      }
-    </div>
-
-    <hgroup>
-      <hr />
-    </hgroup>
+      <ul class="article-tags" aria-label="Tags" role="list">
+        {
+          frontmatter.tags.map((tag: string) => (
+            <li>
+              <a href={`/blog/tags/${tag}`}>
+                <span data-pagefind-filter="tag">{tag}</span>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </header>
 
     {
       frontmatter.image && (
-        <figure data-media-id="4adba267ca620af5d01c92be270b7dd8c60d05a0">
+        <figure
+          class="main-media"
+          data-media-id="4adba267ca620af5d01c92be270b7dd8c60d05a0"
+        >
           <img
             src={frontmatter.image.url}
             alt={frontmatter.image.alt}
@@ -81,105 +91,69 @@ const formatDate = (dateString) => {
       )
     }
 
-    <hgroup>
-      <hr />
-    </hgroup>
-
-    <article>
+    <div class="article-body">
       <slot />
-    </article>
+    </div>
 
-    <p>Continue reading</p>
+    <nav class="article-pagination" aria-label="More blog posts">
+      <p>Continue reading</p>
+      <div class="article-pagination-links">
+        {
+          nextIndex !== undefined && (
+            <a
+              class="pagination-link"
+              href={"/blog" + `/${allPosts[nextIndex].frontmatter.slug}`}
+            >
+              <span>← Older post</span>
+              {allPosts[nextIndex].frontmatter.headline}
+            </a>
+          )
+        }
 
-    ← {
-      nextIndex && (
-        <a href={"/blog" + `/${allPosts[nextIndex].frontmatter.slug}`}>
-          {allPosts[nextIndex].frontmatter.headline}
-        </a>
-      )
-    }
-
-    → {
-      previousIndex !== undefined && (
-        <a href={"/blog" + `/${allPosts[previousIndex].frontmatter.slug}`}>
-          {allPosts[previousIndex].frontmatter.headline}
-        </a>
-      )
-    }
+        {
+          previousIndex !== undefined && (
+            <a
+              class="pagination-link pagination-link-newer"
+              href={"/blog" + `/${allPosts[previousIndex].frontmatter.slug}`}
+            >
+              <span>Newer post →</span>
+              {allPosts[previousIndex].frontmatter.headline}
+            </a>
+          )
+        }
+      </div>
+    </nav>
   </main>
 </Base>
 
 <style lang="css" is:global>
+  :root {
+    --blog-background: #111;
+    --blog-surface: #1b1b1b;
+    --blog-border: #444;
+    --blog-text: #dcdcdc;
+    --blog-muted: #a9a9a9;
+    --blog-link: #8bc8e8;
+    --blog-accent: #ffe500;
+    --pico-background-color: var(--blog-background);
+    --pico-color: var(--blog-text);
+    --pico-muted-color: var(--blog-muted);
+    --pico-primary: var(--blog-link);
+    --pico-primary-hover: #b7ddf2;
+  }
+
+  html {
+    background: var(--blog-background);
+  }
+
   body {
-    font-family: "GuardianTextSans";
-  }
-
-  blockquote.pullstring {
-    position: relative;
-    padding-left: 25px; /* Space for the SVG */
-    font-style: italic;
-    font-weight: 500;
-    border-left: none;
-    border-inline-start: none;
-  }
-
-  blockquote.pullstring::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.15em; /* Adjust vertical alignment */
-    width: 22px;
-    height: 14px;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 14' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.255 0h4.75c-.572 4.53-1.077 8.972-1.297 13.941H0C.792 9.104 2.44 4.53 5.255 0Zm11.061 0H21c-.506 4.53-1.077 8.972-1.297 13.941h-8.686c.902-4.837 2.485-9.411 5.3-13.941Z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  figure {
-    text-align: center;
-    margin-top: 12px;
-    margin-bottom: 12px;
-  }
-
-  figure img:not(.headline) {
-    width: auto;
-    max-width: 85%;
-    max-height: 75dvh;
-  }
-
-  figure.supporting {
-    float: left;
-    margin-right: 2rem;
-    margin-bottom: 1rem;
-    max-width: 300px;
-  }
-
-  figure figcaption {
-    border-left: none;
-    border-inline-start: none;
-    max-width: 85%;
-  }
-
-  figure figcaption::before {
-    content: "";
-    display: inline-block;
-    width: 18px;
-    height: 13px;
-    margin-right: 8px; /* Small gap between icon and text */
-    vertical-align: baseline;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 13' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 3.5v8l-1.5 1.5h-15l-1.5-1.5v-8l1.5-1.5h3.5l2-2h4l2 2h3.5l1.5 1.5zm-9 7.5c1.9 0 3.5-1.6 3.5-3.5s-1.6-3.5-3.5-3.5-3.5 1.6-3.5 3.5 1.6 3.5 3.5 3.5z'%3E%3C/path%3E%3C/svg%3E");
-    background-size: contain;
-    background-repeat: no-repeat;
-  }
-
-  figure figcaption i {
-    display: block;
-    margin-top: 0.25rem;
-    font-size: smaller;
-  }
-
-  figure.supporting figcaption span.caption {
-    font-size: smaller;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: var(--blog-background);
+    color: var(--blog-text);
+    font-family:
+      "GuardianTextSans", "Guardian Text Sans Web", "Helvetica Neue", Helvetica,
+      Arial, sans-serif;
   }
 
   h1,
@@ -188,49 +162,283 @@ const formatDate = (dateString) => {
   h4,
   h5,
   h6 {
+    color: var(--blog-text);
     font-family:
       "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
     font-weight: 500;
   }
 
-  h1 {
-    margin-bottom: 0.75rem;
+  a {
+    color: var(--blog-link);
+    text-underline-offset: 0.16em;
+    text-decoration-thickness: 1px;
   }
 
-  iframe.video {
-    width: 85%;
-    aspect-ratio: 16/9;
-    border: none;
+  hr {
+    border-color: var(--blog-border);
+    opacity: 1;
   }
 
-  p {
-    line-height: 1.5rem;
+  body > main.container {
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
   }
 
-  .color-line {
+  .container {
+    padding-right: clamp(1rem, 3vw, 1.5rem);
+    padding-left: clamp(1rem, 3vw, 1.5rem);
+  }
+  .article-header {
+    padding: 0rem 0rem 1rem 0rem;
+  }
+
+  .article-header h1 {
+    max-width: rem;
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 8vw, 2.4rem);
+    line-height: 1.1;
+  }
+
+  .standfirst {
+    max-width: 42rem;
+    margin: 0 0 1.25rem;
+    color: var(--blog-muted);
+    font-size: 1rem;
+    line-height: 1.45;
+  }
+
+  .article-meta {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-meta p {
+    margin: 0;
+    color: var(--blog-muted);
+    font-size: 0.86rem;
+  }
+
+  .article-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .article-tags li {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+  }
+
+  .article-tags li::marker {
+    content: "";
+  }
+
+  .article-tags a {
+    display: inline-block;
+    padding: 0.18rem 0.5rem;
+    border: 1px solid var(--blog-border);
+    border-radius: 999px;
+    color: var(--blog-muted);
+    font-size: 0.72rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .article-tags a:hover,
+  .article-tags a:focus-visible {
+    border-color: var(--blog-link);
+    color: var(--blog-link);
+  }
+
+  .main-media {
+    margin: 0 0 1.5rem;
+    padding-top: clamp(1.25rem, 4vw, 2rem);
+    border-top: 1px solid var(--blog-border);
+    text-align: center;
+  }
+
+  .main-media img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    max-height: 75dvh;
+    margin: 0 auto;
+    border: 1px solid var(--blog-border);
+  }
+
+  .main-media figcaption,
+  .article-body figcaption {
+    max-width: 100%;
+    margin: 0.65rem auto 0;
+    padding: 0;
+    border: 0;
+    color: var(--blog-muted);
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .main-media figcaption::before,
+  .article-body figcaption::before {
+    content: "";
+    display: inline-block;
+    width: 18px;
+    height: 13px;
+    margin-right: 8px;
+    vertical-align: baseline;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 18 13' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18 3.5v8l-1.5 1.5h-15l-1.5-1.5v-8l1.5-1.5h3.5l2-2h4l2 2h3.5l1.5 1.5zm-9 7.5c1.9 0 3.5-1.6 3.5-3.5s-1.6-3.5-3.5-3.5-3.5 1.6-3.5 3.5 1.6 3.5 3.5 3.5z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .main-media figcaption i,
+  .article-body figcaption i {
+    display: block;
+    margin-top: 0.2rem;
+    font-size: inherit;
+  }
+
+  .article-body {
+    margin: 0;
+    padding: 1.5rem 0;
+    border: 0;
+    border-top: 1px solid var(--blog-border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .article-body > :first-child {
+    margin-top: 0;
+  }
+
+  .article-body p,
+  .article-body li {
+    line-height: 1.65;
+  }
+
+  .article-body p {
+    margin-bottom: 1.25rem;
+  }
+
+  .article-body figure {
+    margin: 2rem 0;
+    text-align: center;
+  }
+
+  .article-body figure img:not(.headline) {
+    width: auto;
+    max-width: 100%;
+    max-height: 75dvh;
+  }
+
+  .article-body figure.supporting {
+    float: left;
+    max-width: 300px;
+    margin: 0.4rem 2rem 1rem 0;
+  }
+
+  .article-body iframe.video {
     width: 100%;
-    height: 4px;
+    aspect-ratio: 16 / 9;
+    border: 0;
   }
 
-  .color-segment {
-    flex: 1;
-    height: 100%;
+  .article-body blockquote.pullstring {
+    position: relative;
+    padding-left: 25px;
+    border: 0;
+    font-style: italic;
+    font-weight: 500;
   }
 
-  .segment-1 {
-    background-color: #c13b2a;
+  .article-body blockquote.pullstring::before {
+    content: "";
+    position: absolute;
+    top: 0.15em;
+    left: 0;
+    width: 22px;
+    height: 14px;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 22 14' style='fill:%23999999;' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.255 0h4.75c-.572 4.53-1.077 8.972-1.297 13.941H0C.792 9.104 2.44 4.53 5.255 0Zm11.061 0H21c-.506 4.53-1.077 8.972-1.297 13.941h-8.686c.902-4.837 2.485-9.411 5.3-13.941Z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: contain;
   }
-  .segment-2 {
-    background-color: #e47e38;
+
+  .article-pagination {
+    display: block;
+    margin-top: 1rem;
+    padding: 1.25rem 0 2rem;
+    border-top: 1px solid var(--blog-border);
+    border-bottom: 1px solid var(--blog-border);
   }
-  .segment-3 {
-    background-color: #3980c5;
+
+  .article-pagination > p {
+    margin: 0 0 0.75rem;
+    color: var(--blog-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
   }
-  .segment-4 {
-    background-color: #a88b69;
+
+  .article-pagination-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
-  .segment-5 {
-    background-color: #b84c93;
+
+  .pagination-link {
+    color: var(--blog-text);
+    font-family:
+      "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+  }
+
+  .pagination-link span {
+    display: block;
+    margin-bottom: 0.25rem;
+    color: var(--blog-link);
+    font-family: "GuardianTextSans", sans-serif;
+    font-size: 0.72rem;
+  }
+
+  .pagination-link-newer {
+    text-align: right;
+  }
+
+  .pagination-link:hover,
+  .pagination-link:focus-visible {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: var(--blog-accent);
+  }
+
+  @media (max-width: 600px) {
+    .article-pagination-links {
+      grid-template-columns: 1fr;
+    }
+
+    .pagination-link-newer {
+      text-align: left;
+    }
+
+    .article-body figure.supporting {
+      float: none;
+      max-width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      max-width: 768px;
+    }
   }
 </style>

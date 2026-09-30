@@ -1,5 +1,5 @@
 ---
-const { pageTitle, pageDescription } = Astro.props;
+const { pageTitle, pageDescription, showSearch = true } = Astro.props;
 import Header from "../../components/blog/Header.astro";
 import Footer from "../../components/blog/Footer.astro";
 ---
@@ -47,7 +47,7 @@ import Footer from "../../components/blog/Footer.astro";
   </head>
 
   <body>
-    <Header />
+    <Header {showSearch} />
     <slot />
     <Footer />
   </body>

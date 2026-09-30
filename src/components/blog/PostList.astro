@@ -35,80 +35,197 @@ const imgSrc = (originalUrl) => {
 ---
 
 <div class="post-list">
-  {title && <p>{title}</p>}
-
-  <hr />
-
   {
     posts.map((post) => (
-      <>
-        <div class="grid">
-          <div>
-            <p>{formatDate(post.frontmatter.date)}</p>
-            <h5>
-              <a href={post.url}>{post.frontmatter.headline}</a>
-            </h5>
-            {showAuthors && (
-              <>
-                <small>
-                  {" "}
-                  <AuthorsToLinks authors={post.frontmatter.authors} />{" "}
-                </small>{" "}
-                <br /> <br />
-              </>
-            )}
-            {showDescription && (
-              <>
-                <p>
-                  <small>{post.frontmatter.standfirst}</small>
-                </p>
-              </>
-            )}
-            <p />
-            <p>
-              <small>
-                {post.frontmatter.tags.map((tag: string) => (
-                  <>
-                    <a href={`/blog/tags/${tag}`}>{tag}</a>
-                    <span>&nbsp;</span>
-                  </>
-                ))}
-              </small>
+      <article class="post-card">
+        <div class="post-copy">
+          <p class="post-date">
+            <time datetime={post.frontmatter.date}>
+              {formatDate(post.frontmatter.date)}
+            </time>
+          </p>
+          <h2 class="post-title">
+            <a href={post.url}>{post.frontmatter.headline}</a>
+          </h2>
+          {showAuthors && (
+            <p class="post-byline">
+              <span>By </span>
+              <AuthorsToLinks authors={post.frontmatter.authors} />
             </p>
-          </div>
-          <div>
-            {post.frontmatter.image && (
-              <figure style="text-align:left; margin-top:0; overflow:hidden;">
-                <a href={post.url}>
-                  <img
-                    alt={post.frontmatter.image.alt}
-                    src={imgSrc(post.frontmatter.image.url)}
-                    loading="lazy"
-                    decoding="async"
-                  />
-                </a>
-              </figure>
-            )}
-          </div>
+          )}
+          {showDescription && (
+            <p class="post-description">{post.frontmatter.standfirst}</p>
+          )}
+          <ul class="post-tags" aria-label="Tags" role="list">
+            {post.frontmatter.tags.map((tag: string) => (
+              <li>
+                <a href={`/blog/tags/${tag}`}>{tag}</a>
+              </li>
+            ))}
+          </ul>
         </div>
-        <hr />
-      </>
+        {post.frontmatter.image && (
+          <figure class="post-image">
+            <a href={post.url} tabindex="-1" aria-hidden="true">
+              <img
+                alt=""
+                src={imgSrc(post.frontmatter.image.url)}
+                loading="lazy"
+                decoding="async"
+              />
+            </a>
+          </figure>
+        )}
+      </article>
     ))
   }
 </div>
 
 <style>
-  h5 a {
+  .post-list {
+    border-top: 1px solid var(--blog-border);
+  }
+
+  .post-list-header {
+    padding: 1.25rem 0 0.85rem;
+    border-bottom: 1px solid var(--blog-border);
+  }
+
+  .post-list-header h1 {
+    margin: 0;
+    font-size: clamp(1.8rem, 5vw, 2.6rem);
+    line-height: 1;
+  }
+
+  .post-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1.08fr) minmax(14rem, 0.92fr);
+    gap: clamp(1.25rem, 4vw, 2rem);
+    margin: 0;
+    padding: clamp(1.5rem, 4vw, 2.25rem) 0;
+    border: 0;
+    border-bottom: 1px solid var(--blog-border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .post-copy {
+    min-width: 0;
+  }
+
+  .post-date {
+    margin: 0 0 0.65rem;
+    color: var(--blog-muted);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+  }
+
+  .post-title {
+    margin: 0 0 0.6rem;
+    font-size: 1.6rem;
+    line-height: 1rem5;
+  }
+
+  .post-title a {
+    color: var(--blog-text);
     text-decoration: none;
-    color: inherit;
   }
 
-  h5 a:is(:hover, :focus, :active) {
-    text-decoration: revert;
-    color: unset;
+  .post-title a:is(:hover, :focus-visible) {
+    color: #fff;
+    text-decoration: underline;
+    text-decoration-color: var(--blog-accent);
+    text-decoration-thickness: 0.1em;
   }
 
-  figure img:not(.headline) {
-    max-width: 100%;
+  .post-byline {
+    margin: 0 0 1rem;
+    color: var(--blog-muted);
+    font-size: 0.86rem;
+  }
+
+  .post-description {
+    margin: 0;
+    color: var(--blog-text);
+    font-size: 0.92rem;
+    line-height: 1.55;
+  }
+
+  .post-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1.1rem 0 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .post-tags li {
+    margin: 0;
+    padding: 0;
+    list-style: none !important;
+  }
+
+  .post-tags li::marker {
+    content: "";
+  }
+
+  .post-tags a {
+    display: inline-block;
+    padding: 0.15rem 0.45rem;
+    border: 1px solid var(--blog-border);
+    border-radius: 999px;
+    color: var(--blog-muted);
+    font-size: 0.7rem;
+    line-height: 1.4;
+    text-decoration: none;
+  }
+
+  .post-tags a:hover,
+  .post-tags a:focus-visible {
+    border-color: var(--blog-link);
+    color: var(--blog-link);
+  }
+
+  .post-image {
+    align-self: start;
+    margin: 0;
+    overflow: hidden;
+    border: 1px solid var(--blog-border);
+    background: var(--blog-surface);
+  }
+
+  .post-image a {
+    display: block;
+  }
+
+  .post-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 180ms ease;
+  }
+
+  .post-image:hover img {
+    transform: scale(1.015);
+  }
+
+  @media (max-width: 700px) {
+    .post-card {
+      grid-template-columns: 1fr;
+    }
+
+    .post-image {
+      grid-row: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-image img {
+      transition: none;
+    }
   }
 </style>
