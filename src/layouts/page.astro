@@ -15,7 +15,7 @@ const { pathname = "/" } = new URL(Astro.request.url);
 const { body, heading } = font;
 ---
 
-<html lang="en">
+<html lang="en" class="engineering-site" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <title>{title}</title>
@@ -23,6 +23,7 @@ const { body, heading } = font;
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
 
     <!-- this Font-face import is slow - do not use it for production Guardian sites -->
     <link
@@ -50,7 +51,20 @@ const { body, heading } = font;
 
     <Bubbles client:load />
     <style lang="scss" is:global define:vars={{ body, heading }}>
-      body {
+      html.engineering-site {
+        color-scheme: dark;
+        background-color: #111;
+        --pico-background-color: #111;
+        --pico-color: #ccc;
+        --pico-h1-color: #ccc;
+        --pico-h2-color: #ccc;
+        --pico-h3-color: #ccc;
+        --pico-h4-color: #ccc;
+        --pico-h5-color: #ccc;
+        --pico-h6-color: #ccc;
+      }
+
+      html.engineering-site body {
         font-family: var(--body);
         margin: 0 auto;
         min-height: 100vh;

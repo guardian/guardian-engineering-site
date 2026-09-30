@@ -127,67 +127,6 @@ const formatDate = (dateString) => {
 </Base>
 
 <style lang="css" is:global>
-  :root {
-    --blog-background: #111;
-    --blog-surface: #1b1b1b;
-    --blog-border: #444;
-    --blog-text: #dcdcdc;
-    --blog-muted: #a9a9a9;
-    --blog-link: #8bc8e8;
-    --blog-accent: #ffe500;
-    --pico-background-color: var(--blog-background);
-    --pico-color: var(--blog-text);
-    --pico-muted-color: var(--blog-muted);
-    --pico-primary: var(--blog-link);
-    --pico-primary-hover: #b7ddf2;
-  }
-
-  html {
-    background: var(--blog-background);
-  }
-
-  body {
-    min-height: 100vh;
-    margin: 0 auto;
-    background: var(--blog-background);
-    color: var(--blog-text);
-    font-family:
-      "GuardianTextSans", "Guardian Text Sans Web", "Helvetica Neue", Helvetica,
-      Arial, sans-serif;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    color: var(--blog-text);
-    font-family:
-      "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
-    font-weight: 500;
-  }
-
-  a {
-    color: var(--blog-link);
-    text-underline-offset: 0.16em;
-    text-decoration-thickness: 1px;
-  }
-
-  hr {
-    border-color: var(--blog-border);
-    opacity: 1;
-  }
-
-  body > main.container {
-    padding-top: 0.5rem;
-    padding-bottom: 4rem;
-  }
-
-  .container {
-    padding-right: clamp(1rem, 3vw, 1.5rem);
-    padding-left: clamp(1rem, 3vw, 1.5rem);
-  }
   .article-header {
     padding: 0rem 0rem 1rem 0rem;
   }
@@ -415,7 +354,7 @@ const formatDate = (dateString) => {
 
   .pagination-link:hover,
   .pagination-link:focus-visible {
-    color: #fff;
+    color: var(--blog-strong-text);
     text-decoration: underline;
     text-decoration-color: var(--blog-accent);
   }

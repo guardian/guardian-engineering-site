@@ -5,7 +5,7 @@ import Footer from "../../components/blog/Footer.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" class="blog-page">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,13 +21,93 @@ import Footer from "../../components/blog/Footer.astro";
     />
 
     <style is:global>
+      html.blog-page {
+        color-scheme: light;
+        --blog-background: #f6f6f6;
+        --blog-surface: #e8e8e8;
+        --blog-border: #c7c7c7;
+        --blog-text: #242424;
+        --blog-strong-text: #000;
+        --blog-muted: #5c5c5c;
+        --blog-link: #005689;
+        --blog-link-hover: #003c60;
+        --blog-accent: #c70000;
+        --pico-background-color: var(--blog-background);
+        --pico-color: var(--blog-text);
+        --pico-muted-color: var(--blog-muted);
+        --pico-primary: var(--blog-link);
+        --pico-primary-hover: var(--blog-link-hover);
+      }
+
+      @media (prefers-color-scheme: dark) {
+        html.blog-page {
+          color-scheme: dark;
+          --blog-background: #111;
+          --blog-surface: #1b1b1b;
+          --blog-border: #444;
+          --blog-text: #dcdcdc;
+          --blog-strong-text: #fff;
+          --blog-muted: #a9a9a9;
+          --blog-link: #8bc8e8;
+          --blog-link-hover: #b7ddf2;
+          --blog-accent: #ffe500;
+        }
+      }
+
+      html.blog-page {
+        background: var(--blog-background);
+      }
+
+      html.blog-page body {
+        min-height: 100vh;
+        margin: 0 auto;
+        background: var(--blog-background);
+        color: var(--blog-text);
+        font-family:
+          "GuardianTextSans", "Guardian Text Sans Web", "Helvetica Neue",
+          Helvetica, Arial, sans-serif;
+      }
+
+      .blog-page h1,
+      .blog-page h2,
+      .blog-page h3,
+      .blog-page h4,
+      .blog-page h5,
+      .blog-page h6 {
+        color: var(--blog-text);
+        font-family:
+          "GH Guardian Headline", "Guardian Egyptian Web", Georgia, serif;
+        font-weight: 500;
+      }
+
+      .blog-page a {
+        color: var(--blog-link);
+        text-underline-offset: 0.16em;
+        text-decoration-thickness: 1px;
+      }
+
+      .blog-page hr {
+        border-color: var(--blog-border);
+        opacity: 1;
+      }
+
+      .blog-page body > main.container {
+        padding-top: 0.5rem;
+        padding-bottom: 4rem;
+      }
+
+      .blog-page .container {
+        padding-right: clamp(1rem, 3vw, 1.5rem);
+        padding-left: clamp(1rem, 3vw, 1.5rem);
+      }
+
       @media (min-width: 1024px) {
-        :root {
+        html.blog-page {
           --pico-font-size: 18px;
         }
 
-        .container {
-          max-width: 800px;
+        .blog-page .container {
+          max-width: 920px;
         }
       }
     </style>
