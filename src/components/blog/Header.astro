@@ -1,5 +1,8 @@
 ---
 import Search from "astro-pagefind/components/Search.astro";
+import { fonts } from "@guardian/source/foundations";
+
+const titlepiece = fonts.titlepiece;
 ---
 
 <header class="container">
@@ -34,3 +37,11 @@ import Search from "astro-pagefind/components/Search.astro";
     searchboxOptions={{ showImages: false, showEmptyFilters: false }}
   />
 </header>
+
+<style define:vars={{ titlepiece }}>
+  span.title {
+    font-family: var(--titlepiece);
+    font-size: 32px;
+    font-weight: 700;
+  }
+</style>
