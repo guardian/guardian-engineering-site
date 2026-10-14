@@ -1,21 +1,27 @@
 ---
 import Search from "astro-pagefind/components/Search.astro";
+import { fonts } from "@guardian/source/foundations";
+
+const { showSearch = true } = Astro.props;
+const titlepiece = fonts.titlepiece;
 ---
 
 <header class="container">
+  <a href="/" class="back-link">
+    <span class="back-icon" aria-hidden="true">←</span>
+    <span>Engineering @ The Guardian</span>
+  </a>
+
   <nav>
-    <ul>
-      <li class="title">
-        <span class="title">The Guardian</span> | <a
-          href="/blog"
-          class="contrast">Engineering blog</a
-        >
-      </li>
-    </ul>
-    <ul>
-      <li><a href="/blog/tags" class="contrast">Tags</a></li>
-      <li><a href="/blog/authors" class="contrast">Authors</a></li>
-      <li><a href="/blog/rss.xml" class="contrast">RSS Feed</a></li>
+    <div class="wordmark">
+      <span class="title">The Guardian</span>
+      <span class="separator" aria-hidden="true">|</span>
+      <a href="/blog" class="blog-title">Engineering blog</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="/blog/tags">Tags</a></li>
+      <li><a href="/blog/authors">Authors</a></li>
+      <li><a href="/blog/rss.xml">RSS feed</a></li>
     </ul>
   </nav>
 
@@ -27,10 +33,186 @@ import Search from "astro-pagefind/components/Search.astro";
     <div class="color-segment segment-5"></div>
   </div>
 
-  <br />
-
-  <Search
-    className="pagefind-ui"
-    searchboxOptions={{ showImages: false, showEmptyFilters: false }}
-  />
+  {
+    showSearch && (
+      <div class="site-search">
+        <Search
+          className="pagefind-ui"
+          searchboxOptions={{ showImages: false, showEmptyFilters: false }}
+        />
+      </div>
+    )
+  }
 </header>
+
+<style define:vars={{ titlepiece }}>
+  header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    margin-bottom: 0.9rem;
+    color: var(--blog-muted);
+    font-size: 0.75rem;
+    text-decoration: none;
+  }
+
+  .back-icon {
+    font-size: 1rem;
+    line-height: 1;
+    transition: transform 120ms ease;
+    margin-top: -5px;
+  }
+
+  .back-link:hover,
+  .back-link:focus-visible {
+    color: var(--blog-text);
+  }
+
+  .back-link:hover .back-icon,
+  .back-link:focus-visible .back-icon {
+    transform: translateX(-0.15rem);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back-icon {
+      transition: none;
+    }
+  }
+
+  nav {
+    align-items: baseline;
+    margin-bottom: 0.85rem;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .site-brand {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0;
+    white-space: nowrap;
+  }
+
+  span.title {
+    font-family: var(--titlepiece);
+    font-size: clamp(1.8rem, 5vw, 2.25rem);
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .separator {
+    color: var(--blog-muted);
+  }
+
+  .blog-title {
+    color: var(--blog-text);
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    gap: 0.75rem;
+  }
+
+  .nav-links li {
+    padding: 0;
+  }
+
+  .nav-links a {
+    display: inline-block;
+    padding: 0.35rem 0.5rem;
+    margin-left: 0rem;
+    border-bottom: 2px solid transparent;
+    color: var(--blog-text);
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 0;
+  }
+
+  .nav-links a:hover,
+  .nav-links a:focus-visible {
+    border-bottom-color: var(--blog-accent);
+    color: var(--blog-accent);
+  }
+
+  .color-line {
+    display: flex;
+    width: 100%;
+    height: 4px;
+  }
+
+  .color-segment {
+    flex: 1;
+  }
+
+  .segment-1 {
+    background-color: #c13b2a;
+  }
+
+  .segment-2 {
+    background-color: #e47e38;
+  }
+
+  .segment-3 {
+    background-color: #3980c5;
+  }
+
+  .segment-4 {
+    background-color: #a88b69;
+  }
+
+  .segment-5 {
+    background-color: #b84c93;
+  }
+
+  .site-search {
+    --pf-searchbox-max-width: 32rem;
+    margin-top: 1.5rem;
+  }
+
+  .wordmark {
+    display: flex;
+    align-items: baseline;
+    gap: 0.4rem;
+    padding: 0;
+    margin-right: 1rem;
+    white-space: nowrap;
+  }
+
+  @media (max-width: 770px) {
+    nav {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.85rem;
+    }
+
+    .wordmark {
+      width: 100%;
+    }
+    nav ul.nav-links {
+      width: 100%;
+      margin-inline: 0;
+      gap: 1rem;
+      justify-content: flex-start;
+    }
+
+    .nav-links a {
+      padding-right: 0.7rem;
+      padding-left: 0;
+    }
+
+    .site-search {
+      --pf-searchbox-max-width: 100%;
+    }
+  }
+</style>
